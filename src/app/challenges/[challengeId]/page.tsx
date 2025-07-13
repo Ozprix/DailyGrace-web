@@ -1,4 +1,3 @@
-
 // src/app/challenges/[challengeId]/page.tsx
 "use client";
 
