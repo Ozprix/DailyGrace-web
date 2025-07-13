@@ -1,13 +1,14 @@
+
 {
-  "apphosting": {
-    "backendId": "daily-grace-backend",
-    "rootDir": "/",
+  "hosting": {
+    "source": ".",
     "ignore": [
-      "node_modules",
-      ".git",
-      "firebase-debug.log",
-      "firebase-debug.*.log",
-      "functions"
-    ]
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "europe-west4"
+    }
   }
 }
