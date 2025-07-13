@@ -167,7 +167,7 @@ export default function FavoritesPage() {
         </div>
 
         <div className="flex items-center gap-2">
-            {isOffline && <WifiOff className="h-5 w-5 text-muted-foreground" title="You are offline" />}
+            {isOffline && <span title="You are offline"><WifiOff className="h-5 w-5 text-muted-foreground" /></span>}
           <ThemeToggle />
           <UserDropdownMenu />
         </div>
