@@ -8,23 +8,47 @@ const withPWA = require("@ducanh2912/next-pwa").default({
   fallbacks: {
     document: "/offline", // Fallback for document requests
   },
-  // Ensure all chunks are cached properly
   workboxOptions: {
     runtimeCaching: [
+      // Cache Next.js static assets (pages, chunks, etc.)
       {
-        urlPattern: /\/_next\/static\/.*/,
+        urlPattern: /^https?:\/\/.*\/\_next\/.*/i,
         handler: 'CacheFirst',
         options: {
-          cacheName: 'next-static',
+          cacheName: 'next-assets',
           expiration: {
-            maxEntries: 100,
-            maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+            maxEntries: 256,
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+          },
+        },
+      },
+      // Cache images
+      {
+        urlPattern: /^https?:\/\/.*\.(?:png|gif|jpg|jpeg|svg|webp)$/i,
+        handler: 'StaleWhileRevalidate',
+        options: {
+          cacheName: 'images',
+          expiration: {
+            maxEntries: 64,
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+          },
+        },
+      },
+      // Cache Google Fonts
+      {
+        urlPattern: /^https?:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/i,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'google-fonts',
+          expiration: {
+            maxEntries: 32,
+            maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
           },
         },
       },
     ],
   },
-  clean: true, // Add this line to clean out old assets
+  clean: true,
 });
 
 const nextConfig = {
