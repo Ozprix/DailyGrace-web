@@ -67,7 +67,7 @@ const interactWithGraceCompanionFlow = ai.defineFlow(
       },
     },
   },
-  async (input) => {
+  async (input: GraceCompanionUserInput) => {
     const logger = ai.log || console;
     logger.info('interactWithGraceCompanionFlow: Started with input:', input);
     try {
