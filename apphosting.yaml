@@ -1,6 +1,11 @@
 # Settings to manage and configure a Firebase App Hosting backend.
 # https://firebase.google.com/docs/app-hosting/configure
 
+# The ID of the backend resource.
+backend: daily-grace-backend
+# The region to deploy the backend.
+region: us-central1
+
 # Specifies the secrets needed by the backend. You will need to set these in
 # Google Cloud Secret Manager before deploying.
 # https://firebase.google.com/docs/app-hosting/configure#secret-variables
