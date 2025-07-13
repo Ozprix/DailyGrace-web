@@ -653,13 +653,13 @@ export default function ChallengeDetailPage() {
                               Day {day.day}: {day.title}
                             </div>
                             {hasJournalEntry && !isCurrentActiveDay && !isDayCompleted && (
-                                <Bookmark className="h-4 w-4 text-muted-foreground/70 ml-2" title="Journal entry saved for this day" />
+                                <span title="Journal entry saved for this day"><Bookmark className="h-4 w-4 text-muted-foreground/70 ml-2" /></span>
                             )}
                              {hasJournalEntry && isDayCompleted && (
-                                <Bookmark className="h-4 w-4 text-green-500/70 ml-2" title="Journal entry saved for this day" />
+                                <span title="Journal entry saved for this day"><Bookmark className="h-4 w-4 text-green-500/70 ml-2" /></span>
                             )}
                              {hasJournalEntry && isCurrentActiveDay && (
-                                <Bookmark className="h-4 w-4 text-primary/70 ml-2" title="Journal entry saved for this day" />
+                                <span title="Journal entry saved for this day"><Bookmark className="h-4 w-4 text-primary/70 ml-2" /></span>
                             )}
                           </div>
                         </AccordionTrigger>
