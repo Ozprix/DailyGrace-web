@@ -23,7 +23,7 @@ export type GenerateChallengeDayContentInput = z.infer<typeof GenerateChallengeD
 // Define the output schema for the flow
 export const GenerateChallengeDayContentOutputSchema = z.object({
   reflection: z.string().describe("An inspirational reflection related to the challenge day's theme, prompt, and verse. Length depends on preferShortContent."),
-  prayerPoint: z.string().describe("A prayer point related to the challenge day. Length depends on preferShortContent."),
+  prayerPoint: z.string().describe("A prayer point related to the day's theme. Length depends on preferShortContent."),
 });
 export type GenerateChallengeDayContentOutput = z.infer<typeof GenerateChallengeDayContentOutputSchema>;
 
@@ -47,8 +47,8 @@ Instructions:
 - For the "prayerPoint" field: {{#if preferShortContent}}Provide a single, concise prayer point sentence.{{else}}Provide a short prayer (1-3 sentences) aligned with the day's theme.{{/if}}`,
 });
 
-// Define the flow
-const generateChallengeDayContentFlow = ai.defineFlow(
+// Define the flow and export it directly
+export const generateChallengeDayContent = ai.defineFlow(
   {
     name: 'generateChallengeDayContentFlow',
     inputSchema: GenerateChallengeDayContentInputSchema,
@@ -62,14 +62,3 @@ const generateChallengeDayContentFlow = ai.defineFlow(
     return output;
   }
 );
-
-/**
- * Server action to generate content for a challenge day.
- * This is a wrapper around the Genkit flow.
- */
-export async function generateChallengeDayContent(
-  input: GenerateChallengeDayContentInput
-): Promise<GenerateChallengeDayContentOutput> {
-  const result = await generateChallengeDayContentFlow(input);
-  return result;
-}
