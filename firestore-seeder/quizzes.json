@@ -1,0 +1,820 @@
+
+[
+  {
+    "id": "nt_heroes_quiz1",
+    "categoryId": "bible_trivia_nt_heroes",
+    "title": "Apostle Paul's Journeys",
+    "description": "Questions about the missionary journeys of Paul.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Which city was Saul traveling to when he encountered Jesus?",
+        "type": "multiple-choice",
+        "options": [
+          { "id": "a", "text": "Jerusalem" },
+          { "id": "b", "text": "Damascus" },
+          { "id": "c", "text": "Antioch" },
+          { "id": "d", "text": "Rome" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Saul, later Paul, was on his way to Damascus to persecute Christians when he had his conversion experience (Acts 9)."
+      },
+      {
+        "id": "q2",
+        "text": "Paul was a Roman citizen.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "Paul was born in Tarsus, a city whose inhabitants were granted Roman citizenship (Acts 22:25-29)."
+      },
+      {
+        "id": "q3",
+        "text": "Which companion often traveled with Paul on his first missionary journey?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Peter"},
+            {"id": "b", "text": "Barnabas"},
+            {"id": "c", "text": "John Mark (initially)"},
+            {"id": "d", "text": "Silas"}
+        ],
+        "correctAnswer": "b",
+        "explanation": "Barnabas was a key companion to Paul on his first missionary journey (Acts 13-14). Silas and John Mark also traveled with him at different times."
+      },
+      {
+        "id": "q4",
+        "text": "In which city did Paul preach his famous sermon on Mars Hill (Areopagus)?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Corinth"},
+            {"id": "b", "text": "Ephesus"},
+            {"id": "c", "text": "Athens"},
+            {"id": "d", "text": "Philippi"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "Paul delivered his sermon about the 'Unknown God' on Mars Hill in Athens (Acts 17:16-34)."
+      },
+      {
+        "id": "q5",
+        "text": "Paul wrote the letter to the Romans before he had ever visited Rome.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "Paul expressed his desire to visit Rome in his letter to the Romans, which he wrote before ever having been there (Romans 1:10-15)."
+      },
+      {
+        "id": "q6",
+        "text": "What trade did Paul practice to support himself during his ministry?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Fishing"},
+            {"id": "b", "text": "Carpentry"},
+            {"id": "c", "text": "Tentmaking"},
+            {"id": "d", "text": "Farming"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "Paul was a tentmaker by trade and worked to support himself and his companions (Acts 18:1-3)."
+      },
+      {
+        "id": "q7",
+        "text": "Paul was shipwrecked on which island?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Crete"},
+            {"id": "b", "text": "Cyprus"},
+            {"id": "c", "text": "Malta"},
+            {"id": "d", "text": "Rhodes"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "While on his way to Rome as a prisoner, Paul was shipwrecked on the island of Malta (Acts 27-28)."
+      }
+    ]
+  },
+  {
+    "id": "nt_heroes_quiz2",
+    "categoryId": "bible_trivia_nt_heroes",
+    "title": "Peter the Apostle",
+    "description": "Test your knowledge about Simon Peter.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "What was Peter's original profession?",
+        "type": "multiple-choice",
+        "options": [
+          { "id": "a", "text": "Carpenter" },
+          { "id": "b", "text": "Tax Collector" },
+          { "id": "c", "text": "Fisherman" },
+          { "id": "d", "text": "Shepherd" }
+        ],
+        "correctAnswer": "c",
+        "explanation": "Peter was a fisherman by trade before Jesus called him to be a 'fisher of men' (Matthew 4:18-20)."
+      },
+      {
+        "id": "q2",
+        "text": "Peter denied Jesus three times before the rooster crowed.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "As Jesus predicted, Peter denied knowing Him three times on the night of Jesus' arrest (Matthew 26:69-75)."
+      },
+      {
+        "id": "q3",
+        "text": "To whom did Peter preach the first sermon on the Day of Pentecost?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "The Roman Governor"},
+            {"id": "b", "text": "A crowd in Jerusalem"},
+            {"id": "c", "text": "The Sanhedrin"},
+            {"id": "d", "text": "Gentiles in Caesarea"}
+        ],
+        "correctAnswer": "b",
+        "explanation": "Peter preached a powerful sermon to a crowd in Jerusalem on the Day of Pentecost, and about 3,000 people were converted (Acts 2)."
+      },
+      {
+        "id": "q4",
+        "text": "Peter walked on water with Jesus.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "Peter briefly walked on water towards Jesus but began to sink when he doubted (Matthew 14:28-31)."
+      },
+      {
+        "id": "q5",
+        "text": "Which Roman centurion did Peter visit and baptize, marking a significant step in the Gentile mission?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Julius"},
+            {"id": "b", "text": "Cornelius"},
+            {"id": "c", "text": "Longinus"},
+            {"id": "d", "text": "Sergius Paulus"}
+        ],
+        "correctAnswer": "b",
+        "explanation": "God gave Peter a vision that led him to the house of Cornelius, a Roman centurion, whom he preached to and baptized along with his household (Acts 10)."
+      },
+      {
+        "id": "q6",
+        "text": "Peter wrote two letters (epistles) that are part of the New Testament.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "The books of 1 Peter and 2 Peter are attributed to the Apostle Peter."
+      },
+      {
+        "id": "q7",
+        "text": "What miraculous healing did Peter perform at the Beautiful Gate of the temple?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Healed a blind man"},
+            {"id": "b", "text": "Raised Dorcas from the dead"},
+            {"id": "c", "text": "Healed a lame man"},
+            {"id": "d", "text": "Cast out a demon"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "Peter, with John, healed a man who had been lame from birth at the temple gate called Beautiful (Acts 3:1-10)."
+      },
+      {
+        "id": "q8",
+        "text": "Jesus gave Simon the new name 'Cephas,' which translates to Peter, meaning what?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Son of Thunder"},
+            {"id": "b", "text": "Beloved"},
+            {"id": "c", "text": "Rock"},
+            {"id": "d", "text": "Fisherman"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "Jesus renamed Simon to Cephas (Aramaic) or Peter (Greek), both meaning 'rock' (John 1:42)."
+      }
+    ]
+  },
+  {
+    "id": "nt_heroes_quiz3",
+    "categoryId": "bible_trivia_nt_heroes",
+    "title": "Mary, Mother of Jesus",
+    "description": "Questions about Mary, the mother of Jesus.",
+    "questions": [
+        {
+            "id": "q1",
+            "text": "Which angel announced to Mary that she would conceive Jesus?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Michael"},
+                {"id": "b", "text": "Gabriel"},
+                {"id": "c", "text": "Raphael"},
+                {"id": "d", "text": "Uriel"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "The angel Gabriel appeared to Mary to announce the miraculous conception of Jesus (Luke 1:26-38)."
+        },
+        {
+            "id": "q2",
+            "text": "Mary was present at Jesus' crucifixion.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "John 19:25-27 records Mary, Jesus' mother, standing near the cross during His crucifixion."
+        },
+        {
+            "id": "q3",
+            "text": "Mary's song of praise after the annunciation is known as the:",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Benedictus"},
+                {"id": "b", "text": "Nunc Dimittis"},
+                {"id": "c", "text": "Magnificat"},
+                {"id": "d", "text": "Gloria"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Mary's song of praise, beginning 'My soul magnifies the Lord,' is traditionally called the Magnificat (Luke 1:46-55)."
+        },
+        {
+            "id": "q4",
+            "text": "Who was Mary engaged to when the angel appeared to her?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Zechariah"},
+                {"id": "b", "text": "Joseph"},
+                {"id": "c", "text": "Simeon"},
+                {"id": "d", "text": "Joachim"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Mary was betrothed (engaged) to Joseph, a descendant of David (Matthew 1:18, Luke 1:27)."
+        },
+        {
+            "id": "q5",
+            "text": "Mary visited her relative Elizabeth, who was also miraculously pregnant.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Mary visited Elizabeth, who was pregnant with John the Baptist. At Mary's greeting, the baby in Elizabeth's womb leaped (Luke 1:39-45)."
+        },
+        {
+            "id": "q6",
+            "text": "In which town was Jesus born?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Nazareth"},
+                {"id": "b", "text": "Jerusalem"},
+                {"id": "c", "text": "Bethlehem"},
+                {"id": "d", "text": "Capernaum"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Jesus was born in Bethlehem, the city of David, because Joseph and Mary traveled there for a census (Luke 2:4-7)."
+        },
+        {
+            "id": "q7",
+            "text": "Mary was with the apostles in the upper room after Jesus' ascension, praying.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Acts 1:14 mentions Mary, the mother of Jesus, along with Jesus' brothers and the apostles, devoting themselves to prayer after His ascension."
+        }
+    ]
+  },
+  {
+    "id": "nt_heroes_quiz4",
+    "categoryId": "bible_trivia_nt_heroes",
+    "title": "John the Baptist",
+    "description": "Learn about the forerunner of Jesus Christ.",
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What was John the Baptist's primary message?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Prosperity and health"},
+                {"id": "b", "text": "Political revolution"},
+                {"id": "c", "text": "Repentance for the forgiveness of sins"},
+                {"id": "d", "text": "Observance of dietary laws"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "John the Baptist preached a message of repentance and baptized people in preparation for the coming of the Messiah (Matthew 3:1-2)."
+        },
+        {
+            "id": "q2",
+            "text": "How was John the Baptist related to Jesus?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Brother"},
+                {"id": "b", "text": "Cousin"},
+                {"id": "c", "text": "Uncle"},
+                {"id": "d", "text": "No relation"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Mary (Jesus' mother) and Elizabeth (John's mother) were relatives, making Jesus and John cousins (Luke 1)."
+        },
+        {
+            "id": "q3",
+            "text": "What unusual food items were part of John the Baptist's diet in the wilderness?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Bread and fish"},
+                {"id": "b", "text": "Dates and figs"},
+                {"id": "c", "text": "Locusts and wild honey"},
+                {"id": "d", "text": "Manna and quail"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Matthew 3:4 describes John's clothing as camel's hair and his food as locusts and wild honey."
+        },
+        {
+            "id": "q4",
+            "text": "John the Baptist baptized Jesus in the Jordan River.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Jesus came from Galilee to the Jordan to be baptized by John (Matthew 3:13-17)."
+        },
+        {
+            "id": "q5",
+            "text": "Who ordered the execution of John the Baptist?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Pontius Pilate"},
+                {"id": "b", "text": "Caesar Augustus"},
+                {"id": "c", "text": "Herod Antipas"},
+                {"id": "d", "text": "The High Priest Caiaphas"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Herod Antipas had John the Baptist imprisoned and later beheaded at the request of Herodias' daughter (Matthew 14:1-12)."
+        },
+        {
+            "id": "q6",
+            "text": "John the Baptist identified Jesus as the 'Lamb of God.'",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Upon seeing Jesus, John proclaimed, 'Behold, the Lamb of God, who takes away the sin of the world!' (John 1:29, 36)."
+        },
+        {
+            "id": "q7",
+            "text": "Where did John the Baptist primarily conduct his ministry of preaching and baptizing?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "In the temple in Jerusalem"},
+                {"id": "b", "text": "In the synagogues of Galilee"},
+                {"id": "c", "text": "In the wilderness of Judea and around the Jordan River"},
+                {"id": "d", "text": "In Samaria"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "John the Baptist emerged from the wilderness of Judea, preaching and baptizing in the region of the Jordan River (Matthew 3:1, Mark 1:4-5)."
+        }
+    ]
+  },
+  {
+    "id": "ot_basics_quiz1",
+    "categoryId": "bible_trivia_ot_basics",
+    "title": "The Story of Creation",
+    "description": "Questions about the Genesis creation account.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "On which day did God create humankind?",
+        "type": "multiple-choice",
+        "options": [
+          { "id": "a", "text": "Third day" },
+          { "id": "b", "text": "Fifth day" },
+          { "id": "c", "text": "Sixth day" },
+          { "id": "d", "text": "Seventh day" }
+        ],
+        "correctAnswer": "c",
+        "explanation": "Humankind was created on the sixth day, according to Genesis 1:26-31."
+      },
+      {
+        "id": "q2",
+        "text": "What did God do on the seventh day of creation?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Created animals"},
+            {"id": "b", "text": "Separated light from darkness"},
+            {"id": "c", "text": "Rested"},
+            {"id": "d", "text": "Created plants"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "On the seventh day, God rested from all His work of creation and blessed it (Genesis 2:2-3)."
+      },
+      {
+        "id": "q3",
+        "text": "According to Genesis, from what did God form the first woman, Eve?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Dust of the ground"},
+            {"id": "b", "text": "A star"},
+            {"id": "c", "text": "One of Adam's ribs"},
+            {"id": "d", "text": "An angel"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "Genesis 2:21-22 describes God taking one of Adam's ribs and making it into a woman."
+      },
+      {
+        "id": "q4",
+        "text": "The sun, moon, and stars were created on the fourth day.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "Genesis 1:14-19 details the creation of the greater light (sun) to rule the day, the lesser light (moon) to rule the night, and the stars on the fourth day."
+      },
+      {
+        "id": "q5",
+        "text": "What was the name of the garden where God placed Adam and Eve?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Garden of Gethsemane"},
+            {"id": "b", "text": "Garden of Eden"},
+            {"id": "c", "text": "Hanging Gardens of Babylon"},
+            {"id": "d", "text": "Paradise Garden"}
+        ],
+        "correctAnswer": "b",
+        "explanation": "God planted a garden in Eden, in the east, and there he put the man whom he had formed (Genesis 2:8)."
+      },
+      {
+        "id": "q6",
+        "text": "God created light on the first day.",
+        "type": "true-false",
+        "correctAnswer": "true",
+        "explanation": "Genesis 1:3-5 states, 'And God said, ‘Let there be light,’ and there was light... And there was evening and there was morning, the first day.'"
+      },
+      {
+        "id": "q7",
+        "text": "What were the two specific trees mentioned in the middle of the Garden of Eden?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "The Tree of Life and the Tree of Knowledge of Good and Evil"},
+            {"id": "b", "text": "The Fig Tree and the Olive Tree"},
+            {"id": "c", "text": "The Cedar Tree and the Oak Tree"},
+            {"id": "d", "text": "The Tree of Wisdom and the Tree of Understanding"}
+        ],
+        "correctAnswer": "a",
+        "explanation": "Genesis 2:9 mentions, 'And out of the ground the LORD God made to spring up every tree that is pleasant to the sight and good for food. The tree of life was in the midst of the garden, and the tree of the knowledge of good and evil.'"
+      }
+    ]
+  },
+  {
+    "id": "ot_basics_quiz2",
+    "categoryId": "bible_trivia_ot_basics",
+    "title": "Noah and the Ark",
+    "description": "Explore the story of Noah and the great flood.",
+    "questions": [
+        {
+            "id": "q1",
+            "text": "How many of each kind of clean animal was Noah instructed to take on the ark?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Two (a pair)"},
+                {"id": "b", "text": "Seven pairs"},
+                {"id": "c", "text": "One"},
+                {"id": "d", "text": "Ten pairs"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Genesis 7:2 specifies that Noah was to take seven pairs of every kind of clean animal."
+        },
+        {
+            "id": "q2",
+            "text": "What was the sign of God's covenant with Noah that He would never again destroy the earth with a flood?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "A dove"},
+                {"id": "b", "text": "An olive branch"},
+                {"id": "c", "text": "A rainbow"},
+                {"id": "d", "text": "A stone altar"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "God set the rainbow in the clouds as the sign of His covenant with Noah and all living creatures (Genesis 9:12-17)."
+        },
+        {
+            "id": "q3",
+            "text": "For how many days and nights did it rain during the great flood?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "7 days and 7 nights"},
+                {"id": "b", "text": "40 days and 40 nights"},
+                {"id": "c", "text": "100 days and 100 nights"},
+                {"id": "d", "text": "150 days and 150 nights"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Genesis 7:12 states, 'And rain fell upon the earth forty days and forty nights.'"
+        },
+        {
+            "id": "q4",
+            "text": "Noah sent out a raven and a dove from the ark to see if the waters had receded.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Genesis 8:6-12 describes Noah sending out a raven first, and then a dove multiple times."
+        },
+        {
+            "id": "q5",
+            "text": "Who were Noah's three sons who were also on the ark?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Cain, Abel, and Seth"},
+                {"id": "b", "text": "Abraham, Isaac, and Jacob"},
+                {"id": "c", "text": "Shem, Ham, and Japheth"},
+                {"id": "d", "text": "Moses, Aaron, and Hur"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Noah's three sons who went into the ark with him were Shem, Ham, and Japheth (Genesis 6:10, 7:13)."
+        },
+        {
+            "id": "q6",
+            "text": "The ark came to rest on the mountains of Ararat.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Genesis 8:4 says, 'And in the seventh month, on the seventeenth day of the month, the ark came to rest on the mountains of Ararat.'"
+        },
+        {
+            "id": "q7",
+            "text": "What material was Noah instructed to use to build the ark?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Cedarwood"},
+                {"id": "b", "text": "Oakwood"},
+                {"id": "c", "text": "Gopher wood"},
+                {"id": "d", "text": "Pinewood"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "God instructed Noah, 'Make yourself an ark of gopher wood.' (Genesis 6:14)."
+        }
+    ]
+  },
+  {
+    "id": "ot_basics_quiz3",
+    "categoryId": "bible_trivia_ot_basics",
+    "title": "The Story of Moses",
+    "description": "Key events from the life of Moses.",
+    "questions": [
+        {
+            "id": "q1",
+            "text": "How did God first appear to Moses in the wilderness?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "In a dream"},
+                {"id": "b", "text": "As a pillar of cloud"},
+                {"id": "c", "text": "In a burning bush"},
+                {"id": "d", "text": "As a whirlwind"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "God spoke to Moses from a bush that was burning but not consumed by the fire (Exodus 3)."
+        },
+        {
+            "id": "q2",
+            "text": "Moses received the Ten Commandments on Mount Sinai.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Moses ascended Mount Sinai where God gave him the Ten Commandments (Exodus 19-20)."
+        },
+        {
+            "id": "q3",
+            "text": "Who was Moses' brother, who often spoke for him?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Joshua"},
+                {"id": "b", "text": "Aaron"},
+                {"id": "c", "text": "Caleb"},
+                {"id": "d", "text": "Eleazar"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Aaron was Moses' older brother and served as his spokesman before Pharaoh and the Israelites (Exodus 4:14-16, Exodus 7:1)."
+        },
+        {
+            "id": "q4",
+            "text": "How many plagues did God send upon Egypt before Pharaoh let the Israelites go?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "3"},
+                {"id": "b", "text": "7"},
+                {"id": "c", "text": "10"},
+                {"id": "d", "text": "12"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "God sent ten plagues upon Egypt to persuade Pharaoh to release the Israelites (Exodus 7-12)."
+        },
+        {
+            "id": "q5",
+            "text": "Moses led the Israelites through the Red Sea on dry ground.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "God parted the Red Sea, allowing the Israelites to cross on dry ground while the pursuing Egyptian army was drowned (Exodus 14)."
+        },
+        {
+            "id": "q6",
+            "text": "What was the name of Moses' sister, who saved him as a baby?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Jochebed"},
+                {"id": "b", "text": "Miriam"},
+                {"id": "c", "text": "Zipporah"},
+                {"id": "d", "text": "Elisheba"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Miriam, Moses' sister, watched over him when he was placed in a basket in the Nile and helped arrange for his own mother to nurse him for Pharaoh's daughter (Exodus 2:1-10)."
+        },
+        {
+            "id": "q7",
+            "text": "For how many years did the Israelites wander in the wilderness?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "10 years"},
+                {"id": "b", "text": "20 years"},
+                {"id": "c", "text": "40 years"},
+                {"id": "d", "text": "70 years"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Due to their disbelief and disobedience, the Israelites wandered in the wilderness for 40 years before entering the Promised Land (Numbers 14:33-34)."
+        }
+    ]
+  },
+  {
+    "id": "dr_trust_quiz1",
+    "categoryId": "devotional_reinforce_challenge1",
+    "title": "Core Concepts of Trust",
+    "description": "Reflecting on key ideas about trusting God.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Which Proverb often encourages trusting in the Lord with all your heart?",
+        "type": "multiple-choice",
+        "options": [
+          { "id": "a", "text": "Proverbs 1:7" },
+          { "id": "b", "text": "Proverbs 3:5-6" },
+          { "id": "c", "text": "Proverbs 10:12" },
+          { "id": "d", "text": "Proverbs 16:9" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Proverbs 3:5-6 says, 'Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.'"
+      },
+      {
+        "id": "q2",
+        "text": "Trusting God means you will never face difficulties.",
+        "type": "true-false",
+        "correctAnswer": "false",
+        "explanation": "Trusting God provides strength and guidance through difficulties, but it doesn't eliminate them. Many faithful biblical figures faced severe trials."
+      },
+      {
+        "id": "q3",
+        "text": "According to Jeremiah 29:11, God's plans for His people are for:",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Prosperity only"},
+            {"id": "b", "text": "Welfare and not for evil, to give a future and a hope"},
+            {"id": "c", "text": "An easy life without challenges"},
+            {"id": "d", "text": "Them to understand all His mysteries"}
+        ],
+        "correctAnswer": "b",
+        "explanation": "Jeremiah 29:11 states, 'For I know the plans I have for you, declares the LORD, plans for welfare and not for evil, to give you a future and a hope.'"
+      },
+      {
+        "id": "q4",
+        "text": "Leaning on our own understanding is encouraged when God's plan seems unclear.",
+        "type": "true-false",
+        "correctAnswer": "false",
+        "explanation": "Proverbs 3:5 explicitly advises, '...do not lean on your own understanding.' Instead, we are to acknowledge Him in all our ways."
+      },
+      {
+        "id": "q5",
+        "text": "What does Isaiah 26:3 promise to those whose minds are stayed on God?",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Material riches"},
+            {"id": "b", "text": "Perfect peace"},
+            {"id": "c", "text": "Answers to all questions"},
+            {"id": "d", "text": "Exemption from suffering"}
+        ],
+        "correctAnswer": "b",
+        "explanation": "Isaiah 26:3 says, 'You keep him in perfect peace whose mind is stayed on you, because he trusts in you.'"
+      },
+      {
+        "id": "q6",
+        "text": "True trust in God is demonstrated only when everything is going well.",
+        "type": "true-false",
+        "correctAnswer": "false",
+        "explanation": "True trust is often most evident and developed during times of trial and uncertainty, not just in good times."
+      },
+      {
+        "id": "q7",
+        "text": "Romans 8:28 assures believers that God works all things together for good for those who:",
+        "type": "multiple-choice",
+        "options": [
+            {"id": "a", "text": "Never sin"},
+            {"id": "b", "text": "Are wealthy and influential"},
+            {"id": "c", "text": "Love Him and are called according to His purpose"},
+            {"id": "d", "text": "Perform many good deeds"}
+        ],
+        "correctAnswer": "c",
+        "explanation": "Romans 8:28 states, 'And we know that for those who love God all things work together for good, for those who are called according to his purpose.'"
+      }
+    ]
+  },
+  {
+    "id": "dr_trust_quiz2",
+    "categoryId": "devotional_reinforce_challenge1",
+    "title": "Biblical Examples of Trust",
+    "description": "Recall individuals who demonstrated great trust in God.",
+    "questions": [
+        {
+            "id": "q1",
+            "text": "Which Old Testament figure is renowned for his unwavering faith and trust in God, even when asked to sacrifice his son?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Moses"},
+                {"id": "b", "text": "David"},
+                {"id": "c", "text": "Abraham"},
+                {"id": "d", "text": "Joseph"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "Abraham is famously known as the 'father of faith' for his trust in God, exemplified by his willingness to sacrifice Isaac (Genesis 22, Hebrews 11:17-19)."
+        },
+        {
+            "id": "q2",
+            "text": "When facing Goliath, David trusted in his own strength and armor.",
+            "type": "true-false",
+            "correctAnswer": "false",
+            "explanation": "David trusted in the Lord, not in armor or his own might, when he faced Goliath (1 Samuel 17:45-47)."
+        },
+        {
+            "id": "q3",
+            "text": "Joseph, son of Jacob, maintained trust in God despite being sold into slavery and falsely imprisoned.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Joseph's story (Genesis 37-50) is a powerful example of trusting God's sovereign plan through immense hardship. He later told his brothers, 'You intended to harm me, but God intended it for good.'"
+        },
+        {
+            "id": "q4",
+            "text": "Which queen trusted God and risked her life by approaching the king uninvited to save her people?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Jezebel"},
+                {"id": "b", "text": "Esther"},
+                {"id": "c", "text": "Bathsheba"},
+                {"id": "d", "text": "Ruth"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Queen Esther fasted, prayed, and then courageously went before King Ahasuerus, saying, 'If I perish, I perish,' trusting God for the deliverance of the Jews (Book of Esther)."
+        },
+        {
+            "id": "q5",
+            "text": "Shadrach, Meshach, and Abednego showed trust in God by refusing to:",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Eat the king's food"},
+                {"id": "b", "text": "Fight in the king's army"},
+                {"id": "c", "text": "Worship Nebuchadnezzar's golden image"},
+                {"id": "d", "text": "Interpret the king's dream"}
+            ],
+            "correctAnswer": "c",
+            "explanation": "They trusted God even when threatened with a fiery furnace, declaring that God could deliver them, but even if He didn’t, they would not worship the idol (Daniel 3)."
+        },
+        {
+            "id": "q6",
+            "text": "Daniel continued to pray to God despite a decree that forbade it, trusting God even when thrown into the lions' den.",
+            "type": "true-false",
+            "correctAnswer": "true",
+            "explanation": "Daniel demonstrated unwavering trust and obedience to God by continuing his practice of prayer, leading to his miraculous deliverance from the lions' den (Daniel 6)."
+        },
+        {
+            "id": "q7",
+            "text": "Who, after much suffering, said, 'Though he slay me, yet will I trust in him'?",
+            "type": "multiple-choice",
+            "options": [
+                {"id": "a", "text": "Jeremiah"},
+                {"id": "b", "text": "Job"},
+                {"id": "c", "text": "Elijah"},
+                {"id": "d", "text": "Paul"}
+            ],
+            "correctAnswer": "b",
+            "explanation": "Job, amidst losing his children, wealth, and health, uttered these profound words of trust in Job 13:15."
+        }
+    ]
+  },
+  {
+    "id": "sg_gifts_quiz1",
+    "categoryId": "personality_spiritual_gifts",
+    "title": "Identifying Your Gifts",
+    "description": "Explore your inclinations related to spiritual gifts.",
+    "questions": [
+      { "id": "q1", "text": "I find great joy and effectiveness in explaining biblical truths to others, helping them understand.", "type": "true-false", "correctAnswer": "true", "explanation": "This might indicate a gift of teaching." },
+      { "id": "q2", "text": "I am often drawn to people who are hurting and feel a strong desire to comfort and support them.", "type": "true-false", "correctAnswer": "true", "explanation": "This could suggest a gift of mercy or exhortation."},
+      { "id": "q3", "text": "When a need arises, I am quick to offer practical help and assistance without needing recognition.", "type": "true-false", "correctAnswer": "true", "explanation": "This aligns with the gift of service or helps."},
+      { "id": "q4", "text": "I feel a deep conviction to share the Gospel message with those who don't know Christ.", "type": "true-false", "correctAnswer": "true", "explanation": "This could be indicative of the gift of evangelism."},
+      { "id": "q5", "text": "I am often able to clearly see the direction God wants a group or ministry to go and can articulate it.", "type": "true-false", "correctAnswer": "true", "explanation": "This might point towards a gift of leadership or administration."},
+      { "id": "q6", "text": "I am comfortable and often effective in praying for others, especially for healing or specific needs.", "type": "true-false", "correctAnswer": "true", "explanation": "This could relate to gifts like faith, healing, or intercession."},
+      { "id": "q7", "text": "I am usually generous with my resources (time, money, possessions) to support God's work and help others.", "type": "true-false", "correctAnswer": "true", "explanation": "This aligns with the gift of giving."}
+    ]
+  },
+  {
+    "id": "ls_style_quiz1",
+    "categoryId": "personality_leadership_style",
+    "title": "Leadership Preferences",
+    "description": "Consider your leadership inclinations in a Christian context.",
+    "questions": [
+      { "id": "q1", "text": "When leading a project, I prefer to set a clear vision and inspire others to follow.", "type": "true-false", "correctAnswer": "true", "explanation": "This is often characteristic of visionary or transformational leadership." },
+      { "id": "q2", "text": "I excel at organizing tasks, delegating responsibilities, and ensuring things run smoothly.", "type": "true-false", "correctAnswer": "true", "explanation": "This points towards administrative or organizational leadership strengths."},
+      { "id": "q3", "text": "I am more focused on mentoring individuals and helping them grow than on achieving specific group targets.", "type": "true-false", "correctAnswer": "true", "explanation": "This aligns with a coaching or servant leadership style."},
+      { "id": "q4", "text": "In difficult situations, I tend to take charge and make decisive calls, even if unpopular.", "type": "true-false", "correctAnswer": "true", "explanation": "This can be a trait of directive or commanding leadership styles."},
+      { "id": "q5", "text": "I believe the best way to lead is by example, working alongside the team.", "type": "true-false", "correctAnswer": "true", "explanation": "This is a hallmark of leading by example or pacesetting leadership."},
+      { "id": "q6", "text": "I prioritize building strong relationships and fostering a sense of community within the team.", "type": "true-false", "correctAnswer": "true", "explanation": "This suggests an affiliative or relational leadership approach."},
+      { "id": "q7", "text": "I am most effective when I can empower others and give them autonomy to achieve their tasks.", "type": "true-false", "correctAnswer": "true", "explanation": "This points towards a democratic or empowering leadership style."}
+    ]
+  },
+  {
+    "id": "psalms_quiz1",
+    "categoryId": "bible_trivia_psalms",
+    "title": "Famous Psalms Insights",
+    "description": "Identify well-known Psalms and their themes.",
+    "questions": [
+      { "id": "q1", "text": "Which Psalm begins with 'The Lord is my shepherd'?", "type": "multiple-choice", "options":[{"id":"a", "text":"Psalm 1"}, {"id":"b", "text":"Psalm 23"}, {"id":"c", "text":"Psalm 91"}], "correctAnswer": "b", "explanation": "Psalm 23 is famously known as 'The Shepherd's Psalm'." },
+      { "id": "q2", "text": "Psalm 119 is known for its focus on what?", "type": "multiple-choice", "options": [{"id": "a", "text":"Creation"}, {"id": "b", "text":"God's Law/Word"}, {"id": "c", "text":"Messianic prophecies"}], "correctAnswer": "b", "explanation": "Psalm 119 is the longest psalm and an acrostic poem praising God's law and word."},
+      { "id": "q3", "text": "Which Psalm is often called the 'Psalm of Repentance' and is attributed to David after his sin with Bathsheba?", "type": "multiple-choice", "options":[{"id":"a", "text":"Psalm 32"}, {"id":"b", "text":"Psalm 51"}, {"id":"c", "text":"Psalm 130"}], "correctAnswer": "b", "explanation": "Psalm 51 is a heartfelt prayer of confession and repentance by David."},
+      { "id": "q4", "text": "The phrase 'Be still, and know that I am God' is found in which Psalm?", "type": "multiple-choice", "options":[{"id":"a", "text":"Psalm 27"}, {"id":"b", "text":"Psalm 46"}, {"id":"c", "text":"Psalm 100"}], "correctAnswer": "b", "explanation": "This powerful declaration is found in Psalm 46:10."},
+      { "id": "q5", "text": "Psalm 91 is primarily about God's protection and refuge.", "type": "true-false", "correctAnswer": "true", "explanation": "Psalm 91 speaks extensively about dwelling in the shelter of the Most High and God's protection from various dangers."},
+      { "id": "q6", "text": "Which Psalm famously starts with 'Bless the Lord, O my soul, and all that is within me, bless his holy name!'?", "type": "multiple-choice", "options":[{"id":"a", "text":"Psalm 95"}, {"id":"b", "text":"Psalm 103"}, {"id":"c", "text":"Psalm 150"}], "correctAnswer": "b", "explanation": "Psalm 103 is a psalm of praise, recounting God's benefits and merciful character."},
+      { "id": "q7", "text": "Many of the Psalms are attributed to King David.", "type": "true-false", "correctAnswer": "true", "explanation": "While not all Psalms were written by David, he is traditionally credited with authoring a large number of them, as indicated by their superscriptions."}
+    ]
+  }
+]

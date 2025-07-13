@@ -1,0 +1,45 @@
+
+[
+  {
+    "id": "bible_trivia_nt_heroes",
+    "name": "New Testament Heroes",
+    "type": "Bible Trivia",
+    "description": "Test your knowledge about the key figures of the New Testament.",
+    "iconName": "BookOpen"
+  },
+  {
+    "id": "bible_trivia_ot_basics",
+    "name": "Old Testament Basics",
+    "type": "Bible Trivia",
+    "description": "Explore foundational stories and characters from the Old Testament.",
+    "iconName": "BookOpen"
+  },
+  {
+    "id": "devotional_reinforce_challenge1",
+    "name": "Challenge: Trusting God's Plan",
+    "type": "Devotional Reinforce",
+    "description": "Reinforce what you learned from a challenge about trusting God.",
+    "iconName": "Target"
+  },
+  {
+    "id": "personality_spiritual_gifts",
+    "name": "Spiritual Gifts Discovery",
+    "type": "Personality",
+    "description": "Explore your potential spiritual gifts and how you can use them.",
+    "iconName": "Smile"
+  },
+  {
+    "id": "personality_leadership_style",
+    "name": "Leadership Style",
+    "type": "Personality",
+    "description": "Understand your approach to leadership in a Christian context.",
+    "iconName": "User"
+  },
+  {
+    "id": "bible_trivia_psalms",
+    "name": "Psalms & Praise",
+    "type": "Bible Trivia",
+    "description": "Dive into the Psalms and expressions of worship in the Bible.",
+    "iconName": "ListMusic"
+  }
+]

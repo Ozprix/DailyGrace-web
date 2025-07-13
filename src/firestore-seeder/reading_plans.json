@@ -1,0 +1,358 @@
+
+[
+  {
+    "id": "plan-1",
+    "name": "Foundations of Faith",
+    "description": "A basic plan to understand the core principles of Christianity.",
+    "durationDays": 5,
+    "readings": [
+      {
+        "day": 1,
+        "title": "The Importance of Faith",
+        "prompt": "Understand what faith is and why it's essential for a relationship with God.",
+        "verseReference": "Hebrews 11:1, Hebrews 11:6, Romans 10:17",
+        "prayerFocus": "Pray for increased faith."
+      },
+      {
+        "day": 2,
+        "title": "Finding Peace in God",
+        "prompt": "Discover how to experience God's peace in the midst of life's challenges.",
+        "verseReference": "Philippians 4:6-7, John 14:27, Isaiah 26:3",
+        "prayerFocus": "Pray for God's peace to guard your heart and mind."
+      },
+      {
+        "day": 3,
+        "title": "Trusting God's Promises",
+        "prompt": "Learn to rely on God's faithfulness and the promises in His Word.",
+        "verseReference": "Proverbs 3:5-6, Jeremiah 29:11, Romans 8:28",
+        "prayerFocus": "Pray for the ability to trust God's plan for your life."
+      },
+      {
+        "day": 4,
+        "title": "Worship and Sacrifice",
+        "prompt": "Explore what true worship looks like and the sacrifice of praise.",
+        "verseReference": "Psalm 95:6, Romans 12:1, Hebrews 13:15",
+        "prayerFocus": "Pray for a heart of worship and thankfulness."
+      },
+      {
+        "day": 5,
+        "title": "Living a New Life",
+        "prompt": "Think about how salvation transforms our lives and actions.",
+        "verseReference": "2 Corinthians 5:17",
+        "prayerFocus": "Pray for guidance and strength to live a life pleasing to God."
+      },
+      {
+        "day": 6,
+        "title": "Living a Holy Life",
+        "prompt": "Understand the call to holiness and how to pursue it with God's help.",
+        "verseReference": "1 Peter 1:15-16, Hebrews 12:14, 2 Corinthians 7:1",
+        "prayerFocus": "Pray for God's strength to live a life set apart for Him."}
+    ]
+  },
+  {
+    "id": "plan-2",
+    "name": "Journey Through the Gospels",
+    "description": "Follow the life and teachings of Jesus as recorded in the Gospels.",
+    "durationDays": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "The Birth of Jesus",
+        "prompt": "Reflect on the significance of Jesus' humble birth.",
+        "verseReference": "Luke 2:1-7",
+        "prayerFocus": "Pray for humility and gratitude for Jesus' arrival."
+      },
+      {
+        "day": 2,
+        "title": "The Miracles of Jesus",
+        "prompt": "Consider the power and compassion displayed in Jesus' miracles.",
+        "verseReference": "Matthew 14:14-21",
+        "prayerFocus": "Pray for faith to believe in God's power in your life."
+      },
+      {
+        "day": 3,
+        "title": "The Sermon on the Mount",
+        "prompt": "Meditate on the counter-cultural teachings of Jesus.",
+        "verseReference": "Matthew 5:1-12",
+        "prayerFocus": "Pray for strength to live out the Beatitudes."
+      },
+      {
+        "day": 4,
+        "title": "Parables and Teachings",
+        "prompt": "Explore the wisdom and insights found in Jesus' parables.",
+        "verseReference": "Luke 15:11-32",
+        "prayerFocus": "Pray for wisdom to understand and apply Jesus' teachings."
+      },
+      {
+        "day": 5,
+        "title": "The Crucifixion",
+        "prompt": "Reflect on the sacrifice Jesus made on the cross.",
+        "verseReference": "John 19:16-30",
+        "prayerFocus": "Thank Jesus for His atoning sacrifice."
+      },
+      {
+        "day": 6,
+        "title": "The Resurrection",
+        "prompt": "Consider the hope and power of Jesus' resurrection.",
+        "verseReference": "Luke 24:1-12",
+        "prayerFocus": "Pray for the power of the resurrection to be evident in your life."
+      },
+      {
+        "day": 7,
+        "title": "The Great Commission",
+        "prompt": "Think about your role in sharing the good news of Jesus.",
+        "verseReference": "Matthew 28:16-20",
+        "prayerFocus": "Pray for opportunities and boldness to share your faith."
+      }
+    ]
+  },
+  {
+    "id": "plan-3",
+    "name": "Strength for the Soul",
+    "description": "Find encouragement and strength through passages of hope and comfort.",
+    "durationDays": 3,
+    "readings": [
+      {
+        "day": 1,
+        "title": "God is Our Refuge",
+        "prompt": "Find comfort in the truth that God is a safe place in times of trouble.",
+        "verseReference": "Psalm 46:1-3",
+        "prayerFocus": "Pray for peace and trust in God during difficult times."
+      },
+      {
+        "day": 2,
+        "title": "Hope in the Lord",
+        "prompt": "Meditate on the strength that comes from waiting on the Lord.",
+        "verseReference": "Isaiah 40:31",
+        "prayerFocus": "Pray for renewed strength and perseverance."
+      },
+      {
+        "day": 3,
+        "title": "God's Promises",
+        "prompt": "Reflect on the faithfulness of God and His promises.",
+        "verseReference": "Philippians 4:6-7",
+        "prayerFocus": "Thank God for His faithfulness and cast your anxieties on Him."
+      }
+    ]
+  },
+  {
+    "id": "plan-4-forgiveness",
+    "name": "7-Day Forgiveness Focus",
+    "description": "Experience the freedom of forgiveness through reflection and Scripture.",
+    "durationDays": 7,
+    "readings": [
+      {"day": 1, "title": "God’s Forgiveness", "prompt": "Receive God’s mercy today.", "verseReference": "1john19", "prayerFocus": "Thank God for forgiveness."},
+      {"day": 2, "title": "Forgive Others", "prompt": "Release resentment.", "verseReference": "ephesians432", "prayerFocus": "Ask for a forgiving heart."},
+      {"day": 3, "title": "Forgive Yourself", "prompt": "God has forgiven you—have you?", "verseReference": "romans81", "prayerFocus": "Accept God’s grace."},
+      {"day": 4, "title": "The Power of the Cross", "prompt": "Jesus paid it all.", "verseReference": "colossians214", "prayerFocus": "Thank Jesus for His sacrifice."},
+      {"day": 5, "title": "Letting Go", "prompt": "Who are you holding a grudge against?", "verseReference": "matthew614", "prayerFocus": "Pray to let go fully."},
+      {"day": 6, "title": "Restore Relationships", "prompt": "Reach out to reconcile.", "verseReference": "romans1218", "prayerFocus": "Pray for peace and restoration."},
+      {"day": 7, "title": "Live Forgiven", "prompt": "Walk in the freedom of grace.", "verseReference": "psalm10312", "prayerFocus": "Celebrate being free."}
+    ]
+  },
+  {
+    "id": "plan-5-gratitude",
+    "name": "7-Day Gratitude Challenge",
+    "description": "Cultivate a heart of thankfulness by recognizing God’s blessings every day.",
+    "durationDays": 7,
+    "readings": [
+      {"day": 1, "title": "Count Your Blessings", "prompt": "List five blessings from today.", "verseReference": "psalm1032", "prayerFocus": "Thank God for His provision."},
+      {"day": 2, "title": "Thankful for Relationships", "prompt": "Reflect on the people God has placed in your life.", "verseReference": "ecclesiastes49", "prayerFocus": "Pray gratitude for friends and family."},
+      {"day": 3, "title": "Appreciate Nature", "prompt": "Notice God’s creation around you.", "verseReference": "psalm191", "prayerFocus": "Thank God for the beauty of creation."},
+      {"day": 4, "title": "Gratitude in Trials", "prompt": "Recall a challenging time and how God helped you.", "verseReference": "romans828", "prayerFocus": "Thank God for His faithfulness."},
+      {"day": 5, "title": "Express Your Thanks", "prompt": "Write a thank-you note to someone.", "verseReference": "1thessalonians518", "prayerFocus": "Pray for a grateful spirit."},
+      {"day": 6, "title": "Praise with Music", "prompt": "Sing or listen to a song of gratitude.", "verseReference": "psalm1001", "prayerFocus": "Praise God joyfully."},
+      {"day": 7, "title": "Live with a Thankful Heart", "prompt": "Commit to daily gratitude practice.", "verseReference": "colossians317", "prayerFocus": "Pray for an ongoing grateful heart."}
+    ]
+  },
+  {
+    "id": "plan-6-faith-builder",
+    "name": "14-Day Faith Builder Challenge",
+    "description": "Strengthen your trust and walk with God through daily reflections and bold faith actions.",
+    "durationDays": 14,
+    "readings": [
+      {"day": 1, "title": "Faith Over Fear", "prompt": "Reflect on what fears God is calling you to release.", "verseReference": "isaiah4110", "prayerFocus": "Ask God to replace fear with faith."},
+      {"day": 2, "title": "Walking by Faith", "prompt": "Consider areas in life where God is asking you to step out in faith.", "verseReference": "2corinthians57", "prayerFocus": "Pray for courage to walk in faith."},
+      {"day": 3, "title": "God is Faithful", "prompt": "Recall how God has been faithful in your past.", "verseReference": "lamentations32223", "prayerFocus": "Thank God for His unwavering faithfulness."},
+      {"day": 4, "title": "Faith in the Storm", "prompt": "How can you trust God in a current challenge?", "verseReference": "mark439", "prayerFocus": "Pray for peace and trust during trials."},
+      {"day": 5, "title": "The Shield of Faith", "prompt": "How can you use your faith as protection today?", "verseReference": "ephesians616", "prayerFocus": "Pray for strong defense against doubt."},
+      {"day": 6, "title": "Faith That Moves Mountains", "prompt": "What is your ‘mountain’ right now?", "verseReference": "hebrews111", "prayerFocus": "Ask God for unwavering belief."},
+      {"day": 7, "title": "Living by Faith", "prompt": "What does living by faith look like in your daily habits?", "verseReference": "hebrews1038", "prayerFocus": "Pray for daily faith-filled choices."},
+      {"day": 8, "title": "Faith Tested & Refined", "prompt": "How is God refining your faith?", "verseReference": "1peter17", "prayerFocus": "Ask God to grow your perseverance."},
+      {"day": 9, "title": "Faith that Pleases God", "prompt": "How are you actively pleasing God with your faith?", "verseReference": "hebrews116", "prayerFocus": "Pray to live in a way that delights God."},
+      {"day": 10, "title": "Faith Through Action", "prompt": "What action is your faith calling you to take?", "verseReference": "james217", "prayerFocus": "Pray for boldness to act."},
+      {"day": 11, "title": "Fixing Our Eyes on Jesus", "prompt": "Where is your focus today?", "verseReference": "hebrews122", "prayerFocus": "Ask God to center your heart on Jesus."},
+      {"day": 12, "title": "Strong in the Lord", "prompt": "How can God’s strength support your faith today?", "verseReference": "ephesians610", "prayerFocus": "Pray for strength through Christ."},
+      {"day": 13, "title": "Faith in God’s Timing", "prompt": "Where do you need patience in your faith journey?", "verseReference": "ecclesiastes311", "prayerFocus": "Pray to trust God’s perfect timing."},
+      {"day": 14, "title": "Faith for the Future", "prompt": "What dreams or hopes are you trusting God with?", "verseReference": "jeremiah2911", "prayerFocus": "Thank God for a hopeful future."}
+    ]
+  },
+  {
+    "id": "plan-7-leadership",
+    "name": "10-Day Christian Leadership Challenge",
+    "description": "Grow as a servant-leader through Scriptural insights and daily applications.",
+    "durationDays": 10,
+    "readings": [
+      {"day": 1, "title": "Servant Leadership", "prompt": "How can you serve those you lead today?", "verseReference": "mark1045", "prayerFocus": "Pray for a heart of service."},
+      {"day": 2, "title": "Leading with Wisdom", "prompt": "Where do you need wisdom in leadership?", "verseReference": "james15", "prayerFocus": "Ask for God’s guidance in decisions."},
+      {"day": 3, "title": "Humble Leadership", "prompt": "How can humility strengthen your leadership?", "verseReference": "philippians23", "prayerFocus": "Pray for a humble spirit."},
+      {"day": 4, "title": "Integrity Matters", "prompt": "Where is your integrity being tested?", "verseReference": "proverbs112", "prayerFocus": "Ask God for uprightness in all things."},
+      {"day": 5, "title": "Lead by Example", "prompt": "What example are you setting today?", "verseReference": "1timothy412", "prayerFocus": "Pray to lead in word and deed."},
+      {"day": 6, "title": "Strength in Weakness", "prompt": "How is God using your weakness?", "verseReference": "2corinthians129", "prayerFocus": "Pray for God’s power in your weakness."},
+      {"day": 7, "title": "Vision from God", "prompt": "What vision has God given you to lead?", "verseReference": "habakkuk22", "prayerFocus": "Pray for clarity and boldness."},
+      {"day": 8, "title": "Lead with Love", "prompt": "How can love shape your leadership today?", "verseReference": "1corinthians1614", "prayerFocus": "Ask God for a loving heart."},
+      {"day": 9, "title": "Empowering Others", "prompt": "Who can you empower or mentor today?", "verseReference": "2timothy22", "prayerFocus": "Pray to invest in others."},
+      {"day": 10, "title": "Leading for God’s Glory", "prompt": "Are your leadership goals God-centered?", "verseReference": "colossians323", "prayerFocus": "Commit your leadership to God’s glory."}
+    ]
+  },
+  {
+    "id": "book-of-john",
+    "name": "The Book of John",
+    "description": "Read through the entire Gospel of John to understand the life and divinity of Jesus Christ.",
+    "durationDays": 21,
+    "readings": [
+      {"day": 1, "title": "The Word Became Flesh", "prompt": "Read John chapter 1 and reflect on the identity of Jesus as the Word and the Lamb of God.", "verseReference": "John 1", "prayerFocus": "Pray for a deeper understanding of who Jesus is."},
+      {"day": 2, "title": "The Wedding at Cana", "prompt": "Read John chapter 2. Consider Jesus' first miracle and His authority.", "verseReference": "John 2", "prayerFocus": "Pray for faith to see Jesus' power in your own life."},
+      {"day": 3, "title": "Born Again", "prompt": "Read John chapter 3. Meditate on Jesus' conversation with Nicodemus and the meaning of being born again.", "verseReference": "John 3", "prayerFocus": "Thank God for the gift of salvation and new life through His Son."},
+      {"day": 4, "title": "The Woman at the Well", "prompt": "Read John chapter 4. Reflect on how Jesus breaks down social barriers to offer living water.", "verseReference": "John 4", "prayerFocus": "Pray for opportunities to share the hope of Jesus with others."},
+      {"day": 5, "title": "Authority of the Son", "prompt": "Read John chapter 5. Consider the authority Jesus has from the Father.", "verseReference": "John 5", "prayerFocus": "Pray for submission to Jesus' authority in all areas of your life."},
+      {"day": 6, "title": "Bread of Life", "prompt": "Read John chapter 6. Meditate on Jesus' teaching that He is the Bread of Life who provides eternal satisfaction.", "verseReference": "John 6", "prayerFocus": "Pray to find your ultimate satisfaction and sustenance in Jesus alone."},
+      {"day": 7, "title": "Rivers of Living Water", "prompt": "Read John chapter 7. Reflect on Jesus' promise of the Holy Spirit.", "verseReference": "John 7", "prayerFocus": "Ask the Holy Spirit to fill and guide you today."},
+      {"day": 8, "title": "The Light of the World", "prompt": "Read John chapter 8. Consider Jesus' claim to be the Light of the World and what it means to walk in the light.", "verseReference": "John 8", "prayerFocus": "Pray to walk in truth and freedom from the darkness of sin."},
+      {"day": 9, "title": "The Blind Man Sees", "prompt": "Read John chapter 9. Reflect on the contrast between physical and spiritual blindness.", "verseReference": "John 9", "prayerFocus": "Pray for spiritual eyes to see Jesus more clearly."},
+      {"day": 10, "title": "The Good Shepherd", "prompt": "Read John chapter 10. Meditate on the relationship between the Good Shepherd and His sheep.", "verseReference": "John 10", "prayerFocus": "Thank Jesus for His guidance, protection, and sacrificial love."},
+      {"day": 11, "title": "The Resurrection and the Life", "prompt": "Read John chapter 11. Consider the power of Jesus over death in the raising of Lazarus.", "verseReference": "John 11", "prayerFocus": "Pray for a stronger faith in the hope of the resurrection."},
+      {"day": 12, "title": "Anointing at Bethany", "prompt": "Read John chapter 12. Reflect on Mary's act of worship and the Triumphal Entry.", "verseReference": "John 12", "prayerFocus": "Pray for a heart that extravagantly worships Jesus."},
+      {"day": 13, "title": "The Servant's Heart", "prompt": "Read John chapter 13. Consider Jesus' example of servanthood in washing the disciples' feet.", "verseReference": "John 13", "prayerFocus": "Pray for a humble heart to serve others as Jesus did."},
+      {"day": 14, "title": "The Way, the Truth, and the Life", "prompt": "Read John chapter 14. Meditate on Jesus' promises of peace and the Holy Spirit.", "verseReference": "John 14", "prayerFocus": "Pray for peace in your heart, trusting that Jesus is the only way to the Father."},
+      {"day": 15, "title": "Abiding in the Vine", "prompt": "Read John chapter 15. Reflect on the importance of remaining connected to Jesus to bear fruit.", "verseReference": "John 15", "prayerFocus": "Pray to abide in Christ daily and to bear much fruit for His glory."},
+      {"day": 16, "title": "The Work of the Holy Spirit", "prompt": "Read John chapter 16. Consider the role of the Holy Spirit in our lives.", "verseReference": "John 16", "prayerFocus": "Pray to be more sensitive and responsive to the Holy Spirit's guidance."},
+      {"day": 17, "title": "Jesus' High Priestly Prayer", "prompt": "Read John chapter 17. Reflect on what Jesus prays for His followers.", "verseReference": "John 17", "prayerFocus": "Pray for unity among believers, for which Jesus prayed."},
+      {"day": 18, "title": "Betrayal and Arrest", "prompt": "Read John chapter 18. Consider Jesus' sovereignty even in His arrest.", "verseReference": "John 18", "prayerFocus": "Pray for strength and faithfulness in times of trial."},
+      {"day": 19, "title": "The Crucifixion", "prompt": "Read John chapter 19. Meditate on the profound sacrifice Jesus made on the cross.", "verseReference": "John 19", "prayerFocus": "Spend time in prayer, thanking Jesus for His atoning sacrifice for your sins."},
+      {"day": 20, "title": "The Resurrection", "prompt": "Read John chapter 20. Reflect on the empty tomb and Jesus' appearances to His disciples.", "verseReference": "John 20", "prayerFocus": "Rejoice and pray with a heart full of hope because of the resurrection of Jesus."},
+      {"day": 21, "title": "Breakfast by the Sea", "prompt": "Read John chapter 21. Consider Jesus' restoration of Peter and the call to 'feed His sheep.'", "verseReference": "John 21", "prayerFocus": "Pray for God to show you how you can serve Him and care for others."}
+    ]
+  },
+  {
+    "id": "book-of-psalms-1",
+    "name": "The Book of Psalms (Part 1)",
+    "description": "Read through the first 30 Psalms, a collection of praises, prayers, and laments.",
+    "durationDays": 30,
+    "readings": [
+      {"day": 1, "title": "The Two Ways", "prompt": "Read Psalm 1. Reflect on the path of the righteous versus the wicked.", "verseReference": "Psalm 1", "prayerFocus": "Pray for wisdom to delight in God's law and follow His path."},
+      {"day": 2, "title": "The Reign of the LORD's Anointed", "prompt": "Read Psalm 2. Consider God's sovereignty over all nations.", "verseReference": "Psalm 2", "prayerFocus": "Pray for world leaders and for God's will to be done on earth."},
+      {"day": 3, "title": "You Are a Shield for Me", "prompt": "Read Psalm 3. Find comfort in God as your protector in times of trouble.", "verseReference": "Psalm 3", "prayerFocus": "Pray for God's protection over you and your loved ones."},
+      {"day": 4, "title": "Answer Me When I Call", "prompt": "Read Psalm 4. Reflect on finding peace and trust in God at the end of the day.", "verseReference": "Psalm 4", "prayerFocus": "Pray for a peaceful heart and restful sleep, trusting in God's care."},
+      {"day": 5, "title": "Lead Me, O LORD", "prompt": "Read Psalm 5. Consider God's hatred of sin and His love for the righteous.", "verseReference": "Psalm 5", "prayerFocus": "Pray for guidance and a desire to live a righteous life."},
+      {"day": 6, "title": "O LORD, Heal Me", "prompt": "Read Psalm 6. Reflect on turning to God in times of personal suffering and distress.", "verseReference": "Psalm 6", "prayerFocus": "Bring your personal pains and sorrows to God in prayer, asking for His healing and mercy."},
+      {"day": 7, "title": "My Refuge in the LORD", "prompt": "Read Psalm 7. Consider God as a righteous judge who defends the innocent.", "verseReference": "Psalm 7", "prayerFocus": "Pray for justice in situations of unfairness and trust God to be your defender."},
+      {"day": 8, "title": "How Majestic Is Your Name", "prompt": "Read Psalm 8. Marvel at the glory of God in creation and the honor He has given to mankind.", "verseReference": "Psalm 8", "prayerFocus": "Spend time in praise, adoring God for His majestic creation."},
+      {"day": 9, "title": "I Will Give Thanks", "prompt": "Read Psalm 9. Reflect on praising God for His justice and help.", "verseReference": "Psalm 9", "prayerFocus": "Pray with thanksgiving for God's righteous acts in your life and in the world."},
+      {"day": 10, "title": "Why, O LORD, Do You Stand Afar Off?", "prompt": "Read Psalm 10. Cry out to God about the injustice and arrogance of the wicked.", "verseReference": "Psalm 10", "prayerFocus": "Pray for the oppressed and for God to act against injustice."},
+      {"day": 11, "title": "In the LORD I Take Refuge", "prompt": "Read Psalm 11. Trust in God's sovereignty even when it seems evil is prevailing.", "verseReference": "Psalm 11", "prayerFocus": "Pray for unwavering faith in God's ultimate control and justice."},
+      {"day": 12, "title": "Help, LORD", "prompt": "Read Psalm 12. A prayer for help in a faithless generation.", "verseReference": "Psalm 12", "prayerFocus": "Pray for the preservation of truth and faithfulness in your community and church."},
+      {"day": 13, "title": "How Long, O LORD?", "prompt": "Read Psalm 13. A lament that turns to trust in God's steadfast love.", "verseReference": "Psalm 13", "prayerFocus": "Be honest with God about your struggles and feelings of abandonment, but conclude with trust."},
+      {"day": 14, "title": "The Fool Says, 'There Is No God'", "prompt": "Read Psalm 14. Reflect on the universal nature of sin and the hope of salvation.", "verseReference": "Psalm 14", "prayerFocus": "Pray for a greater awareness of your own need for God's grace and salvation."},
+      {"day": 15, "title": "Who Shall Dwell on Your Holy Hill?", "prompt": "Read Psalm 15. Consider the character of a person who lives in fellowship with God.", "verseReference": "Psalm 15", "prayerFocus": "Pray for God to cultivate a character of integrity and righteousness in you."},
+      {"day": 16, "title": "You Are My Lord", "prompt": "Read Psalm 16. Reflect on finding ultimate satisfaction and security in God alone.", "verseReference": "Psalm 16", "prayerFocus": "Declare your allegiance to God and find your joy in His presence."},
+      {"day": 17, "title": "Hide Me in the Shadow of Your Wings", "prompt": "Read Psalm 17. A prayer for protection from those who do evil.", "verseReference": "Psalm 17", "prayerFocus": "Pray for God's protection and for your heart to remain fixed on Him."},
+      {"day": 18, "title": "I Love You, O LORD, My Strength", "prompt": "Read Psalm 18. A powerful testimony of God's deliverance.", "verseReference": "Psalm 18", "prayerFocus": "Recount God's faithfulness and deliverances in your own life with thanksgiving."},
+      {"day": 19, "title": "The Heavens Declare the Glory of God", "prompt": "Read Psalm 19. Marvel at how God reveals Himself through creation and His Word.", "verseReference": "Psalm 19", "prayerFocus": "Pray that the words of your mouth and the meditation of your heart would be pleasing to God."},
+      {"day": 20, "title": "May the LORD Answer You", "prompt": "Read Psalm 20. A prayer for the king's success in battle, trusting in God, not in chariots.", "verseReference": "Psalm 20", "prayerFocus": "Pray for your leaders, and place your trust in God's power, not human strength."},
+      {"day": 21, "title": "In Your Strength the King Rejoices", "prompt": "Read Psalm 21. A song of thanksgiving for victory given by God.", "verseReference": "Psalm 21", "prayerFocus": "Give thanks to God for the victories and blessings He has given you."},
+      {"day": 22, "title": "My God, My God, Why Have You Forsaken Me?", "prompt": "Read Psalm 22. A messianic psalm of suffering and ultimate vindication, quoted by Jesus on the cross.", "verseReference": "Psalm 22", "prayerFocus": "Reflect on the suffering of Christ on your behalf and the victory that followed."},
+      {"day": 23, "title": "The LORD Is My Shepherd", "prompt": "Read Psalm 23. Find deep comfort and peace in God's loving care and guidance.", "verseReference": "Psalm 23", "prayerFocus": "Pray with confidence, knowing the Lord is your shepherd who provides for all your needs."},
+      {"day": 24, "title": "Who Shall Ascend the Hill of the LORD?", "prompt": "Read Psalm 24. A psalm about the King of Glory entering His temple.", "verseReference": "Psalm 24", "prayerFocus": "Pray for a clean heart and pure hands to worship the King of Glory."},
+      {"day": 25, "title": "To You, O LORD, I Lift Up My Soul", "prompt": "Read Psalm 25. An acrostic prayer for guidance, deliverance, and forgiveness.", "verseReference": "Psalm 25", "prayerFocus": "Humbly ask God for His guidance and mercy in your life."},
+      {"day": 26, "title": "Vindicate Me, O LORD", "prompt": "Read Psalm 26. A prayer of integrity and trust.", "verseReference": "Psalm 26", "prayerFocus": "Pray for a heart of integrity and a desire to walk in God's truth."},
+      {"day": 27, "title": "The LORD Is My Light and My Salvation", "prompt": "Read Psalm 27. A declaration of confident faith in the face of fear.", "verseReference": "Psalm 27", "prayerFocus": "Pray for courage and to trust in God's protection and deliverance."},
+      {"day": 28, "title": "The Voice of the LORD", "prompt": "Read Psalm 28. A cry for help that turns into praise for answered prayer.", "verseReference": "Psalm 28", "prayerFocus": "Bring your requests to God and praise Him in faith for hearing you."},
+      {"day": 29, "title": "Ascribe to the LORD Glory", "prompt": "Read Psalm 29. A psalm celebrating the powerful and majestic voice of God in the storm.", "verseReference": "Psalm 29", "prayerFocus": "Worship God for His power and majesty revealed in nature."},
+      {"day": 30, "title": "I Will Extol You, O LORD", "prompt": "Read Psalm 30. A song of thanksgiving for deliverance from death and sorrow.", "verseReference": "Psalm 30", "prayerFocus": "Thank God for turning your mourning into dancing and for His faithfulness."}
+    ]
+  },
+  {
+    "id": "genesis-chapter-1",
+    "name": "The Story of Creation",
+    "description": "A detailed, verse-by-verse reading of Genesis chapter 1, reflecting on the power and majesty of God's creative work.",
+    "durationDays": 7,
+    "readings": [
+      {
+        "day": 1,
+        "title": "The Beginning (Gen 1:1-5)",
+        "prompt": "Read Genesis 1:1-5. Reflect on God creating light out of darkness and bringing order from chaos.",
+        "verseReference": "Genesis 1:1-5",
+        "prayerFocus": "Praise God for His power to bring light into the darkest areas of our lives."
+      },
+      {
+        "day": 2,
+        "title": "The Sky Above (Gen 1:6-8)",
+        "prompt": "Read Genesis 1:6-8. Consider the act of separation and the creation of the expanse we call the sky.",
+        "verseReference": "Genesis 1:6-8",
+        "prayerFocus": "Thank God for the beauty of the sky and the air we breathe."
+      },
+      {
+        "day": 3,
+        "title": "Land, Sea, and Vegetation (Gen 1:9-13)",
+        "prompt": "Read Genesis 1:9-13. Reflect on God's design in separating land and water and causing plants to grow.",
+        "verseReference": "Genesis 1:9-13",
+        "prayerFocus": "Pray with gratitude for the food we eat and the beauty of the earth."
+      },
+      {
+        "day": 4,
+        "title": "Sun, Moon, and Stars (Gen 1:14-19)",
+        "prompt": "Read Genesis 1:14-19. Consider the purpose of the celestial bodies to mark time and seasons.",
+        "verseReference": "Genesis 1:14-19",
+        "prayerFocus": "Worship God for the order and rhythm He has built into the universe."
+      },
+      {
+        "day": 5,
+        "title": "Creatures of the Sea and Sky (Gen 1:20-23)",
+        "prompt": "Read Genesis 1:20-23. Marvel at the diversity and life that fills the waters and the air.",
+        "verseReference": "Genesis 1:20-23",
+        "prayerFocus": "Pray for the care of God's creation and all living creatures."
+      },
+      {
+        "day": 6,
+        "title": "Land Animals and Humankind (Gen 1:24-31)",
+        "prompt": "Read Genesis 1:24-31. Reflect on the pinnacle of God's creation: humanity, made in His own image.",
+        "verseReference": "Genesis 1:24-31",
+        "prayerFocus": "Thank God for creating you in His image and for the purpose He has for your life."
+      },
+      {
+        "day": 7,
+        "title": "Sabbath Rest (Gen 2:1-3)",
+        "prompt": "Read Genesis 2:1-3. Consider the concept of Sabbath and the importance of rest.",
+        "verseReference": "Genesis 2:1-3",
+        "prayerFocus": "Pray for the ability to rest well and to honor God with your time of rest."
+      }
+    ]
+  },
+  {
+    "id": "wise-parenting",
+    "name": "Wise Parenting",
+    "description": "A 5-day plan to find wisdom and encouragement in the journey of parenting.",
+    "durationDays": 5,
+    "readings": [
+      {"day": 1, "title": "Patience in Parenting", "prompt": "Reflect on the importance of patience and how a calm spirit can transform your home.", "verseReference": "proverbs1429", "prayerFocus": "Pray for a heart of patience and understanding towards your children."},
+      {"day": 2, "title": "Training a Child", "prompt": "Consider the long-term vision for your children's character and faith. What seeds are you planting today?", "verseReference": "proverbs226", "prayerFocus": "Pray for wisdom to guide your children in a way that honors God."},
+      {"day": 3, "title": "The Gift of Children", "prompt": "Meditate on the blessing that children are from the Lord. How can you cherish this gift today?", "verseReference": "psalm1273", "prayerFocus": "Thank God for the unique gift of each of your children."},
+      {"day": 4, "title": "Unconditional Love", "prompt": "Think about the characteristics of God's love and how you can model that love to your family.", "verseReference": "1corinthians1347", "prayerFocus": "Ask God to fill you with a love that is patient, kind, and unconditional."},
+      {"day": 5, "title": "Leading by Example", "prompt": "Your actions and words are powerful tools. How can you live out your faith diligently before your children?", "verseReference": "deuteronomy667", "prayerFocus": "Pray for strength to be a consistent and godly example in your home."}
+    ]
+  },
+  {
+    "id": "guiding-young-hearts",
+    "name": "Guiding Young Hearts",
+    "description": "A 5-day plan focused on the principles of raising children in faith and love.",
+    "durationDays": 5,
+    "readings": [
+      {"day": 1, "title": "Nurturing with Love", "prompt": "Consider how to bring up your children with discipline and instruction that is encouraging, not exasperating.", "verseReference": "ephesians64", "prayerFocus": "Pray for a nurturing spirit that builds up your children's hearts."},
+      {"day": 2, "title": "The Value of Discipline", "prompt": "Reflect on how loving discipline leads to a harvest of righteousness and peace, even if it's difficult.", "verseReference": "hebrews1211", "prayerFocus": "Ask for wisdom to apply discipline that is both effective and loving."},
+      {"day": 3, "title": "Teaching God's Word", "prompt": "Think about the importance of making the Scriptures known to your children from an early age.", "verseReference": "2timothy315", "prayerFocus": "Pray for creative and consistent ways to teach your children about God's love."},
+      {"day": 4, "title": "A Legacy of Faith", "prompt": "Consider the faith passed down through generations. What legacy of faith are you building for your family?", "verseReference": "2timothy15", "prayerFocus": "Pray for a sincere faith that will inspire your children and future generations."},
+      {"day": 5, "title": "Blessing Your Children", "prompt": "Reflect on the power of speaking words of blessing and encouragement over your children.", "verseReference": "numbers62426", "prayerFocus": "Speak a blessing over each of your children by name in your prayer time today."}
+    ]
+  }
+]

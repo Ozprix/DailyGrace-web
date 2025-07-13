@@ -1,0 +1,53 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Vercel
+.vercel
+
+# Local Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Sensitive Keys
+# IMPORTANT: Never commit your service account key!
+src/firestore-seeder/serviceAccountKey.json
+functions/src/serviceAccountKey.json
+
+# Firebase
+# Emulator data should not be committed
+firebase-emulator-data/
+database-debug.log
+firestore-debug.log
+pubsub-debug.log
+storage-debug.log
+*.log
+
+# Misc
+.DS_Store
+*.pem
+
+# Editor directories and files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

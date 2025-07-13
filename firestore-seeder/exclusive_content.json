@@ -1,0 +1,193 @@
+
+[
+  {
+    "id": "series_3day_gratitude",
+    "name": "3-Day Gratitude Boost",
+    "description": "A short series to cultivate a heart of thankfulness through daily reflections and prayers.",
+    "cost": 150,
+    "type": "devotional_series",
+    "iconName": "Gift",
+    "days": [
+      {
+        "dayNumber": 1,
+        "title": "The Gift of Today",
+        "reflection": "Reflect on the simple blessing of waking up to a new day. Consider the opportunities it holds, the air you breathe, and the life within you. Each moment is a gift, an occasion for gratitude.",
+        "prayer": "Lord, thank you for this new day. Help me to see the good in it and to use it wisely. May I be a source of gratitude and joy to others."
+      },
+      {
+        "dayNumber": 2,
+        "title": "Thankfulness in Trials",
+        "reflection": "Even in difficult times, there are things to be thankful for. Perhaps it's the strength you've discovered, the support of loved ones, or the lessons learned. Finding gratitude in adversity can bring peace.",
+        "prayer": "God, even when things are hard, help me to find reasons to be thankful. Grant me perspective and a heart that seeks out your goodness in all circumstances."
+      },
+      {
+        "dayNumber": 3,
+        "title": "Expressing Gratitude",
+        "reflection": "Gratitude grows when it's shared. Think about who you can thank today. A kind word, a note, or a prayer for someone else can magnify your own thankfulness and bless others.",
+        "prayer": "Father, fill me with a spirit of active gratitude. Show me how I can express my thanks to you and to those around me, spreading your love through a thankful heart."
+      }
+    ]
+  },
+  {
+    "id": "series_peace_within",
+    "name": "5-Day Journey to Inner Peace",
+    "description": "Discover pathways to finding and maintaining peace in your heart and mind through these daily devotionals.",
+    "cost": 250,
+    "type": "devotional_series",
+    "iconName": "BookOpen",
+    "days": [
+      {
+        "dayNumber": 1,
+        "title": "The Source of True Peace",
+        "reflection": "Explore the idea that true, lasting peace comes not from external circumstances, but from a deeper spiritual connection. What does 'peace that surpasses all understanding' mean to you?",
+        "prayer": "Lord, help me to seek your peace today, the kind that anchors my soul regardless of the storms around me. Be my calm and my stillness."
+      },
+      {
+        "dayNumber": 2,
+        "title": "Letting Go of Anxiety",
+        "reflection": "Anxiety is often a thief of peace. Identify one worry you can consciously release to God today. Practice entrusting your concerns to a higher power.",
+        "prayer": "Father, I give you my anxieties and fears. Replace them with your trust and peace. Help me to rest in your care and to not be overwhelmed by my worries."
+      },
+      {
+        "dayNumber": 3,
+        "title": "Cultivating a Peaceful Mind",
+        "reflection": "Our thoughts significantly impact our inner peace. Focus on Philippians 4:8 today: 'whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable—if anything is excellent or praiseworthy—think about such things.' How can you apply this?",
+        "prayer": "God, guide my thoughts towards what is good and uplifting. Help me to cultivate a mindset that fosters peace and rejects negativity. Renew my mind with your truth."
+      },
+      {
+        "dayNumber": 4,
+        "title": "Peace in Relationships",
+        "reflection": "Conflict with others can deeply disturb our peace. Is there a relationship where you can extend forgiveness or seek reconciliation? How can you be a peacemaker today?",
+        "prayer": "Lord, grant me the wisdom and courage to pursue peace in my relationships. Help me to forgive as I have been forgiven, and to be an instrument of your reconciliation."
+      },
+      {
+        "dayNumber": 5,
+        "title": "Living a Peaceful Presence",
+        "reflection": "Consider how your own state of peace (or lack thereof) affects those around you. How can you intentionally carry and share an aura of peace in your interactions today?",
+        "prayer": "Holy Spirit, fill me with your peace so that I may be a peaceful presence to others. May my words and actions bring calm and reflect your love."
+      }
+    ]
+  },
+  {
+    "id": "series_7day_patience",
+    "name": "7-Day Path to Patience",
+    "description": "Cultivate the virtue of patience through daily reflections, scriptures, and prayers focused on understanding and developing a more patient heart.",
+    "cost": 300,
+    "type": "devotional_series",
+    "iconName": "Hourglass",
+    "days": [
+      {
+        "dayNumber": 1,
+        "title": "Understanding Patience",
+        "reflection": "Patience is not just the ability to wait, but how we act while we're waiting. It's a virtue that reflects God's own long-suffering towards us. Today, consider what patience truly means to you and where you find it most challenging.",
+        "prayer": "Lord, grant me a deeper understanding of patience. Help me see it not as a burden, but as a path to peace and a reflection of Your character. Amen."
+      },
+      {
+        "dayNumber": 2,
+        "title": "Patience in Waiting",
+        "reflection": "Waiting seasons are inevitable. Whether waiting for an answer to prayer, a change in circumstances, or personal growth, these times test our trust. Embrace the wait as an opportunity to draw closer to God and learn reliance on His timing.",
+        "prayer": "Father, in my seasons of waiting, teach me to be still and know that You are God. Help me to trust Your perfect timing and find strength in You while I wait. Amen."
+      },
+      {
+        "dayNumber": 3,
+        "title": "Patience with Others",
+        "reflection": "Extending patience to others is a tangible way to show God's love. We all have imperfections. Today, focus on offering grace and understanding to those around you, remembering the patience God extends to you daily.",
+        "prayer": "God of compassion, fill me with patience for others. Help me to be slow to anger, quick to forgive, and to reflect Your loving kindness in all my interactions. Amen."
+      },
+      {
+        "dayNumber": 4,
+        "title": "Patience in Trials",
+        "reflection": "Trials can stretch our patience to its limits. Yet, it is through these challenges that our faith is refined and our endurance grows. Lean on God's strength to persevere with a patient heart, knowing He works all things for good.",
+        "prayer": "Lord, when trials come, grant me the endurance that patience brings. Help me to trust Your purpose in the midst of hardship and to find my hope and strength in You alone. Amen."
+      },
+      {
+        "dayNumber": 5,
+        "title": "The Fruit of Patience",
+        "reflection": "Patience is listed as a fruit of the Spirit (Galatians 5:22-23). This means it's a quality that grows in us as we abide in Christ. Nurture this fruit by seeking the Spirit's guidance and allowing Him to work in your heart.",
+        "prayer": "Holy Spirit, cultivate the fruit of patience within me. Transform my reactions, calm my spirit, and help me to grow in this virtue daily. Amen."
+      },
+      {
+        "dayNumber": 6,
+        "title": "Growing in Patience",
+        "reflection": "Patience is a muscle that strengthens with use. Each small act of choosing patience over frustration is a step forward. Identify one area today where you can consciously practice patience and observe how it changes your perspective.",
+        "prayer": "God, show me opportunities to practice patience today. Give me the wisdom to choose a patient response and the grace to grow in this area. Amen."
+      },
+      {
+        "dayNumber": 7,
+        "title": "Living a Patient Life",
+        "reflection": "A patient life is a more peaceful and impactful life. It allows us to better reflect God's love and to navigate life's ups and downs with grace. Commit today to making patience an ongoing pursuit, a way of living that honors God.",
+        "prayer": "Heavenly Father, thank You for the gift of patience. Help me to live a life marked by this virtue, reflecting Your peace and steadfastness to the world around me. Amen."
+      }
+    ]
+  },
+  {
+    "id": "theme_ocean_calm",
+    "name": "Ocean Calm Theme",
+    "description": "A soothing theme inspired by the tranquility of the ocean waves and clear skies.",
+    "cost": 200,
+    "type": "theme",
+    "iconName": "Palette",
+    "themeClassName": "theme-ocean-calm",
+    "previewColors": {
+      "background": "hsl(190 60% 95%)",
+      "primary": "hsl(180 70% 55%)",
+      "accent": "hsl(210 80% 60%)"
+    }
+  },
+  {
+    "id": "theme_sunset_glow",
+    "name": "Sunset Glow Theme",
+    "description": "Warm and inviting, like the colors of a beautiful sunset.",
+    "cost": 200,
+    "type": "theme",
+    "iconName": "Palette",
+    "themeClassName": "theme-sunset-glow",
+    "previewColors": {
+      "background": "hsl(25 70% 95%)",
+      "primary": "hsl(15 80% 60%)",
+      "accent": "hsl(45 90% 65%)"
+    }
+  },
+  {
+    "id": "theme_forest_serenity",
+    "name": "Forest Serenity Theme",
+    "description": "A calming theme inspired by the deep greens and earthy tones of a peaceful forest.",
+    "cost": 220,
+    "type": "theme",
+    "iconName": "Trees",
+    "themeClassName": "theme-forest-serenity",
+    "previewColors": {
+      "background": "hsl(120 20% 96%)",
+      "primary": "hsl(130 40% 45%)",
+      "accent": "hsl(35 50% 60%)"
+    }
+  },
+  {
+    "id": "gift_light_candle",
+    "name": "Light a Virtual Candle",
+    "description": "Dedicate a virtual candle in our app's quiet corner, a beacon for your prayer, hope, or memory. Your contribution helps maintain this space of reflection for everyone.",
+    "cost": 50,
+    "type": "symbolic_gift",
+    "iconName": "Flame",
+    "confirmationMessage": "Your virtual candle is now glowing, joining others in a quiet prayer space. May it bring comfort and peace."
+  },
+  {
+    "id": "gift_prayer_request",
+    "name": "Submit a Prayer Focus",
+    "description": "Add your prayer intention to our community's virtual prayer board. While symbolic, it represents a collective lifting of spirits and shared hopes. Your contribution supports this community feature.",
+    "cost": 25,
+    "type": "symbolic_gift",
+    "iconName": "HandHelping",
+    "confirmationMessage": "Your prayer focus has been acknowledged and added to our community's intentions. May you feel the support of our shared spirit."
+  },
+  {
+    "id": "gift_share_verse",
+    "name": "Share a Verse of Encouragement",
+    "description": "Contribute a verse to our 'Well of Encouragement.' Though symbolic, your selection enriches our shared pool of uplifting scriptures, supporting the app's mission to spread hope.",
+    "cost": 75,
+    "type": "symbolic_gift",
+    "iconName": "Send",
+    "confirmationMessage": "Your verse has been added to the 'Well of Encouragement,' sharing its light with our community. Thank you for your contribution!"
+  }
+]
+

@@ -1,0 +1,412 @@
+[
+    {
+      "id": "20dayprayer",
+      "name": "20-Day Prayer Journey",
+      "description": "Deepen your connection with God through 20 days of focused prayer and reflection.",
+      "durationDays": 20,
+      "days": [
+        {"day": 1, "title": "God’s Love", "prompt": "Reflect on the depth of God's love for you.", "verseReference": "john316", "prayerFocus": "Thank God for His unconditional love."},
+        {"day": 2, "title": "Strength in Christ", "prompt": "Consider where you need strength today.", "verseReference": "philippians413", "prayerFocus": "Ask God for strength in your weakness."},
+        {"day": 3, "title": "Trusting God's Plan", "prompt": "Think about areas you need to trust God more.", "verseReference": "proverbs356", "prayerFocus": "Pray for a heart of trust."},
+        {"day": 4, "title": "Hope for the Future", "prompt": "Meditate on God's plans for your life.", "verseReference": "jeremiah2911", "prayerFocus": "Pray for hope and clarity."},
+        {"day": 5, "title": "Purpose in Trials", "prompt": "See how God is working for your good.", "verseReference": "romans828", "prayerFocus": "Thank God for His purpose in your pain."},
+        {"day": 6, "title": "Shepherd of Your Soul", "prompt": "Visualize God as your shepherd today.", "verseReference": "psalm231", "prayerFocus": "Rest in God’s provision and care."},
+        {"day": 7, "title": "Renewed Strength", "prompt": "Where are you weary? Invite renewal.", "verseReference": "isaiah4031", "prayerFocus": "Pray for renewed energy and focus."},
+        {"day": 8, "title": "Come and Rest", "prompt": "Bring your burdens to Jesus.", "verseReference": "matthew1128", "prayerFocus": "Pray for peace and relief from stress."},
+        {"day": 9, "title": "Abundant Life", "prompt": "Reflect on the life Jesus offers.", "verseReference": "john1010", "prayerFocus": "Thank God for the abundance in your life."},
+        {"day": 10, "title": "Gift of Eternal Life", "prompt": "Think about God’s grace in your salvation.", "verseReference": "romans623", "prayerFocus": "Praise God for eternal life in Christ."},
+        {"day": 11, "title": "Saved by Grace", "prompt": "Meditate on salvation as a gift.", "verseReference": "ephesians289", "prayerFocus": "Thank God for unearned grace."},
+        {"day": 12, "title": "Fruit of the Spirit", "prompt": "Ask which fruit you need more of today.", "verseReference": "galatians522", "prayerFocus": "Pray for spiritual growth."},
+        {"day": 13, "title": "Faith Defined", "prompt": "Reflect on your faith walk.", "verseReference": "hebrews111", "prayerFocus": "Ask God to deepen your faith."},
+        {"day": 14, "title": "The Greatest is Love", "prompt": "Contemplate how love shapes your faith.", "verseReference": "1corinthians1313", "prayerFocus": "Ask God to grow your love."},
+        {"day": 15, "title": "New Creation", "prompt": "What has God renewed in you?", "verseReference": "2corinthians517", "prayerFocus": "Celebrate your new identity in Christ."},
+        {"day": 16, "title": "Joy in Trials", "prompt": "Reframe your trials as growth.", "verseReference": "james12", "prayerFocus": "Pray for joy and endurance."},
+        {"day": 17, "title": "Casting Your Cares", "prompt": "What burdens do you need to release?", "verseReference": "1peter57", "prayerFocus": "Give your anxieties to God."},
+        {"day": 18, "title": "Great Commission", "prompt": "How can you live on mission today?", "verseReference": "matthew2819", "prayerFocus": "Pray for boldness and impact."},
+        {"day": 19, "title": "Working for the Lord", "prompt": "Reorient your tasks to serve God.", "verseReference": "colossians323", "prayerFocus": "Commit your work to the Lord."},
+        {"day": 20, "title": "Be Still", "prompt": "Quiet your soul before God.", "verseReference": "psalm4610", "prayerFocus": "Listen for God's voice."}
+      ]
+    }, 
+    {
+      "id": "30daylove",
+      "name": "30-Day Love & Kindness Challenge",
+      "description": "Cultivate love and kindness in your daily life over 30 days.",
+      "durationDays": 30,
+      "days": [
+        {"day": 1, "title": "Act of Kindness", "prompt": "Show kindness to someone anonymously.", "verseReference": "proverbs35", "prayerFocus": "Ask God for a kind heart."},
+        {"day": 2, "title": "Encourage a Friend", "prompt": "Send a message of encouragement.", "verseReference": "hebrews111", "prayerFocus": "Pray for words that uplift."},
+        {"day": 3, "title": "Love Your Neighbor", "prompt": "Do something helpful for a neighbor.", "verseReference": "1corinthians1313", "prayerFocus": "Ask God for compassion."},
+        {"day": 4, "title": "Be a Listener", "prompt": "Offer someone your full attention.", "verseReference": "james12", "prayerFocus": "Pray for patience and understanding."},
+        {"day": 5, "title": "Speak Life", "prompt": "Speak words of life to others.", "verseReference": "galatians52223", "prayerFocus": "Pray for a gentle spirit."},
+        {"day": 6, "title": "Serve with Joy", "prompt": "Help someone joyfully today.", "verseReference": "colossians323", "prayerFocus": "Ask God to use your work."},
+        {"day": 7, "title": "Forgive Freely", "prompt": "Let go of an old hurt.", "verseReference": "2corinthians517", "prayerFocus": "Pray for a forgiving heart."},
+        {"day": 8, "title": "Support the Needy", "prompt": "Give to someone in need.", "verseReference": "john316", "prayerFocus": "Thank God for His provision."},
+        {"day": 9, "title": "Compliment Someone", "prompt": "Be sincere and affirming.", "verseReference": "philippians413", "prayerFocus": "Pray to build others up."},
+        {"day": 10, "title": "Random Act of Love", "prompt": "Surprise someone with kindness.", "verseReference": "romans828", "prayerFocus": "Pray for God-led moments."},
+        {"day": 11, "title": "Practice Patience", "prompt": "Show patience with someone today.", "verseReference": "galatians522", "prayerFocus": "Ask for the fruit of patience."},
+        {"day": 12, "title": "Kind Words Only", "prompt": "Speak kindly all day long.", "verseReference": "ephesians429", "prayerFocus": "Pray for a gracious tongue."},
+        {"day": 13, "title": "Love in Action", "prompt": "Show love through a thoughtful deed.", "verseReference": "1john318", "prayerFocus": "Ask God to guide your actions."},
+        {"day": 14, "title": "Honor Others", "prompt": "Put someone else’s needs before yours.", "verseReference": "romans1210", "prayerFocus": "Pray to be selfless."},
+        {"day": 15, "title": "Encourage the Discouraged", "prompt": "Reach out to someone who is down.", "verseReference": "1thessalonians511", "prayerFocus": "Pray for words of comfort."},
+        {"day": 16, "title": "Give Generously", "prompt": "Give more than you planned.", "verseReference": "2corinthians97", "prayerFocus": "Pray to give cheerfully."},
+        {"day": 17, "title": "Listen First", "prompt": "Practice listening before speaking.", "verseReference": "james119", "prayerFocus": "Pray to be slow to speak."},
+        {"day": 18, "title": "Support a Stranger", "prompt": "Help someone you don’t know.", "verseReference": "hebrews132", "prayerFocus": "Pray for open opportunities."},
+        {"day": 19, "title": "Reflect God’s Love", "prompt": "Be a reflection of Jesus today.", "verseReference": "matthew516", "prayerFocus": "Ask to shine God’s light."},
+        {"day": 20, "title": "Comfort the Hurting", "prompt": "Reach out to someone hurting.", "verseReference": "2corinthians134", "prayerFocus": "Pray for healing words."},
+        {"day": 21, "title": "Joyful Presence", "prompt": "Bring joy to someone today.", "verseReference": "philippians44", "prayerFocus": "Pray for a joyful heart."},
+        {"day": 22, "title": "Kindness at Home", "prompt": "Be extra kind to those you live with.", "verseReference": "ephesians432", "prayerFocus": "Pray for harmony at home."},
+        {"day": 23, "title": "Bless Your Enemies", "prompt": "Be kind to someone hard to love.", "verseReference": "matthew544", "prayerFocus": "Pray for a loving attitude."},
+        {"day": 24, "title": "Express Gratitude", "prompt": "Tell someone why you’re thankful for them.", "verseReference": "1thessalonians518", "prayerFocus": "Thank God for others."},
+        {"day": 25, "title": "Act Justly", "prompt": "Stand up for someone today.", "verseReference": "micah68", "prayerFocus": "Pray for a just heart."},
+        {"day": 26, "title": "Love the Lonely", "prompt": "Spend time with someone who feels alone.", "verseReference": "psalm3418", "prayerFocus": "Pray for God’s comfort."},
+        {"day": 27, "title": "Lift the Weary", "prompt": "Help carry someone’s burden.", "verseReference": "galatians62", "prayerFocus": "Pray to be a helper."},
+        {"day": 28, "title": "Share God’s Word", "prompt": "Give someone a Scripture.", "verseReference": "isaiah5511", "prayerFocus": "Pray for seed to grow."},
+        {"day": 29, "title": "Faithful in Small Things", "prompt": "Be faithful in simple acts.", "verseReference": "luke1610", "prayerFocus": "Pray to honor God daily."},
+        {"day": 30, "title": "Love Like Jesus", "prompt": "Let Christ’s love guide you today.", "verseReference": "john1334", "prayerFocus": "Pray to love sacrificially."}
+      ]
+    }, 
+    {
+      "id": "10daypeace",
+      "name": "10-Day Peace Pursuit",
+      "description": "Discover God's peace in everyday life through Scripture and prayer.",
+      "durationDays": 10,
+      "days": [
+        {"day": 1, "title": "Source of Peace", "prompt": "Reflect on God as the source of peace.", "verseReference": "john1427", "prayerFocus": "Pray to receive God's peace."},
+        {"day": 2, "title": "Peace in Anxiety", "prompt": "What’s making you anxious today?", "verseReference": "philippians46", "prayerFocus": "Give your worries to God."},
+        {"day": 3, "title": "Peace in the Storm", "prompt": "How has God calmed your storms?", "verseReference": "mark439", "prayerFocus": "Trust Him to calm your heart."},
+        {"day": 4, "title": "Guarded by Peace", "prompt": "Let peace guard your thoughts.", "verseReference": "philippians47", "prayerFocus": "Pray for a peaceful mind."},
+        {"day": 5, "title": "Living Peaceably", "prompt": "Seek peace in relationships.", "verseReference": "romans1218", "prayerFocus": "Pray for reconciliation."},
+        {"day": 6, "title": "Peace and Righteousness", "prompt": "Pursue righteousness and peace.", "verseReference": "hebrews1214", "prayerFocus": "Ask God to align your heart."},
+        {"day": 7, "title": "Peace from Trust", "prompt": "Trust brings peace—where do you need to trust?", "verseReference": "isaiah263", "prayerFocus": "Pray for a trusting heart."},
+        {"day": 8, "title": "Peacemaker Role", "prompt": "Be a peacemaker today.", "verseReference": "matthew59", "prayerFocus": "Pray to bring peace to others."},
+        {"day": 9, "title": "Peace Through the Spirit", "prompt": "Peace is fruit of the Spirit.", "verseReference": "galatians52223", "prayerFocus": "Invite the Spirit’s peace in you."},
+        {"day": 10, "title": "Peace Be Still", "prompt": "Rest in God’s quiet presence.", "verseReference": "psalm4610", "prayerFocus": "Be still and know God."}
+      ]
+    }, 
+    {
+      "id": "5dayidentity",
+      "name": "5-Day Identity in Christ",
+      "description": "Discover who you truly are in Christ.",
+      "durationDays": 5,
+      "days": [
+        {"day": 1, "title": "A Child of God", "prompt": "Reflect on being God’s child.", "verseReference": "john112", "prayerFocus": "Thank God for adopting you."},
+        {"day": 2, "title": "New Creation", "prompt": "Consider your new life in Christ.", "verseReference": "2corinthians517", "prayerFocus": "Celebrate transformation."},
+        {"day": 3, "title": "God’s Workmanship", "prompt": "You are created for purpose.", "verseReference": "ephesians210", "prayerFocus": "Ask God to use you today."},
+        {"day": 4, "title": "Chosen and Loved", "prompt": "You are chosen and dearly loved.", "verseReference": "colossians312", "prayerFocus": "Rest in your worth."},
+        {"day": 5, "title": "Complete in Christ", "prompt": "In Christ, you lack nothing.", "verseReference": "colossians210", "prayerFocus": "Thank God for completeness."}
+      ]
+    }, 
+    {
+        "id": "7dayforgiveness",
+        "name": "7-Day Forgiveness Focus",
+        "description": "Experience the freedom of forgiveness through reflection and Scripture.",
+        "durationDays": 7,
+        "days": [
+          {"day": 1, "title": "God’s Forgiveness", "prompt": "Receive God’s mercy today.", "verseReference": "1john19", "prayerFocus": "Thank God for forgiveness."},
+          {"day": 2, "title": "Forgive Others", "prompt": "Release resentment.", "verseReference": "ephesians432", "prayerFocus": "Ask for a forgiving heart."},
+          {"day": 3, "title": "Forgive Yourself", "prompt": "God has forgiven you—have you?", "verseReference": "romans81", "prayerFocus": "Accept God’s grace."},
+          {"day": 4, "title": "The Power of the Cross", "prompt": "Jesus paid it all.", "verseReference": "colossians214", "prayerFocus": "Thank Jesus for His sacrifice."},
+          {"day": 5, "title": "Letting Go", "prompt": "Who are you holding a grudge against?", "verseReference": "matthew614", "prayerFocus": "Pray to let go fully."},
+          {"day": 6, "title": "Restore Relationships", "prompt": "Reach out to reconcile.", "verseReference": "romans1218", "prayerFocus": "Pray for peace and restoration."},
+          {"day": 7, "title": "Live Forgiven", "prompt": "Walk in the freedom of grace.", "verseReference": "psalm10312", "prayerFocus": "Celebrate being free."}
+        ]
+    }, 
+      {
+        "id": "7daygratitude",
+        "name": "7-Day Gratitude Challenge",
+        "description": "Cultivate a heart of thankfulness by recognizing God’s blessings every day.",
+        "durationDays": 7,
+        "days": [
+          {"day": 1, "title": "Count Your Blessings", "prompt": "List five blessings from today.", "verseReference": "psalm1032", "prayerFocus": "Thank God for His provision."},
+          {"day": 2, "title": "Thankful for Relationships", "prompt": "Reflect on the people God has placed in your life.", "verseReference": "ecclesiastes49", "prayerFocus": "Pray gratitude for friends and family."},
+          {"day": 3, "title": "Appreciate Nature", "prompt": "Notice God’s creation around you.", "verseReference": "psalm191", "prayerFocus": "Thank God for the beauty of creation."},
+          {"day": 4, "title": "Gratitude in Trials", "prompt": "Recall a challenging time and how God helped you.", "verseReference": "romans828", "prayerFocus": "Thank God for His faithfulness."},
+          {"day": 5, "title": "Express Your Thanks", "prompt": "Write a thank-you note to someone.", "verseReference": "1thessalonians519", "prayerFocus": "Pray for a grateful spirit."},
+          {"day": 6, "title": "Praise with Music", "prompt": "Sing or listen to a song of gratitude.", "verseReference": "psalm1001", "prayerFocus": "Praise God joyfully."},
+          {"day": 7, "title": "Live with a Thankful Heart", "prompt": "Commit to daily gratitude practice.", "verseReference": "colossians317", "prayerFocus": "Pray for an ongoing grateful heart."}
+        ]
+      }, 
+      {
+        "id": "14dayfaith",
+        "name": "14-Day Faith Builder Challenge",
+        "description": "Strengthen your trust and walk with God through daily reflections and bold faith actions.",
+        "durationDays": 14,
+        "days": [
+          {"day": 1, "title": "Faith Over Fear", "prompt": "Reflect on what fears God is calling you to release.", "verseReference": "isaiah4110", "prayerFocus": "Ask God to replace fear with faith."},
+          {"day": 2, "title": "Walking by Faith", "prompt": "Consider areas in life where God is asking you to step out in faith.", "verseReference": "2corinthians57", "prayerFocus": "Pray for courage to walk in faith."},
+          {"day": 3, "title": "God is Faithful", "prompt": "Recall how God has been faithful in your past.", "verseReference": "lamentations32223", "prayerFocus": "Thank God for His unwavering faithfulness."},
+          {"day": 4, "title": "Faith in the Storm", "prompt": "How can you trust God in a current challenge?", "verseReference": "mark43940", "prayerFocus": "Pray for peace and trust during trials."},
+          {"day": 5, "title": "The Shield of Faith", "prompt": "How can you use your faith as protection today?", "verseReference": "ephesians616", "prayerFocus": "Pray for strong defense against doubt."},
+          {"day": 6, "title": "Faith That Moves Mountains", "prompt": "What is your ‘mountain’ right now?", "verseReference": "matthew1720", "prayerFocus": "Ask God for unwavering belief."},
+          {"day": 7, "title": "Living by Faith", "prompt": "What does living by faith look like in your daily habits?", "verseReference": "hebrews1038", "prayerFocus": "Pray for daily faith-filled choices."},
+          {"day": 8, "title": "Faith Tested & Refined", "prompt": "How is God refining your faith?", "verseReference": "1peter17", "prayerFocus": "Ask God to grow your perseverance."},
+          {"day": 9, "title": "Faith that Pleases God", "prompt": "How are you actively pleasing God with your faith?", "verseReference": "hebrews116", "prayerFocus": "Pray to live in a way that delights God."},
+          {"day": 10, "title": "Faith Through Action", "prompt": "What action is your faith calling you to take?", "verseReference": "james217", "prayerFocus": "Pray for boldness to act."},
+          {"day": 11, "title": "Fixing Our Eyes on Jesus", "prompt": "Where is your focus today?", "verseReference": "hebrews122", "prayerFocus": "Ask God to center your heart on Jesus."},
+          {"day": 12, "title": "Strong in the Lord", "prompt": "How can God’s strength support your faith today?", "verseReference": "ephesians610", "prayerFocus": "Pray for strength through Christ."},
+          {"day": 13, "title": "Faith in God’s Timing", "prompt": "Where do you need patience in your faith journey?", "verseReference": "ecclesiastes311", "prayerFocus": "Pray to trust God’s perfect timing."},
+          {"day": 14, "title": "Faith for the Future", "prompt": "What dreams or hopes are you trusting God with?", "verseReference": "jeremiah2911", "prayerFocus": "Thank God for a hopeful future."}
+        ]
+      }, 
+      {
+        "id": "10dayleadership",
+        "name": "10-Day Christian Leadership Challenge",
+        "description": "Grow as a servant-leader through Scriptural insights and daily applications.",
+        "durationDays": 10,
+        "days": [
+          {"day": 1, "title": "Servant Leadership", "prompt": "How can you serve those you lead today?", "verseReference": "mark1045", "prayerFocus": "Pray for a heart of service."},
+          {"day": 2, "title": "Leading with Wisdom", "prompt": "Where do you need wisdom in leadership?", "verseReference": "james15", "prayerFocus": "Ask for God’s guidance in decisions."},
+          {"day": 3, "title": "Humble Leadership", "prompt": "How can humility strengthen your leadership?", "verseReference": "philippians23", "prayerFocus": "Pray for a humble spirit."},
+          {"day": 4, "title": "Integrity Matters", "prompt": "Where is your integrity being tested?", "verseReference": "proverbs112", "prayerFocus": "Ask God for uprightness in all things."},
+          {"day": 5, "title": "Lead by Example", "prompt": "What example are you setting today?", "verseReference": "1timothy412", "prayerFocus": "Pray to lead in word and deed."},
+          {"day": 6, "title": "Strength in Weakness", "prompt": "How is God using your weakness?", "verseReference": "2corinthians129", "prayerFocus": "Pray for God’s power in your weakness."},
+          {"day": 7, "title": "Vision from God", "prompt": "What vision has God given you to lead?", "verseReference": "habakkuk22", "prayerFocus": "Pray for clarity and boldness."},
+          {"day": 8, "title": "Lead with Love", "prompt": "How can love shape your leadership today?", "verseReference": "1corinthians1614", "prayerFocus": "Ask God for a loving heart."},
+          {"day": 9, "title": "Empowering Others", "prompt": "Who can you empower or mentor today?", "verseReference": "2timothy22", "prayerFocus": "Pray to invest in others."},
+          {"day": 10, "title": "Leading for God’s Glory", "prompt": "Are your leadership goals God-centered?", "verseReference": "colossians323", "prayerFocus": "Commit your leadership to God’s glory."}
+        ]
+      }, 
+      {
+        "id": "5daylove",
+        "name": "5-Day Journey of Love",
+        "description": "Deepen your understanding of God’s love and how to share it with others.",
+        "durationDays": 5,
+        "days": [
+          {
+            "day": 1,
+            "title": "God’s Love Revealed",
+            "prompt": "Reflect on the depth of God’s love for you.",
+            "verseReference": "John316",
+            "prayerFocus": "Thank God for His sacrificial love."
+          },
+          {
+            "day": 2,
+            "title": "Loving Others",
+            "prompt": "How can you show love to someone today?", 
+            "verseReference": "John1512",
+            "prayerFocus": "Pray for a heart to love others as Christ does."
+          },
+          {
+            "day": 3,
+            "title": "Love in Action",
+            "prompt": "Consider how love requires action, not just words.",
+            "verseReference": "1John318",
+            "prayerFocus": "Ask God for opportunities to act in love."
+          },
+          {
+            "day": 4,
+            "title": "Love Your Neighbor",
+            "prompt": "Who is your neighbor, and how can you love them?",
+            "verseReference": "matthew2239",
+            "prayerFocus": "Pray for compassion toward those around you."
+          },
+          {
+            "day": 5,
+            "title": "Enduring Love",
+            "prompt": "Rest in the permanence of God’s love.",
+            "verseReference": "Romans83839",
+            "prayerFocus": "Praise God for His unending love."
+          }
+        ]
+      }, 
+      {
+        "id": "6daytrust",
+        "name": "6-Day Trust in God",
+        "description": "Build a stronger trust in God through daily Scripture and prayer.",
+        "durationDays": 6,
+        "days": [
+          {
+            "day": 1,
+            "title": "Trusting God’s Guidance", 
+            "prompt": "Where do you need to trust God’s direction?",
+            "verseReference": "proverbs35",
+            "prayerFocus": "Pray for surrender to God’s path."
+          },
+          {
+            "day": 2,
+            "title": "Trust in His Strength",
+            "prompt": "Rely on God’s strength in your weakness.",
+            "verseReference": "isaiah4110",
+            "prayerFocus": "Ask for God’s strength to sustain you."
+          },
+          {
+            "day": 3,
+            "title": "Trust Through Fear",
+            "prompt": "How can trust overcome your fears?",
+            "verseReference": "psalm563",
+            "prayerFocus": "Pray for courage through trust."
+          },
+          {
+            "day": 4,
+            "title": "Trust in God’s Timing",
+            "prompt": "Reflect on waiting for God’s perfect timing.",
+            "verseReference": "psalm2714",
+            "prayerFocus": "Ask for patience in God’s plan."
+          },
+          {
+            "day": 5,
+            "title": "Trust in His Protection",
+            "prompt": "Find safety in God’s care.",
+            "verseReference": "Proverbs1810",
+            "prayerFocus": "Thank God for being your refuge."
+          },
+          {
+            "day": 6,
+            "title": "Unwavering Trust",
+            "prompt": "Commit to trusting God in all circumstances.",
+            "verseReference": "Psalm628",
+            "prayerFocus": "Pray for steadfast trust in God."
+          }
+        ]
+      }, 
+      {
+        "id": "7dayprayer",
+        "name": "7-Day Prayer Focus",
+        "description": "Grow closer to God through intentional daily prayer.",
+        "durationDays": 7,
+        "days": [
+          {
+            "day": 1,
+            "title": "Prayer of Adoration", 
+            "prompt": "Spend time praising God for who He is.",
+            "verseReference": "Psalm1453",
+            "prayerFocus": "Praise God for His greatness."
+          },
+          {
+            "day": 2,
+            "title": "Prayer for Guidance",
+            "prompt": "Seek God’s direction for your decisions.",
+            "verseReference": "Psalm2545",
+            "prayerFocus": "Ask God to guide your steps."
+          },
+          {
+            "day": 3,
+            "title": "Prayer of Confession",
+            "prompt": "Confess your sins and seek forgiveness.",
+            "verseReference": "1John19",
+            "prayerFocus": "Pray for a cleansed heart."
+          },
+          {
+            "day": 4,
+            "title": "Prayer for Others",
+            "prompt": "Intercede for those in need around you.",
+            "verseReference": "1Timothy21",
+            "prayerFocus": "Lift up others in prayer."
+          },
+          {
+            "day": 5,
+            "title": "Prayer for Strength",
+            "prompt": "Ask God for strength in challenges.",
+            "verseReference": "Philippians413",
+            "prayerFocus": "Seek God’s power for today."
+          },
+          {
+            "day": 6,
+            "title": "Prayer of Thanksgiving",
+            "prompt": "Thank God for His blessings.",
+            "verseReference": "1Thessalonians518",
+            "prayerFocus": "Express gratitude to God."
+          },
+          {
+            "day": 7,
+            "title": "Persistent Prayer",
+            "prompt": "Commit to praying without ceasing.",
+            "verseReference": "1Thessalonians517",
+            "prayerFocus": "Pray for a consistent prayer life."
+          }
+        ]
+      }, 
+      {
+        "id": "5dayjoy",
+        "name": "5-Day Joyful Heart",
+        "description": "Discover the source of true joy through God’s Word.",
+        "durationDays": 5,
+        "days": [
+          {
+            "day": 1,
+            "title": "Joy in God’s Presence", 
+            "prompt": "Find joy in being with God.",
+            "verseReference": "Psalm1611",
+            "prayerFocus": "Pray for joy in God’s presence."
+          },
+          {
+            "day": 2,
+            "title": "Joy Despite Trials",
+            "prompt": "How can you find joy in difficulties?",
+            "verseReference": "James123",
+            "prayerFocus": "Ask for joy in challenges."
+          },
+          {
+            "day": 3,
+            "title": "Joy in Salvation",
+            "prompt": "Rejoice in the gift of salvation.",
+            "verseReference": "Psalm5112",
+            "prayerFocus": "Thank God for restored joy."
+          },
+          {
+            "day": 4,
+            "title": "Joy in God’s Creation",
+            "prompt": "Find joy in the world God made.",
+            "verseReference": "Psalm191",
+            "prayerFocus": "Praise God for His creation."
+          },
+          {
+            "day": 5,
+            "title": "Everlasting Joy", 
+            "prompt": "Rest in the promise of eternal joy.",
+            "verseReference": "Isaiah3510",
+            "prayerFocus": "Pray for hope in eternal joy."
+          }
+        ]
+      }, 
+      {
+        "id": "6daystrength",
+        "name": "6-Day Strength in God",
+        "description": "Find strength in God to face life’s challenges.",
+        "durationDays": 6,
+        "days": [
+          {
+            "day": 1,
+            "title": "Strength in God’s Presence", 
+            "prompt": "Rely on God as your refuge and strength.",
+            "verseReference": "psalms461",
+            "prayerFocus": "Pray for God’s strength to uphold you."
+          },
+          {
+            "day": 2,
+            "title": "Strength Through Faith",
+            "prompt": "How does faith give you strength?", 
+            "verseReference": "Isaiah4029",
+            "prayerFocus": "Ask for strength through faith."
+          },
+          {
+            "day": 3,
+            "title": "Strength in Weakness",
+            "prompt": "Find God’s power in your weakness.",
+            "verseReference": "2Corinthians129",
+            "prayerFocus": "Pray for God’s grace in weakness."
+          },
+          {
+            "day": 4,
+            "title": "Strength for the Battle", 
+            "prompt": "Prepare for spiritual battles with God’s strength.",
+            "verseReference": "Ephesians610",
+            "prayerFocus": "Seek God’s power for spiritual warfare."
+          },
+          {
+            "day": 5,
+            "title": "Strength in Endurance",
+            "prompt": "Trust God to help you endure.",
+            "verseReference": "Colossians111",
+            "prayerFocus": "Pray for endurance in trials."
+          },
+          {
+            "day": 6,
+            "title": "Strength for Service",
+            "prompt": "Use God’s strength to serve others.",
+            "verseReference": "1Peter411",
+            "prayerFocus": "Ask God to empower your service."
+          }
+        ]
+      }
+    ]

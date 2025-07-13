@@ -1,0 +1,57 @@
+
+[
+  {
+    "id": "mission-encourage",
+    "title": "Encourage a Friend",
+    "description": "Send a verse or a kind word to someone who needs it. Sharing from the devotional page counts!",
+    "points": 15,
+    "link": "/daily-devotional",
+    "actionText": "Share a Devotional"
+  },
+  {
+    "id": "mission-pray-5-min",
+    "title": "5-Minute Prayer",
+    "description": "Set aside five minutes for focused, intentional prayer. You can use a prayer from the app or your own.",
+    "points": 10
+  },
+  {
+    "id": "mission-journal-new",
+    "title": "Journal on a New Verse",
+    "description": "Generate a devotional for a new verse and write a journal entry about it.",
+    "points": 20,
+    "link": "/generate-devotional",
+    "actionText": "Generate Devotional"
+  },
+  {
+    "id": "mission-prayer-wall",
+    "title": "Pray for Others",
+    "description": "Visit the anonymous Prayer Wall and pray for three requests from the community.",
+    "points": 15,
+    "link": "/prayer-wall",
+    "actionText": "Visit Prayer Wall"
+  },
+  {
+    "id": "mission-complete-challenge-day",
+    "title": "Complete a Challenge Day",
+    "description": "Make progress in one of your active spiritual challenges by completing a day's task.",
+    "points": 25,
+    "link": "/challenges",
+    "actionText": "Go to Challenges"
+  },
+  {
+    "id": "mission-share-favorite",
+    "title": "Share a Favorite",
+    "description": "Share one of your favorited verses with someone.",
+    "points": 10,
+    "link": "/favorites",
+    "actionText": "View Favorites"
+  },
+  {
+    "id": "mission-quiz",
+    "title": "Take a Quiz",
+    "description": "Test your knowledge by taking any quiz.",
+    "points": 15,
+    "link": "/quiz",
+    "actionText": "Go to Quizzes"
+  }
+]

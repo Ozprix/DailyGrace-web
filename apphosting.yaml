@@ -1,0 +1,16 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+# Specifies the secrets needed by the backend. You will need to set these in
+# Google Cloud Secret Manager before deploying.
+# https://firebase.google.com/docs/app-hosting/configure#secret-variables
+secretEnvironmentVariables:
+  - key: GOOGLE_API_KEY
+    secret: GOOGLE_API_KEY
+  - key: STRIPE_SECRET_KEY
+    secret: STRIPE_SECRET_KEY
+
+runConfig:
+  # Increase this value if you'd like to automatically spin up
+  # more instances in response to increased traffic.
+  maxInstances: 1
