@@ -11,7 +11,6 @@
     "firebase:emulators": "firebase emulators:start --only functions,firestore --import=./firebase-emulator-data --export-on-exit"
   },
   "dependencies": {
-    "@ducanh2912/next-pwa": "^10.2.7",
     "@genkit-ai/ai": "0.5.0",
     "@genkit-ai/core": "0.5.0",
     "@genkit-ai/googleai": "0.5.0",

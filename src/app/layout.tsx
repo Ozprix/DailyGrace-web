@@ -26,37 +26,9 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  manifest: '/manifest.json',
   title: 'Daily Grace',
   description: 'Your daily dose of inspiration and spiritual upliftment.',
-  icons: {
-    icon: '/icons/icon-192x192.png',
-    apple: '/icons/icon-180x180.png',
-  },
-  applicationName: 'Daily Grace',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Daily Grace',
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  other: {
-    "mobile-web-app-capable": "yes",
-    "msapplication-config": "/icons/browserconfig.xml",
-    "msapplication-TileColor": "#8B7EF7",
-    "msapplication-tap-highlight": "no",
-  }
 };
-
-export const viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#8B7EF7' },
-    { media: '(prefers-color-scheme: dark)', color: '#A999FF' },
-  ],
-};
-
 
 export default function RootLayout({
   children,

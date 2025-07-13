@@ -1,3 +1,4 @@
+
 // src/app/challenges/[challengeId]/page.tsx
 "use client";
 
@@ -70,7 +71,7 @@ export default function ChallengeDetailPage() {
   const {
     startChallenge,
     hasStartedChallenge,
-    isLoadingUserChallenges,
+    isLoading,
     fetchChallengeProgress,
     getChallengeProgress,
     isFetchingProgress,
@@ -319,7 +320,7 @@ export default function ChallengeDetailPage() {
   };
 
 
-  if (authLoading || isLoadingAppContextContent || isLoadingUserChallenges || !preferencesLoaded) {
+  if (authLoading || isLoadingAppContextContent || isLoading || !preferencesLoaded) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-foreground p-4">
         <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
@@ -446,7 +447,7 @@ export default function ChallengeDetailPage() {
                   variant="primaryGradient"
                   onClick={handleStartChallengeClick}
                   className="ml-auto"
-                  disabled={!user || isProcessingStart || isLoadingUserChallenges || isFreeUserAccessingPremium}
+                  disabled={!user || isProcessingStart || isLoading}
                   title={isFreeUserAccessingPremium ? "Upgrade to Premium to start this challenge" : "Start This Challenge"}
                 >
                   {isProcessingStart ? (<Loader2 className="mr-2 h-4 w-4 animate-spin" />) : null}
