@@ -54,7 +54,7 @@ export const generateChallengeDayContent = ai.defineFlow(
     inputSchema: GenerateChallengeDayContentInputSchema,
     outputSchema: GenerateChallengeDayContentOutputSchema,
   },
-  async (input) => {
+  async (input: GenerateChallengeDayContentInput) => {
     const { output } = await challengeDayPrompt(input);
     if (!output) {
       throw new Error("AI failed to generate a valid challenge day content.");
