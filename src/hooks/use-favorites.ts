@@ -20,10 +20,11 @@ export function useFavorites() {
   useEffect(() => {
     const loadFavorites = async () => {
       setIsLoaded(false);
-      if (user && preferencesLoaded) {
+      if (user && preferencesLoaded && preferences.favoriteVerseIds) {
         // For logged-in users, favorites are stored in their user_preferences document
-        const favoriteVerseIds = preferences.favoriteVerseIds || [];
-        setFavorites(favoriteVerseIds.map((id: string) => ({ id, type: 'verse', addedAt: new Date() })));
+        setFavorites(preferences.favoriteVerseIds.map((id: string) => ({ id, type: 'verse', addedAt: new Date() })));
+      } else {
+        setFavorites([]);
       }
       setIsLoaded(true);
     };
@@ -63,7 +64,7 @@ export function useFavorites() {
       setFavorites(favorites); // Revert optimistic update on failure
       toast({ title: "Update Failed", description: "Could not sync your favorites with the cloud.", variant: "destructive" });
     }
-  }, [favorites, user, preferences, preferencesLoaded, toast]);
+  }, [favorites, user, preferencesLoaded, toast]);
 
   const isFavorite = useCallback((id: string) => {
     return favorites.some(f => f.id === id);

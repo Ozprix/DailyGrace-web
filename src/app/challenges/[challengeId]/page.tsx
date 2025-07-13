@@ -316,7 +316,7 @@ export default function ChallengeDetailPage() {
     if (success) {
       toast({ title: "Journal Saved!", description: `Your reflection for Day ${currentDayData.day} has been saved.` });
       setAllChallengeDayJournals(prevMap => {
-        const newMap = new Map(prevMap);
+        const newMap = new Map(prevMap || []);
         newMap.set(currentDayData.day, challengeDayJournalText);
         return newMap;
       });

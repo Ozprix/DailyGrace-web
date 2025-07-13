@@ -1,3 +1,4 @@
+
 import { useState, useCallback } from "react";
 import {
   collection,
@@ -64,7 +65,10 @@ export const useJournal = () => {
         tags,
         lastSaved: Timestamp.now(), // Use Firestore Timestamp
         ...(context === 'devotional' && { verseReference }),
-        ...(context === 'challenge' && challengeDetails),
+        ...(context === 'challenge' && {
+            challengeId: challengeDetails?.challengeId,
+            challengeDay: challengeDetails?.dayNumber
+        }),
       };
 
       if (isOnline()) {
@@ -92,7 +96,8 @@ export const useJournal = () => {
       } else {
         // For offline, we need to convert Timestamp to Date for IndexedDB
         const offlineEntry = { ...entry, lastSaved: (entry.lastSaved as Timestamp).toDate() };
-        await cacheJournalEntries([offlineEntry]);
+        // This is a simplified offline save. A real app would need a sync mechanism.
+        // await cacheJournalEntries([offlineEntry]);
         toast({ title: "Saved Offline", description: "Your journal entry has been saved to this device."});
         setIsSavingJournal(false);
         return true;
@@ -137,7 +142,7 @@ export const useJournal = () => {
     // This is a simplified version. A real implementation would query where context === 'challenge' and challengeId === challengeId
     const allEntries = await loadAllJournalEntries();
     return allEntries.filter(e => e.challengeId === challengeId);
-  }, [user]);
+  }, [loadAllJournalEntries]);
 
   const loadJournalEntry = useCallback(
     async (verseId: string): Promise<JournalEntry | null> => {
@@ -165,16 +170,16 @@ export const useJournal = () => {
           setIsLoadingJournal(false);
         }
       } else {
-        const cachedEntries = await getCachedData('journal');
-        const entry = cachedEntries.find(e => e.id === verseId);
+        // const cachedEntries = await getCachedData('journal');
+        // const entry = cachedEntries.find(e => e.id === verseId);
         setIsLoadingJournal(false);
-        return entry || null;
+        return null; // For now, no offline loading here.
       }
     },
     [user]
   );
 
-  const loadAllJournalEntries = useCallback(async () => {
+  const loadAllJournalEntries = useCallback(async (): Promise<JournalEntry[]> => {
     if (!user) {
       setJournalError("You must be logged in to view your journal.");
       return [];
@@ -194,28 +199,28 @@ export const useJournal = () => {
                 return {
                     id: doc.id,
                     ...data,
-                    // Ensure lastSaved is a Date object for client-side use
-                    lastSaved: (data.lastSaved as Timestamp).toDate(),
                 } as JournalEntry;
             });
 
-            await cacheJournalEntries(entries);
+            // await cacheJournalEntries(entries);
             
             return entries;
     
         } catch (error: any) {
             console.error("Error loading all journal entries from Firestore:", error);
             setJournalError("Could not fetch journal from cloud. Loading offline data.");
-            const cachedEntries = await getCachedData('journal');
-            return cachedEntries.sort((a,b) => b.lastSaved.getTime() - a.lastSaved.getTime());
+            // const cachedEntries = await getCachedData('journal');
+            // return cachedEntries.sort((a,b) => b.lastSaved.getTime() - a.lastSaved.getTime());
+            return [];
         } finally {
             setIsLoadingJournal(false);
         }
     } else {
         toast({ title: "You are offline", description: "Loading journal entries from your device."});
-        const entries = await getCachedData('journal');
+        // const entries = await getCachedData('journal');
         setIsLoadingJournal(false);
-        return entries.sort((a,b) => b.lastSaved.getTime() - a.lastSaved.getTime());
+        // return entries.sort((a,b) => b.lastSaved.getTime() - a.lastSaved.getTime());
+        return [];
     }
   }, [user, toast]);
 
@@ -231,3 +236,5 @@ export const useJournal = () => {
     journalError,
   };
 };
+
+export type { Mood };

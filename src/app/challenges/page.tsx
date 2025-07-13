@@ -47,7 +47,7 @@ const ChallengeCardSkeleton = () => (
 export default function ChallengesPage() {
   const { allChallenges, isLoadingContent: isLoadingAppContextContent, contentError: appContextContentError } = useContent();
   const { user, loading: authLoading } = useAuth();
-  const { hasStartedChallenge, isLoadingUserChallenges } = useUserChallenges();
+  const { hasStartedChallenge, isLoading } = useUserChallenges();
   const { preferences, isLoaded: preferencesLoaded } = useUserPreferences();
   const router = useRouter();
 
@@ -134,7 +134,7 @@ export default function ChallengesPage() {
     </div>
   );
 
-  if (authLoading || !user || isLoadingAppContextContent || !preferencesLoaded || isLoadingUserChallenges) {
+  if (authLoading || !user || isLoadingAppContextContent || !preferencesLoaded || isLoading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-foreground p-4">
         <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />

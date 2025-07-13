@@ -19,7 +19,7 @@ export function useUserChallenges() {
   const { preferences, awardPoints, isLoaded: preferencesLoaded, setLastChallengeCompletedTimestamp } = useUserPreferences();
   const [startedChallengeIds, setStartedChallengeIds] = useState<Set<string>>(new Set());
   const [challengeProgressCache, setChallengeProgressCache] = useState<Map<string, UserChallengeStatus>>(new Map());
-  const [isLoadingUserChallenges, setIsLoadingUserChallenges] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [isFetchingProgress, setIsFetchingProgress] = useState(false);
   const [isUpdatingProgress, setIsUpdatingProgress] = useState(false);
 
@@ -34,44 +34,6 @@ export function useUserChallenges() {
       };
     })
     .sort((a, b) => (b.lastDayCompletedAt?.toMillis() || b.startedAt.toMillis()) - (a.lastDayCompletedAt?.toMillis() || a.startedAt.toMillis()));
-
-  useEffect(() => {
-    const loadUserChallengeIds = async () => {
-      if (!user?.uid) {
-        setStartedChallengeIds(new Set());
-        setChallengeProgressCache(new Map());
-        setIsLoadingUserChallenges(false);
-        return;
-      }
-
-      setIsLoadingUserChallenges(true);
-      const userDocRef = doc(db, 'users', user.uid);
-      try {
-        const docSnap = await getDoc(userDocRef);
-        if (docSnap.exists()) {
-          const userData = docSnap.data();
-          const activeIds = userData.activeChallengeIds || [];
-          setStartedChallengeIds(new Set(activeIds));
-          // Pre-fetch progress for active challenges
-          for (const id of activeIds) {
-            await fetchChallengeProgress(id);
-          }
-        } else {
-          setStartedChallengeIds(new Set());
-        }
-      } catch (error) {
-        console.error("Failed to load user challenge IDs from Firestore:", error);
-        setStartedChallengeIds(new Set());
-        if (analytics) {
-          logEvent(analytics, 'load_user_challenges_failed', { error_message: (error as Error).message });
-        }
-      } finally {
-        setIsLoadingUserChallenges(false);
-      }
-    };
-
-    loadUserChallengeIds();
-  }, [user?.uid]);
 
   const fetchChallengeProgress = useCallback(async (challengeId: string): Promise<UserChallengeStatus | null> => {
     if (!user?.uid) return null;
@@ -107,6 +69,44 @@ export function useUserChallenges() {
       setIsFetchingProgress(false);
     }
   }, [user?.uid]);
+
+  useEffect(() => {
+    const loadUserChallengeIds = async () => {
+      if (!user?.uid) {
+        setStartedChallengeIds(new Set());
+        setChallengeProgressCache(new Map());
+        setIsLoading(false);
+        return;
+      }
+
+      setIsLoading(true);
+      const userDocRef = doc(db, 'users', user.uid);
+      try {
+        const docSnap = await getDoc(userDocRef);
+        if (docSnap.exists()) {
+          const userData = docSnap.data();
+          const activeIds = userData.activeChallengeIds || [];
+          setStartedChallengeIds(new Set(activeIds));
+          // Pre-fetch progress for active challenges
+          for (const id of activeIds) {
+            await fetchChallengeProgress(id);
+          }
+        } else {
+          setStartedChallengeIds(new Set());
+        }
+      } catch (error) {
+        console.error("Failed to load user challenge IDs from Firestore:", error);
+        setStartedChallengeIds(new Set());
+        if (analytics) {
+          logEvent(analytics, 'load_user_challenges_failed', { error_message: (error as Error).message });
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadUserChallengeIds();
+  }, [user?.uid, fetchChallengeProgress]);
 
   const getChallengeProgress = useCallback((challengeId: string): UserChallengeStatus | null => {
     return challengeProgressCache.get(challengeId) || null;
@@ -291,7 +291,7 @@ export function useUserChallenges() {
   return {
     startChallenge,
     hasStartedChallenge,
-    isLoading: isLoadingUserChallenges,
+    isLoading,
     startedChallengeIds,
     fetchChallengeProgress,
     getChallengeProgress,
