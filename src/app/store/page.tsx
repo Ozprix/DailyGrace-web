@@ -14,7 +14,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
-import { ArrowLeft, Sparkles, Gift, ShoppingBag, Award, Terminal, Loader2, CheckCircle, Eye, Palette, Flame, HeartHandshake, Filter, Lock, BookOpen, Hourglass, Trees, Send } from 'lucide-react';
+import { ArrowLeft, Sparkles, Gift, ShoppingBag, Award, Terminal, Loader2, CheckCircle, Eye, Palette, Flame, HeartHandshake, Filter, Lock } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { analytics } from '@/lib/firebase/config';
 import { logEvent } from 'firebase/analytics';
@@ -25,22 +25,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
+import { iconMap, type IconName } from '@/lib/nav-links';
 
 
 type ItemType = 'all' | 'series' | 'themes' | 'gifts';
 type SortType = 'cost-asc' | 'cost-desc' | 'name-asc';
-
-const iconMap: { [key: string]: React.ElementType } = {
-  BookOpen,
-  Gift,
-  Palette,
-  Flame,
-  HeartHandshake,
-  Hourglass,
-  Trees,
-  Send
-};
-
 
 const StoreItemSkeleton = () => (
   <Card className="shadow-lg">
@@ -295,7 +284,7 @@ export default function GraceStorePage() {
                 const isUnlocked = preferences.unlockedExclusiveSeriesIds?.includes(series.id);
                 const canAfford = userTotalPoints >= series.cost;
                 const isCurrentlyUnlockingThis = isUnlockingId === series.id && savingPreferenceType === 'unlockedSeries';
-                const IconComponent = iconMap[series.iconName || 'BookOpen'] || BookOpen;
+                const IconComponent = iconMap[series.iconName as IconName] || iconMap.BookOpen;
 
                 return (
                   <Card key={series.id} className={cn("shadow-lg bg-card/80 backdrop-blur-sm border-border/50 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1", !isUnlocked && !canAfford && "opacity-60")}>
@@ -354,7 +343,7 @@ export default function GraceStorePage() {
                 const canAfford = userTotalPoints >= theme.cost;
                 const isCurrentlyUnlockingThis = isUnlockingId === theme.id && savingPreferenceType === 'unlockedThemes';
                 const isCurrentlyApplyingThis = isApplyingThemeId === theme.id;
-                const IconComponent = iconMap[theme.iconName || 'Palette'] || Palette;
+                const IconComponent = iconMap[theme.iconName as IconName] || iconMap.Palette;
 
                 return (
                   <Card key={theme.id} className={cn("shadow-lg bg-card/80 backdrop-blur-sm border-border/50 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1", isActive ? 'ring-2 ring-primary' : '', !isUnlocked && !canAfford && "opacity-60")}>
@@ -423,7 +412,7 @@ export default function GraceStorePage() {
               {filteredAndSortedItems.gifts.map((item) => {
                 const canAfford = userTotalPoints >= item.cost;
                 const isCurrentlyPurchasingThis = isPurchasingGiftId === item.id && savingPreferenceType === 'symbolicGift';
-                const IconComponent = iconMap[item.iconName || 'Gift'] || Gift;
+                const IconComponent = iconMap[item.iconName as IconName] || iconMap.Gift;
 
                 return (
                   <Card key={item.id} className={cn("shadow-lg bg-card/80 backdrop-blur-sm border-border/50 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1", !canAfford && "opacity-60")}>

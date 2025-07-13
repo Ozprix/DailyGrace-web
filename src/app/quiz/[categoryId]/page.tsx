@@ -10,7 +10,7 @@ import { useContent } from '@/contexts/content-context';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, BookOpen, ChevronRight, ListMusic, Loader2, Puzzle, Smile, Target, User as UserIconLucide } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronRight, ClipboardList, ListMusic, Loader2, Puzzle, Smile, Target, User as UserIconLucide } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { analytics } from '@/lib/firebase/config';
 import { logEvent } from 'firebase/analytics';
@@ -20,17 +20,7 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
 import { useUserPreferences } from '@/hooks/use-user-preferences';
 import UserDropdownMenu from '@/components/user-dropdown-menu';
-
-// Map icon names to Lucide components
-const iconComponents: { [key: string]: React.ElementType } = {
-  BookOpen,
-  Target,
-  Smile,
-  User: UserIconLucide,
-  ListMusic,
-  Puzzle,
-};
-
+import { iconMap, IconName } from '@/lib/nav-links';
 
 const QuizItemSkeleton = () => (
   <Card className="shadow-lg rounded-xl">
@@ -200,7 +190,7 @@ export default function QuizCategoryPage() {
                         </CardContent>
                         <CardFooter>
                           <Button variant="outline" className="w-full">
-                            Start Quiz <ArrowRight className="ml-2 h-4 w-4" />
+                            Start Quiz <ChevronRight className="ml-2 h-4 w-4" />
                           </Button>
                         </CardFooter>
                       </Card>

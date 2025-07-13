@@ -16,7 +16,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Skeleton } from '@/components/ui/skeleton';
 import { ArrowLeft, Bookmark, Heart, Gift, ChevronRight, Loader2, LayoutGrid } from 'lucide-react';
 import Header from '@/components/ui/header';
-import { iconMap } from '@/lib/nav-links';
+import { iconMap, type IconName } from '@/lib/nav-links';
 
 const SummaryCard = ({ icon, title, count, link, linkText, isLoading }: { icon: React.ElementType, title: string, count: number, link: string, linkText: string, isLoading: boolean }) => (
     <Card className="hover:bg-muted/50 transition-colors">
@@ -36,7 +36,7 @@ const SummaryCard = ({ icon, title, count, link, linkText, isLoading }: { icon: 
 );
 
 const ExclusiveSeriesCard = ({ series }: { series: ExclusiveDevotionalSeries }) => {
-    const IconComponent = iconMap[series.iconName] || Gift;
+    const IconComponent = iconMap[series.iconName as IconName] || Gift;
     return (
         <Link href={`/my-content/exclusive-series/${series.id}`}>
             <Card className="hover:bg-muted/50 transition-colors h-full">

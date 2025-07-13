@@ -18,6 +18,13 @@ import {
     Shield, // Added for themes
     HeartHandshake, // Replaced HandHelping
     UserPlus, // Added for referrals
+    Trees,
+    Palette,
+    Flame,
+    Hourglass,
+    Send,
+    User as UserIcon,
+    ListMusic,
 } from 'lucide-react';
 
 // Create a map of icon names to components
@@ -40,12 +47,21 @@ export const iconMap = {
     Shield,
     HeartHandshake,
     UserPlus,
+    Trees,
+    Palette,
+    Flame,
+    Hourglass,
+    Send,
+    User: UserIcon,
+    ListMusic,
 };
+
+export type IconName = keyof typeof iconMap;
 
 export type NavLink = {
     href: string;
     label: string;
-    icon: keyof typeof iconMap;
+    icon: IconName;
     premium?: boolean;
 };
 

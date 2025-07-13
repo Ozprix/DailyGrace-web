@@ -1,6 +1,7 @@
 // src/types/index.ts
 
 import type { Timestamp } from "firebase/firestore";
+import type { IconName } from "@/lib/nav-links";
 
 // --- CORE CONTENT ---
 
@@ -112,7 +113,7 @@ export interface QuizCategoryPublic {
   name: string;
   description: string;
   type: 'Bible Trivia' | 'Devotional Reinforce' | 'Personality';
-  iconName: string;
+  iconName: IconName;
 }
 
 
@@ -155,7 +156,7 @@ interface BaseStoreItem {
   name: string;
   description: string;
   cost: number;
-  iconName: string;
+  iconName: IconName;
 }
 
 export interface ExclusiveDevotionalDay {

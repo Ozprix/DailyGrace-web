@@ -17,17 +17,7 @@ import { logEvent } from 'firebase/analytics';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import type { QuizCategoryPublic } from '@/types';
 import UserDropdownMenu from '@/components/user-dropdown-menu';
-
-// Map icon names to Lucide components
-const iconComponents: { [key: string]: React.ElementType } = {
-  BookOpen,
-  Target,
-  Smile,
-  User: UserIconLucide,
-  ListMusic,
-  Puzzle,
-};
-
+import { iconMap, IconName } from '@/lib/nav-links';
 
 const QuizPageSkeleton = () => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -118,7 +108,7 @@ export default function QuizPage() {
                 ) : allQuizCategories.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {allQuizCategories.map((category) => {
-                      const IconComponent = iconComponents[category.iconName] || Puzzle;
+                      const IconComponent = iconMap[category.iconName as IconName] || Puzzle;
                       return (
                         <Card 
                           key={category.id} 
