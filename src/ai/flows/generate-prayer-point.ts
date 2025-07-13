@@ -56,7 +56,7 @@ const generatePrayerPointFlow = ai.defineFlow(
       },
     },
   },
-  async input => {
+  async (input: GeneratePrayerPointInput) => {
     const {output} = await prompt(input);
     if (!output || !output.prayerPoint) {
       throw new Error("AI failed to generate a valid prayer point.");

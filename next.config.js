@@ -7,7 +7,6 @@ const withPWA = require("@ducanh2912/next-pwa").default({
   disable: process.env.NODE_ENV === "development",
   fallbacks: {
     document: "/offline", // Fallback for document requests
-    // Add fallbacks for other types of requests if needed
   },
   // Ensure all chunks are cached properly
   workboxOptions: {
@@ -25,6 +24,7 @@ const withPWA = require("@ducanh2912/next-pwa").default({
       },
     ],
   },
+  clean: true, // Add this line to clean out old assets
 });
 
 const nextConfig = {
