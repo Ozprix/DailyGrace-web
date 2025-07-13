@@ -79,10 +79,10 @@ export default function ChallengeDetailPage() {
     isUpdatingProgress
   } = useUserChallenges();
   const { preferences, isLoaded: preferencesLoaded } = useUserPreferences();
+  const { toast } = useToast();
   const router = useRouter();
   const params = useParams();
   const challengeId = params.challengeId as string;
-  const { toast } = useToast();
 
   const [challenge, setChallenge] = useState<Challenge | null>(null);
   const [challengeProgress, setChallengeProgress] = useState<UserChallengeStatus | null>(null);
@@ -156,7 +156,11 @@ export default function ChallengeDetailPage() {
         setIsLoadingAllChallengeDayJournals(true);
         const journalsMap = await loadAllJournalEntriesForChallenge(challengeId);
         const map = new Map<number, string>();
-        journalsMap.forEach(entry => map.set(entry.dayNumber, entry.text));
+        journalsMap.forEach(entry => {
+            if (entry.challengeDay) {
+                map.set(entry.challengeDay, entry.text)
+            }
+        });
         setAllChallengeDayJournals(map);
         setIsLoadingAllChallengeDayJournals(false);
       };
@@ -276,7 +280,11 @@ export default function ChallengeDetailPage() {
       setChallengeProgress(progress);
       const journals = await loadAllJournalEntriesForChallenge(challenge.id);
       const map = new Map<number, string>();
-      journals.forEach(entry => map.set(entry.dayNumber, entry.text));
+      journals.forEach(entry => {
+        if (entry.challengeDay) {
+          map.set(entry.challengeDay, entry.text);
+        }
+      });
       setAllChallengeDayJournals(map);
 
     } else {
