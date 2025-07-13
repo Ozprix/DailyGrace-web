@@ -1,6 +1,6 @@
 // src/ai/actions/generate-challenge-day-content.action.ts
 'use server';
-import { runFlow } from '@genkit-ai/flow';
+import { runFlow } from '@genkit-ai/core';
 import {
   generateChallengeDayContentFlow,
   type GenerateChallengeDayContentInput,

@@ -16,7 +16,7 @@ import {
     LayoutGrid,
     BarChart3,
     Shield, // Added for themes
-    HandHelping,
+    HeartHandshake, // Replaced HandHelping
     UserPlus, // Added for referrals
 } from 'lucide-react';
 
@@ -38,7 +38,7 @@ export const iconMap = {
     LayoutGrid,
     BarChart3,
     Shield,
-    HandHelping,
+    HeartHandshake,
     UserPlus,
 };
 
@@ -65,7 +65,7 @@ export const featuresNavLinks: NavLink[] = [
 
 export const communityNavLinks: NavLink[] = [
     { href: '/prayer-circles', label: 'Prayer Circles', icon: 'MessageCircle' },
-    { href: '/prayer-wall', label: 'Prayer Wall', icon: 'HandHelping' },
+    { href: '/prayer-wall', label: 'Prayer Wall', icon: 'HeartHandshake' },
 ];
 
 export const bottomNavLinks: NavLink[] = [

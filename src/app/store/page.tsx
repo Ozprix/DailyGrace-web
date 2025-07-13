@@ -14,7 +14,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
-import { ArrowLeft, Sparkles, Gift, ShoppingBag, Award, Terminal, Loader2, CheckCircle, Eye, Palette, Flame, HandHelping, Filter, Lock, BookOpen, Hourglass, Trees, Send } from 'lucide-react';
+import { ArrowLeft, Sparkles, Gift, ShoppingBag, Award, Terminal, Loader2, CheckCircle, Eye, Palette, Flame, HeartHandshake, Filter, Lock, BookOpen, Hourglass, Trees, Send } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { analytics } from '@/lib/firebase/config';
 import { logEvent } from 'firebase/analytics';
@@ -35,7 +35,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Gift,
   Palette,
   Flame,
-  HandHelping,
+  HeartHandshake,
   Hourglass,
   Trees,
   Send

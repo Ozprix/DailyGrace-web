@@ -22,7 +22,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Send, HandHelping, UserCircle } from "lucide-react";
+import { Loader2, Send, HeartHandshake, UserCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 
 export default function AnonymousPrayerWallPage() {
@@ -175,7 +175,7 @@ export default function AnonymousPrayerWallPage() {
                   disabled={prayedForIds.has(prayer.id)}
                   className="w-full"
                 >
-                  <HandHelping className="mr-2 h-4 w-4" />
+                  <HeartHandshake className="mr-2 h-4 w-4" />
                   {prayedForIds.has(prayer.id) ? "You've Prayed" : "I Prayed for This"}
                 </Button>
               </CardFooter>

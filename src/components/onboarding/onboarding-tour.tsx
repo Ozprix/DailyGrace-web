@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { Newspaper, PenSquare, Trophy, HandHelping, Sparkles, MessageCircle } from "lucide-react";
+import { Newspaper, PenSquare, Trophy, HeartHandshake, Sparkles, MessageCircle } from "lucide-react";
 
 const tourSteps = [
   {
@@ -39,7 +39,7 @@ const tourSteps = [
       "Tackle multi-day spiritual challenges or complete bite-sized weekly missions to earn points and grow in your faith.",
   },
   {
-    icon: HandHelping,
+    icon: HeartHandshake,
     title: "Community Connection",
     content:
       "Join the community! Share requests on the Prayer Wall, join or create a private Prayer Circle, and find encouragement together.",

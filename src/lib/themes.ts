@@ -1,4 +1,4 @@
-import { Heart, Shield, BookOpen, HandHelping } from 'lucide-react';
+import { Heart, Shield, BookOpen, HeartHandshake } from 'lucide-react';
 
 export interface WeeklyTheme {
   name: string;
@@ -11,7 +11,7 @@ export const weeklyThemes: WeeklyTheme[] = [
   {
     name: 'Gratitude',
     description: 'Focus on thankfulness and recognizing God’s blessings in your life.',
-    icon: HandHelping,
+    icon: HeartHandshake,
     keywords: ['gratitude', 'thankful', 'blessings', 'praise', '7-day gratitude challenge'],
   },
   {

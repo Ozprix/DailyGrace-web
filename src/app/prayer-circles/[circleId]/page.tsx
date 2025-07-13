@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, ArrowLeft, Send, HandHelping } from "lucide-react";
+import { Loader2, ArrowLeft, Send, HeartHandshake } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 
 export default function PrayerCircleDetailPage() {
@@ -227,7 +227,7 @@ export default function PrayerCircleDetailPage() {
                     size="sm"
                     onClick={() => handleMarkAsPrayedFor(request.id)}
                   >
-                    <HandHelping className="mr-2 h-4 w-4" /> I Prayed
+                    <HeartHandshake className="mr-2 h-4 w-4" /> I Prayed
                   </Button>
                 )}
               </div>
