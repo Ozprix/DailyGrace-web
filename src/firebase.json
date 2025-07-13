@@ -8,9 +8,7 @@
       "**/node_modules/**"
     ],
     "appAssociation": "AUTO",
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
+    "backend": "daily-grace-backend"
   },
   "firestore": {
     "rules": "firestore.rules",
