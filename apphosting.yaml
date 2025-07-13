@@ -4,7 +4,7 @@
 # The ID of the backend resource.
 backend: daily-grace-backend
 # The region to deploy the backend.
-region: us-central1
+region: europe-west4
 
 # Specifies the secrets needed by the backend. You will need to set these in
 # Google Cloud Secret Manager before deploying.
