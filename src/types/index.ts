@@ -2,6 +2,7 @@
 
 import type { Timestamp } from "firebase/firestore";
 import type { IconName } from "@/lib/nav-links";
+import type { ReadingPlan } from "./reading-plan";
 
 // --- CORE CONTENT ---
 
@@ -240,3 +241,6 @@ export interface VerseReflection {
   upvotes: number;
   upvotedBy: string[];
 }
+
+// --- READING PLANS ---
+export type { ReadingPlan };

@@ -24,6 +24,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, ArrowLeft, Send, HeartHandshake } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
+import { Timestamp } from "firebase/firestore";
 
 export default function PrayerCircleDetailPage() {
   const { user, loading: authLoading } = useAuth();
@@ -93,7 +94,7 @@ export default function PrayerCircleDetailPage() {
         authorId: user.uid,
         authorName: user.displayName || "Anonymous",
         text: newRequestText,
-        createdAt: new Date(), // This will be a client-side approximation
+        createdAt: Timestamp.now(), // This will be a client-side approximation
         prayedForBy: [],
       };
       setRequests((prev) => [newRequest, ...prev]);
@@ -215,7 +216,7 @@ export default function PrayerCircleDetailPage() {
                 <div>
                   <p>
                     by {request.authorName} -{" "}
-                    {formatDistanceToNow(request.createdAt.toDate(), { addSuffix: true })}
+                    {formatDistanceToNow(request.createdAt instanceof Timestamp ? request.createdAt.toDate() : request.createdAt, { addSuffix: true })}
                   </p>
                   <p>
                     Prayed for by {request.prayedForBy.length} member(s)

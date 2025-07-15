@@ -1,0 +1,143 @@
+[debug] [2025-07-15T07:13:16.914Z] ----------------------------------------------------------------------
+[debug] [2025-07-15T07:13:16.918Z] Command:       /nix/store/rbdrkcs5kkwpalxcd7c6bnm33lk2955n-nodejs-20.19.0/bin/node /home/user/.global_modules/bin/firebase deploy
+[debug] [2025-07-15T07:13:16.918Z] CLI Version:   14.7.0
+[debug] [2025-07-15T07:13:16.919Z] Platform:      linux
+[debug] [2025-07-15T07:13:16.919Z] Node Version:  v20.19.0
+[debug] [2025-07-15T07:13:16.919Z] Time:          Tue Jul 15 2025 07:13:16 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-07-15T07:13:16.919Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-15T07:13:17.547Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-15T07:13:17.719Z] Running auto auth
+[debug] [2025-07-15T07:13:17.721Z] [iam] checking project daily-grace-9r6u6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-07-15T07:13:17.725Z] No OAuth tokens found
+[debug] [2025-07-15T07:13:17.730Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions [none]
+[debug] [2025-07-15T07:13:17.731Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions x-goog-quota-user=projects/daily-grace-9r6u6
+[debug] [2025-07-15T07:13:17.731Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-15T07:13:18.388Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions 200
+[debug] [2025-07-15T07:13:18.388Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-15T07:13:18.392Z] No OAuth tokens found
+[debug] [2025-07-15T07:13:18.395Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6 [none]
+[debug] [2025-07-15T07:13:18.592Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6 200
+[debug] [2025-07-15T07:13:18.592Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6 {"projectId":"daily-grace-9r6u6","projectNumber":"912630226430","displayName":"Daily Grace","name":"projects/daily-grace-9r6u6","resources":{"hostingSite":"daily-grace-9r6u6"},"state":"ACTIVE","etag":"1_76b50dd3-c68b-4a46-8105-de568078de06"}
+[debug] [2025-07-15T07:13:24.187Z] No OAuth tokens found
+[debug] [2025-07-15T07:13:24.188Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites pageToken=&pageSize=10
+[debug] [2025-07-15T07:13:25.312Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites 200
+[debug] [2025-07-15T07:13:25.313Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites {"sites":[{"name":"projects/daily-grace-9r6u6/sites/daily-grace-9r6u6","defaultUrl":"https://daily-grace-9r6u6.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-15T07:13:25.314Z] No OAuth tokens found
+[debug] [2025-07-15T07:13:25.315Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites 
+[debug] [2025-07-15T07:13:25.870Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites 200
+[debug] [2025-07-15T07:13:25.871Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites {"sites":[{"name":"projects/daily-grace-9r6u6/sites/daily-grace-9r6u6","defaultUrl":"https://daily-grace-9r6u6.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-15T07:13:25.871Z] No OAuth tokens found
+[debug] [2025-07-15T07:13:25.872Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6/webApps/-/config [none]
+[debug] [2025-07-15T07:13:26.258Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6/webApps/-/config 200
+[debug] [2025-07-15T07:13:26.259Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6/webApps/-/config {"projectId":"daily-grace-9r6u6","storageBucket":"daily-grace-9r6u6.firebasestorage.app","apiKey":"AIzaSyA7NDj9BkU_HpvleiCrLCdZxdNFY6SLEUM","authDomain":"daily-grace-9r6u6.firebaseapp.com","messagingSenderId":"912630226430"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-07-15T07:13:39.414Z] No OAuth tokens found
+[debug] [2025-07-15T07:13:39.416Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites/daily-grace-9r6u6 [none]
+[debug] [2025-07-15T07:13:40.340Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites/daily-grace-9r6u6 200
+[debug] [2025-07-15T07:13:40.340Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites/daily-grace-9r6u6 {"name":"projects/daily-grace-9r6u6/sites/daily-grace-9r6u6","defaultUrl":"https://daily-grace-9r6u6.web.app","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.5
+  - Environments: .env.local, .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] ./src/ai/flows/generate-challenge-day-content.genkit.ts:29:5
+Type error: Object literal may only specify known properties, and 'name' does not exist in type 'Registry'.
+
+  27 | export const generateChallengeDayContent = defineFlow(
+  28 |   {
+> 29 |     name: 'generateChallengeDayContentFlow',
+     |     ^
+  30 |     inputSchema: GenerateChallengeDayContentInputSchema,
+  31 |     outputSchema: GenerateChallengeDayContentOutputSchema,
+  32 |   },
+
+[debug] [2025-07-15T07:16:01.334Z] Error: ENOENT: no such file or directory, open '/home/user/studio/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-07-15T08:11:32.773Z] ----------------------------------------------------------------------
+[debug] [2025-07-15T08:11:32.777Z] Command:       /nix/store/rbdrkcs5kkwpalxcd7c6bnm33lk2955n-nodejs-20.19.0/bin/node /home/user/.global_modules/bin/firebase deploy
+[debug] [2025-07-15T08:11:32.777Z] CLI Version:   14.7.0
+[debug] [2025-07-15T08:11:32.778Z] Platform:      linux
+[debug] [2025-07-15T08:11:32.778Z] Node Version:  v20.19.0
+[debug] [2025-07-15T08:11:32.778Z] Time:          Tue Jul 15 2025 08:11:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-07-15T08:11:32.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-15T08:11:33.305Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-15T08:11:33.507Z] Running auto auth
+[debug] [2025-07-15T08:11:33.512Z] [iam] checking project daily-grace-9r6u6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-07-15T08:11:33.516Z] No OAuth tokens found
+[debug] [2025-07-15T08:11:33.520Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions [none]
+[debug] [2025-07-15T08:11:33.523Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions x-goog-quota-user=projects/daily-grace-9r6u6
+[debug] [2025-07-15T08:11:33.523Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-15T08:11:34.183Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions 200
+[debug] [2025-07-15T08:11:34.184Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/daily-grace-9r6u6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-15T08:11:34.186Z] No OAuth tokens found
+[debug] [2025-07-15T08:11:34.187Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6 [none]
+[debug] [2025-07-15T08:11:34.407Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6 200
+[debug] [2025-07-15T08:11:34.407Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6 {"projectId":"daily-grace-9r6u6","projectNumber":"912630226430","displayName":"Daily Grace","name":"projects/daily-grace-9r6u6","resources":{"hostingSite":"daily-grace-9r6u6"},"state":"ACTIVE","etag":"1_76b50dd3-c68b-4a46-8105-de568078de06"}
+[debug] [2025-07-15T08:11:42.248Z] No OAuth tokens found
+[debug] [2025-07-15T08:11:42.249Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites pageToken=&pageSize=10
+[debug] [2025-07-15T08:11:43.335Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites 200
+[debug] [2025-07-15T08:11:43.335Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites {"sites":[{"name":"projects/daily-grace-9r6u6/sites/daily-grace-9r6u6","defaultUrl":"https://daily-grace-9r6u6.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-15T08:11:43.339Z] No OAuth tokens found
+[debug] [2025-07-15T08:11:43.340Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites 
+[debug] [2025-07-15T08:11:44.014Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites 200
+[debug] [2025-07-15T08:11:44.014Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites {"sites":[{"name":"projects/daily-grace-9r6u6/sites/daily-grace-9r6u6","defaultUrl":"https://daily-grace-9r6u6.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-15T08:11:44.017Z] No OAuth tokens found
+[debug] [2025-07-15T08:11:44.018Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6/webApps/-/config [none]
+[debug] [2025-07-15T08:11:44.580Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6/webApps/-/config 200
+[debug] [2025-07-15T08:11:44.580Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/daily-grace-9r6u6/webApps/-/config {"projectId":"daily-grace-9r6u6","storageBucket":"daily-grace-9r6u6.firebasestorage.app","apiKey":"AIzaSyA7NDj9BkU_HpvleiCrLCdZxdNFY6SLEUM","authDomain":"daily-grace-9r6u6.firebaseapp.com","messagingSenderId":"912630226430"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-07-15T08:11:59.911Z] No OAuth tokens found
+[debug] [2025-07-15T08:11:59.915Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites/daily-grace-9r6u6 [none]
+[debug] [2025-07-15T08:12:00.870Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites/daily-grace-9r6u6 200
+[debug] [2025-07-15T08:12:00.874Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/daily-grace-9r6u6/sites/daily-grace-9r6u6 {"name":"projects/daily-grace-9r6u6/sites/daily-grace-9r6u6","defaultUrl":"https://daily-grace-9r6u6.web.app","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.5
+
+[info]   - Environments: .env.local, .env
+
+
+[info]    Creating an optimized production build ...
+
+[info] Failed to compile.
+
+
+[info] ./src/app/challenges/[challengeId]/page.tsx
+Module not found: Can't resolve '@/ai/flows/generate-challenge-day-content.genkit'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[info] 
+> Build failed because of webpack errors
+
+[debug] [2025-07-15T08:12:19.580Z] Error: ENOENT: no such file or directory, open '/home/user/studio/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

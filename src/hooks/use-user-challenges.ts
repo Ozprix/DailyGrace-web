@@ -121,7 +121,7 @@ export function useUserChallenges() {
     const currentUserDocRef = doc(db, 'users', user.uid);
 
     if (startedChallengeIds.has(challengeId)) {
-      let existingProgress = challengeProgressCache.get(challengeId);
+      let existingProgress: UserChallengeStatus | null | undefined = challengeProgressCache.get(challengeId);
       if (!existingProgress) {
         existingProgress = await fetchChallengeProgress(challengeId);
       }

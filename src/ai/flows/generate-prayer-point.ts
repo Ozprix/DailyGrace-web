@@ -8,7 +8,9 @@
  * - GeneratePrayerPointOutput - The return type.
  */
 import { z } from 'zod';
-import { ai } from '@/lib/genkit';
+import { defineFlow } from '@genkit-ai/core';
+import { generate } from '@genkit-ai/ai';
+import { gemini10Pro } from '@genkit-ai/googleai';
 
 const GeneratePrayerPointInputSchema = z.object({
   verse: z.string().describe('The daily Bible verse.'),
@@ -22,28 +24,7 @@ const GeneratePrayerPointOutputSchema = z.object({
 });
 export type GeneratePrayerPointOutput = z.infer<typeof GeneratePrayerPointOutputSchema>;
 
-export async function generatePrayerPoint(input: GeneratePrayerPointInput): Promise<GeneratePrayerPointOutput> {
-  return generatePrayerPointFlow(input);
-}
-
-const prompt = ai.definePrompt({
-  name: 'generatePrayerPointPrompt',
-  input: {schema: GeneratePrayerPointInputSchema},
-  output: {schema: GeneratePrayerPointOutputSchema},
-  prompt: `You are an AI assistant who is an expert Christian devotional writer.
-Your task is to write a short prayer point based on the provided Bible verse and its accompanying message.
-Your response MUST be a JSON object with a single key: "prayerPoint".
-{{#if preferShortPrayer}}
-The prayer point should be a single, concise sentence.
-{{else}}
-The prayer point should be a short prayer of 1-3 sentences.
-{{/if}}
-
-Bible Verse: {{{verse}}}
-Message: {{{message}}}`,
-});
-
-const generatePrayerPointFlow = ai.defineFlow(
+const generatePrayerPointFlow = defineFlow(
   {
     name: 'generatePrayerPointFlow',
     inputSchema: GeneratePrayerPointInputSchema,
@@ -58,10 +39,36 @@ const generatePrayerPointFlow = ai.defineFlow(
     },
   },
   async (input: GeneratePrayerPointInput) => {
-    const {output} = await prompt(input);
+    const llmResponse = await generate({
+      model: gemini10Pro,
+      prompt: {
+        text: `You are an AI assistant who is an expert Christian devotional writer.
+Your task is to write a short prayer point based on the provided Bible verse and its accompanying message.
+Your response MUST be a JSON object with a single key: "prayerPoint".
+{{#if preferShortPrayer}}
+The prayer point should be a single, concise sentence.
+{{else}}
+The prayer point should be a short prayer of 1-3 sentences.
+{{/if}}
+
+Bible Verse: {{{verse}}}
+Message: {{{message}}}`,
+        input: input,
+      },
+      output: {
+        schema: GeneratePrayerPointOutputSchema,
+      },
+    });
+
+    const output = llmResponse.output();
     if (!output || !output.prayerPoint) {
       throw new Error("AI failed to generate a valid prayer point.");
     }
     return output;
-  }
+  },
+  () => {}
 );
+
+export async function generatePrayerPoint(input: GeneratePrayerPointInput): Promise<GeneratePrayerPointOutput> {
+  return generatePrayerPointFlow.invoke(input);
+}

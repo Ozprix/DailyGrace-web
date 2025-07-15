@@ -58,8 +58,8 @@ export default function SignupPage() {
     if (user) {
       localStorage.removeItem('referrerId'); // Clean up after successful signup
       router.push('/');
-    } else if (!authError) {
-       setFormError(authError?.message || "Signup failed. Please try again.");
+    } else if (authError) {
+       setFormError(authError.message || "Signup failed. Please try again.");
     }
   };
 

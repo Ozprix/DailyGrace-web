@@ -137,48 +137,6 @@ export const useJournal = () => {
      );
   }, [user, saveJournalEntry]);
 
-  const loadAllJournalEntriesForChallenge = useCallback(async (challengeId: string): Promise<JournalEntry[]> => {
-    if(!user) return [];
-    // This is a simplified version. A real implementation would query where context === 'challenge' and challengeId === challengeId
-    const allEntries = await loadAllJournalEntries();
-    return allEntries.filter(e => e.challengeId === challengeId);
-  }, [loadAllJournalEntries]);
-
-  const loadJournalEntry = useCallback(
-    async (verseId: string): Promise<JournalEntry | null> => {
-      if (!user) {
-        setJournalError("Not logged in.");
-        return null;
-      }
-
-      setIsLoadingJournal(true);
-      setJournalError(null);
-
-      if (isOnline()) {
-        try {
-          const journalRef = doc(db, "users", user.uid, "journal", verseId);
-          const docSnap = await getDoc(journalRef);
-          if (docSnap.exists()) {
-            return { id: docSnap.id, ...docSnap.data() } as JournalEntry;
-          }
-          return null;
-        } catch (error: any) {
-          console.error("Error loading journal entry:", error);
-          setJournalError(error.message || "Failed to load entry.");
-          return null;
-        } finally {
-          setIsLoadingJournal(false);
-        }
-      } else {
-        // const cachedEntries = await getCachedData('journal');
-        // const entry = cachedEntries.find(e => e.id === verseId);
-        setIsLoadingJournal(false);
-        return null; // For now, no offline loading here.
-      }
-    },
-    [user]
-  );
-
   const loadAllJournalEntries = useCallback(async (): Promise<JournalEntry[]> => {
     if (!user) {
       setJournalError("You must be logged in to view your journal.");
@@ -223,6 +181,48 @@ export const useJournal = () => {
         return [];
     }
   }, [user, toast]);
+
+  const loadAllJournalEntriesForChallenge = useCallback(async (challengeId: string): Promise<JournalEntry[]> => {
+    if(!user) return [];
+    // This is a simplified version. A real implementation would query where context === 'challenge' and challengeId === challengeId
+    const allEntries = await loadAllJournalEntries();
+    return allEntries.filter(e => e.challengeId === challengeId);
+  }, [loadAllJournalEntries]);
+
+  const loadJournalEntry = useCallback(
+    async (verseId: string): Promise<JournalEntry | null> => {
+      if (!user) {
+        setJournalError("Not logged in.");
+        return null;
+      }
+
+      setIsLoadingJournal(true);
+      setJournalError(null);
+
+      if (isOnline()) {
+        try {
+          const journalRef = doc(db, "users", user.uid, "journal", verseId);
+          const docSnap = await getDoc(journalRef);
+          if (docSnap.exists()) {
+            return { id: docSnap.id, ...docSnap.data() } as JournalEntry;
+          }
+          return null;
+        } catch (error: any) {
+          console.error("Error loading journal entry:", error);
+          setJournalError(error.message || "Failed to load entry.");
+          return null;
+        } finally {
+          setIsLoadingJournal(false);
+        }
+      } else {
+        // const cachedEntries = await getCachedData('journal');
+        // const entry = cachedEntries.find(e => e.id === verseId);
+        setIsLoadingJournal(false);
+        return null; // For now, no offline loading here.
+      }
+    },
+    [user]
+  );
 
   return {
     saveJournalEntry,

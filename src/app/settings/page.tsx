@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/auth-context';
-import { useUserPreferences, type NotificationFrequency, type ContentStyle } from '@/hooks/use-user-preferences';
+import { useUserPreferences } from '@/hooks/use-user-preferences';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -23,6 +23,7 @@ import UserDropdownMenu from '@/components/user-dropdown-menu';
 import { useToast } from '@/hooks/use-toast';
 import { syncAllDataForOffline } from '@/services/offline-sync.service';
 import { Input } from '@/components/ui/input';
+import type { NotificationFrequency, ContentStyle } from '@/types';
 
 export default function SettingsPage() {
   const { user, loading: authLoading } = useAuth();

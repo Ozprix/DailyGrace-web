@@ -41,7 +41,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setError(null); // Clear error on successful auth state change
     }, (authError) => {
       console.error("Auth state change error:", authError);
-      setError(authError);
+      setError({
+        code: 'auth/state-changed-error',
+        message: authError.message,
+        name: authError.name,
+        customData: {
+          appName: app.name,
+        }
+      });
       setUser(null);
       setLoading(false);
     });

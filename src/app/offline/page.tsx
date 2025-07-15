@@ -4,7 +4,7 @@
 
 import { WifiOff, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { useEffect } from 'react';
 import { analytics } from '@/lib/firebase/config';
 import { logEvent } from 'firebase/analytics';

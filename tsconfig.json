@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "src/functions", "src/firestore-seeder", "functions", "firestore-seeder"]
+  "exclude": ["node_modules", "functions", "firestore-seeder"]
 }

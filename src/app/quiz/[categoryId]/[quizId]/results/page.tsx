@@ -24,12 +24,12 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { ThemeToggle } from '@/components/theme-toggle';
 import { analytics } from '@/lib/firebase/config';
 import { logEvent } from 'firebase/analytics';
-import type { Quiz, Question as QuestionType } from '@/types';
+import type { Quiz, QuizQuestion as QuestionType } from '@/types';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Terminal, Sparkles } from 'lucide-react';
 import { useUserPreferences } from '@/hooks/use-user-preferences';
 
-const QUIZ_COMPLETION_POINTS = 25; 
+const QUIZ_COMPLETION_POINTS = 25;
 const QUIZ_SUCCESS_THRESHOLD = 0.7;
 
 const QuizResultsSkeleton = () => (
@@ -79,8 +79,8 @@ function QuizResultsContent() {
 
   useEffect(() => {
     if (analytics) {
-      logEvent(analytics, 'view_page', { 
-        page_name: 'quiz_results_page', 
+      logEvent(analytics, 'view_page', {
+        page_name: 'quiz_results_page',
         quiz_id: quizId,
         category_id: categoryId
       });
@@ -128,7 +128,7 @@ function QuizResultsContent() {
         if ((currentScore / currentTotal) >= QUIZ_SUCCESS_THRESHOLD) {
           awardPoints(QUIZ_COMPLETION_POINTS).then(success => {
             if (success) {
-              setPointsAwardedThisSession(true); 
+              setPointsAwardedThisSession(true);
               if(analytics) {
                 logEvent(analytics, 'points_awarded_for_quiz', {
                   quiz_id: quizId,

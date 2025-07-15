@@ -19,6 +19,7 @@ import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer } from 'recharts';
 import { format, subMonths, startOfMonth } from 'date-fns';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import { Timestamp } from 'firebase/firestore';
 
 interface StatData {
   journalEntries: number;
@@ -106,7 +107,7 @@ export default function ProgressDashboardPage() {
       });
 
       journalEntries.forEach(entry => {
-        const entryDate = entry.lastSaved.toDate ? entry.lastSaved.toDate() : new Date(entry.lastSaved);
+        const entryDate = entry.lastSaved instanceof Timestamp ? entry.lastSaved.toDate() : new Date(entry.lastSaved);
         if (entryDate >= startOfMonth(subMonths(today, 5))) {
           const monthName = format(entryDate, 'MMM');
           const monthData = newChartData.find(d => d.name === monthName);
@@ -117,8 +118,8 @@ export default function ProgressDashboardPage() {
       });
       
       completedChallenges.forEach(progress => {
-        if (progress?.completedAt) {
-            const completionDate = progress.completedAt.toDate();
+        if (progress?.lastDayCompletedAt) {
+            const completionDate = progress.lastDayCompletedAt.toDate();
             if (completionDate >= startOfMonth(subMonths(today, 5))) {
                 const monthName = format(completionDate, 'MMM');
                 const monthData = newChartData.find(d => d.name === monthName);
