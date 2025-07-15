@@ -8,9 +8,7 @@
  * - GenerateDevotionalMessageOutput - The return type.
  */
 import { z } from 'zod';
-import { defineFlow } from '@genkit-ai/core';
-import { generate } from '@genkit-ai/ai';
-import { gemini10Pro } from '@genkit-ai/googleai';
+import { ai } from '@/ai/genkit';
 
 const GenerateDevotionalMessageInputSchema = z.object({
   bibleVerse: z.string().describe('The full text of the Bible verse for the devotional.'),
@@ -24,17 +22,11 @@ const GenerateDevotionalMessageOutputSchema = z.object({
 });
 export type GenerateDevotionalMessageOutput = z.infer<typeof GenerateDevotionalMessageOutputSchema>;
 
-const generateDevotionalMessageFlow = defineFlow(
-  {
-    name: 'generateDevotionalMessageFlow',
-    inputSchema: GenerateDevotionalMessageInputSchema,
-    outputSchema: GenerateDevotionalMessageOutputSchema,
-  },
-  async (input: GenerateDevotionalMessageInput) => {
-    const llmResponse = await generate({
-      model: gemini10Pro,
-      prompt: {
-        text: `You are an AI assistant and Christian devotional writer. Your task is to write an uplifting message and extract 2-3 relevant themes based on the provided Bible verse.
+const prompt = ai.definePrompt({
+  name: 'generateDevotionalMessagePrompt',
+  input: { schema: GenerateDevotionalMessageInputSchema },
+  output: { schema: GenerateDevotionalMessageOutputSchema },
+  prompt: `You are an AI assistant and Christian devotional writer. Your task is to write an uplifting message and extract 2-3 relevant themes based on the provided Bible verse.
 
 Bible Verse: {{{bibleVerse}}}
 
@@ -44,26 +36,26 @@ Write a short, single-sentence devotional message.
 Write 1-2 uplifting paragraphs for the devotional message.
 {{/if}}
 
-Based on the verse and your generated message, provide an array of 2-3 relevant themes (e.g., "faith", "hope", "love", "strength").
-Your response MUST be a valid JSON object.`,
-        input: input,
-      },
-      output: {
-        schema: GenerateDevotionalMessageOutputSchema,
-      },
-    });
+Based on the verse and your generated message, provide an array of 2-3 relevant themes (e.g., "faith", "hope", "love", "strength").`,
+});
 
-    const output = llmResponse.output();
+const generateDevotionalMessageFlow = ai.defineFlow(
+  {
+    name: 'generateDevotionalMessageFlow',
+    inputSchema: GenerateDevotionalMessageInputSchema,
+    outputSchema: GenerateDevotionalMessageOutputSchema,
+  },
+  async (input) => {
+    const { output } = await prompt(input);
     if (!output) {
       throw new Error('AI failed to generate a valid devotional message.');
     }
     return output;
-  },
-  () => {}
+  }
 );
 
 export async function generateDevotionalMessage(
   input: GenerateDevotionalMessageInput
 ): Promise<GenerateDevotionalMessageOutput> {
-  return generateDevotionalMessageFlow.invoke(input);
+  return generateDevotionalMessageFlow(input);
 }

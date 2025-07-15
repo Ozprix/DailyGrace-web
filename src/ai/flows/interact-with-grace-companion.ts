@@ -7,9 +7,8 @@
  * - GraceCompanionAIOutput - Output type for the AI's response.
  */
 
-import { defineFlow } from '@genkit-ai/core';
+import { ai } from '@/ai/genkit';
 import { generate } from '@genkit-ai/ai';
-import { gemini10Pro } from '@genkit-ai/googleai';
 import { z } from 'zod';
 
 // Define input/output schemas
@@ -48,43 +47,30 @@ Response style: Feel free to provide detailed and in-depth responses. You can of
   return basePrompt + subscriptionGuidance;
 }
 
-const interactWithGraceCompanionFlow = defineFlow(
+const prompt = ai.definePrompt(
+  {
+    name: 'graceCompanionPrompt',
+    input: { schema: GraceCompanionInputSchema },
+    output: { schema: GraceCompanionOutputSchema },
+    system: (input) => buildSystemPrompt(input.subscriptionStatus),
+    prompt: (input) => input.userMessage,
+  },
+);
+
+const interactWithGraceCompanionFlow = ai.defineFlow(
   {
     name: 'interactWithGraceCompanionFlow',
     inputSchema: GraceCompanionInputSchema,
     outputSchema: GraceCompanionOutputSchema,
-    retry: {
-      maxAttempts: 3,
-      backoff: {
-        initialDelay: 1000,
-        maxDelay: 10000,
-        multiplier: 2,
-      },
-    },
   },
-  async (input: GraceCompanionUserInput): Promise<GraceCompanionAIOutput> => {
+  async (input) => {
     try {
-      const systemPrompt = buildSystemPrompt(input.subscriptionStatus);
-      
-      const llmResponse = await generate({
-        model: gemini10Pro,
-        prompt: {
-          system: systemPrompt,
-          prompt: input.userMessage,
-        },
-        output: {
-          schema: GraceCompanionOutputSchema,
-        },
-      });
-
-      const output = llmResponse.output();
-      
+      const { output } = await prompt(input);
       if (!output || !output.aiResponseText) {
         return { 
           aiResponseText: "I'm sorry, I couldn't generate a response at this moment. Could you try rephrasing or asking something else? I'm here to help you with spiritual guidance and biblical wisdom." 
         };
       }
-      
       return output;
     } catch (error) {
       console.error('Error in Grace Companion flow:', error);
@@ -95,8 +81,9 @@ const interactWithGraceCompanionFlow = defineFlow(
   }
 );
 
+
 export async function interactWithGraceCompanion(
   input: GraceCompanionUserInput
 ): Promise<GraceCompanionAIOutput> {
-  return interactWithGraceCompanionFlow.invoke(input);
+  return interactWithGraceCompanionFlow(input);
 }

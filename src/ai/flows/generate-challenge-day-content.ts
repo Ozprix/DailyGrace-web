@@ -1,10 +1,8 @@
-// src/ai/flows/generate-challenge-day-content.genkit.ts
+// src/ai/flows/generate-challenge-day-content.ts
 'use server';
 
-import { defineFlow } from '@genkit-ai/core';
-import { generate } from '@genkit-ai/ai';
+import { ai } from '@/ai/genkit';
 import { z } from 'zod';
-import { gemini10Pro } from '@genkit-ai/googleai';
 
 // Define the input schema for the flow
 export const GenerateChallengeDayContentInputSchema = z.object({
@@ -23,19 +21,12 @@ export const GenerateChallengeDayContentOutputSchema = z.object({
 });
 export type GenerateChallengeDayContentOutput = z.infer<typeof GenerateChallengeDayContentOutputSchema>;
 
-const generateChallengeDayContentFlow = defineFlow(
-  {
-    name: 'generateChallengeDayContentFlow',
-    inputSchema: GenerateChallengeDayContentInputSchema,
-    outputSchema: GenerateChallengeDayContentOutputSchema,
-  },
-  async (input: GenerateChallengeDayContentInput) => {
-    const llmResponse = await generate({
-      model: gemini10Pro,
-      prompt: {
-        text: `You are an AI assistant who is an expert and encouraging Christian devotional writer.
+const prompt = ai.definePrompt({
+  name: 'generateChallengeDayContentPrompt',
+  input: { schema: GenerateChallengeDayContentInputSchema },
+  output: { schema: GenerateChallengeDayContentOutputSchema },
+  prompt: `You are an AI assistant who is an expert and encouraging Christian devotional writer.
 Your task is to generate content for a specific day in a spiritual challenge, based on the provided context.
-Your response MUST be a JSON object with two keys: "reflection" and "prayerPoint".
 
 Context for the challenge day:
 - Title: "{{challengeDayTitle}}"
@@ -46,24 +37,25 @@ Context for the challenge day:
 Instructions:
 - For the "reflection" field: {{#if preferShortContent}}Provide a single, concise, inspirational sentence.{{else}}Provide a 1-2 paragraph inspirational reflection that expands on the context.{{/if}}
 - For the "prayerPoint" field: {{#if preferShortContent}}Provide a single, concise prayer point sentence.{{else}}Provide a short prayer (1-3 sentences) aligned with the day's theme.{{/if}}`,
-        input: input,
-      },
-      output: {
-        schema: GenerateChallengeDayContentOutputSchema,
-      },
-    });
+});
 
-    const output = llmResponse.output();
+const generateChallengeDayContentFlow = ai.defineFlow(
+  {
+    name: 'generateChallengeDayContentFlow',
+    inputSchema: GenerateChallengeDayContentInputSchema,
+    outputSchema: GenerateChallengeDayContentOutputSchema,
+  },
+  async (input) => {
+    const { output } = await prompt(input);
     if (!output) {
-      throw new Error("AI failed to generate a valid challenge day content.");
+      throw new Error("AI failed to generate valid challenge day content.");
     }
     return output;
-  },
-  () => {}
+  }
 );
 
 export async function generateChallengeDayContent(
   input: GenerateChallengeDayContentInput
 ): Promise<GenerateChallengeDayContentOutput> {
-  return generateChallengeDayContentFlow.invoke(input);
+  return generateChallengeDayContentFlow(input);
 }
