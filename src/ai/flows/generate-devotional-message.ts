@@ -45,7 +45,7 @@ const generateDevotionalMessageFlow = ai.defineFlow(
     inputSchema: GenerateDevotionalMessageInputSchema,
     outputSchema: GenerateDevotionalMessageOutputSchema,
   },
-  async (input) => {
+  async (input: GenerateDevotionalMessageInput) => {
     const { output } = await prompt(input);
     if (!output) {
       throw new Error('AI failed to generate a valid devotional message.');

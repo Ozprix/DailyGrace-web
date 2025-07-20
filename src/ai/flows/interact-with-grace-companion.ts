@@ -36,13 +36,9 @@ Guidelines:
 - If the user asks for a devotional message, provide one based on general biblical themes
 - Always respond with compassion and wisdom`;
 
-  const subscriptionGuidance = subscriptionStatus === 'free' 
-    ? '
-
-Response style: Keep responses concise, typically 1-2 paragraphs. Provide focused, helpful guidance without overly detailed explanations unless specifically requested and essential.'
-    : '
-
-Response style: Feel free to provide detailed and in-depth responses. You can offer comprehensive guidance and elaborate on biblical principles as needed.';
+  const subscriptionGuidance = subscriptionStatus === 'free'
+    ? 'Response style: Keep responses concise, typically 1-2 paragraphs. Provide focused, helpful guidance without overly detailed explanations unless specifically requested and essential.'
+    : 'Response style: Feel free to provide detailed and in-depth responses. You can offer comprehensive guidance and elaborate on biblical principles as needed.';
 
   return basePrompt + subscriptionGuidance;
 }
@@ -52,8 +48,8 @@ const prompt = ai.definePrompt(
     name: 'graceCompanionPrompt',
     input: { schema: GraceCompanionInputSchema },
     output: { schema: GraceCompanionOutputSchema },
-    system: (input) => buildSystemPrompt(input.subscriptionStatus),
-    prompt: (input) => input.userMessage,
+    system: (input: GraceCompanionUserInput) => buildSystemPrompt(input.subscriptionStatus),
+    prompt: (input: GraceCompanionUserInput) => input.userMessage,
   },
 );
 
@@ -63,19 +59,19 @@ const interactWithGraceCompanionFlow = ai.defineFlow(
     inputSchema: GraceCompanionInputSchema,
     outputSchema: GraceCompanionOutputSchema,
   },
-  async (input) => {
+  async (input: GraceCompanionUserInput) => {
     try {
       const { output } = await prompt(input);
       if (!output || !output.aiResponseText) {
-        return { 
-          aiResponseText: "I'm sorry, I couldn't generate a response at this moment. Could you try rephrasing or asking something else? I'm here to help you with spiritual guidance and biblical wisdom." 
+        return {
+          aiResponseText: "I'm sorry, I couldn't generate a response at this moment. Could you try rephrasing or asking something else? I'm here to help you with spiritual guidance and biblical wisdom."
         };
       }
       return output;
     } catch (error) {
       console.error('Error in Grace Companion flow:', error);
-      return { 
-        aiResponseText: "I apologize, but I'm experiencing some technical difficulties right now. Please try again in a moment. I'm here to support you with spiritual guidance whenever you need it." 
+      return {
+        aiResponseText: "I apologize, but I'm experiencing some technical difficulties right now. Please try again in a moment. I'm here to support you with spiritual guidance whenever you need it."
       };
     }
   }

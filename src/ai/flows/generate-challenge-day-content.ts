@@ -16,7 +16,7 @@ export type GenerateChallengeDayContentInput = z.infer<typeof GenerateChallengeD
 
 // Define the output schema for the flow
 export const GenerateChallengeDayContentOutputSchema = z.object({
-  reflection: z.string().describe("An inspirational reflection related to the challenge day's theme, prompt, and verse. Length depends on preferShortContent."),
+  reflection: z.string().describe("An inspirational reflection related to the day's theme, prompt, and verse. Length depends on preferShortContent."),
   prayerPoint: z.string().describe("A prayer point related to the day's theme. Length depends on preferShortContent."),
 });
 export type GenerateChallengeDayContentOutput = z.infer<typeof GenerateChallengeDayContentOutputSchema>;
@@ -45,7 +45,7 @@ const generateChallengeDayContentFlow = ai.defineFlow(
     inputSchema: GenerateChallengeDayContentInputSchema,
     outputSchema: GenerateChallengeDayContentOutputSchema,
   },
-  async (input) => {
+  async (input: GenerateChallengeDayContentInput) => {
     const { output } = await prompt(input);
     if (!output) {
       throw new Error("AI failed to generate valid challenge day content.");
