@@ -1,60 +1,55 @@
-'use server';
-/**
- * @fileOverview Generates an inspirational message and themes based on a Bible verse.
- *
- * - generateDevotionalMessage - A function that handles the message generation.
- * - GenerateDevotionalMessageInput - The input type.
- * - GenerateDevotionalMessageOutput - The return type.
- */
-import { z } from 'zod';
-import { ai } from '@/ai/genkit';
+// // src/ai/flows/generate-devotional-message.ts
+// /**
+//  * @fileoverview Defines a Genkit flow for generating a devotional message based on a Bible verse.
+//  *
+//  * This file exports a Zod schema for the flow's input and the flow function itself.
+//  * The flow uses a predefined prompt to instruct the AI model on how to generate the devotional content.
+//  */
+// 'use server';
 
-const GenerateDevotionalMessageInputSchema = z.object({
-  bibleVerse: z.string().describe('The full text of the Bible verse for the devotional.'),
-  preferShortMessage: z.boolean().optional().describe('If true, generate a short, single-sentence message. Otherwise, generate 1-2 paragraphs.'),
-});
-export type GenerateDevotionalMessageInput = z.infer<typeof GenerateDevotionalMessageInputSchema>;
+// import { z } from 'zod';
+// import { ai } from '@/ai/genkit';
 
-const GenerateDevotionalMessageOutputSchema = z.object({
-  message: z.string().describe('The inspirational devotional message.'),
-  themes: z.array(z.string()).describe('A list of 2-3 relevant themes derived from the verse and message.'),
-});
-export type GenerateDevotionalMessageOutput = z.infer<typeof GenerateDevotionalMessageOutputSchema>;
+// const GenerateDevotionalMessageInputSchema = z.object({
+//   bibleVerse: z.string().describe('The full text of the Bible verse for the devotional.'),
+//   bibleVerseReference: z.string().describe('The reference for the Bible verse (e.g., "John 3:16").'),
+//   theme: z.string().optional().describe('An optional theme to guide the devotional message.'),
+//   preferShortContent: z.boolean().optional().describe('If true, generate a single, concise inspirational sentence. Otherwise, generate a 1-2 paragraph reflection.'),
+// });
 
-const prompt = ai.definePrompt({
-  name: 'generateDevotionalMessagePrompt',
-  input: { schema: GenerateDevotionalMessageInputSchema },
-  output: { schema: GenerateDevotionalMessageOutputSchema },
-  prompt: `You are an AI assistant and Christian devotional writer. Your task is to write an uplifting message and extract 2-3 relevant themes based on the provided Bible verse.
+// const GenerateDevotionalMessageOutputSchema = z.object({
+//   reflection: z.string().describe("An inspirational reflection based on the verse. Length depends on preferShortContent."),
+// });
 
-Bible Verse: {{{bibleVerse}}}
+// const prompt = ai.definePrompt({
+//   name: 'generateDevotionalMessagePrompt',
+//   input: { schema: GenerateDevotionalMessageInputSchema },
+//   output: { schema: GenerateDevotionalMessageOutputSchema },
+//   prompt: `You are an AI assistant who is an expert and encouraging Christian devotional writer.
+// Your task is to write a devotional message based on a Bible verse.
 
-{{#if preferShortMessage}}
-Write a short, single-sentence devotional message.
-{{else}}
-Write 1-2 uplifting paragraphs for the devotional message.
-{{/if}}
+// Context:
+// - Bible Verse: "{{bibleVerse}}" ({{bibleVerseReference}})
+// {{#if theme}}- Theme: "{{theme}}"{{/if}}
 
-Based on the verse and your generated message, provide an array of 2-3 relevant themes (e.g., "faith", "hope", "love", "strength").`,
-});
+// Instructions:
+// - Write a devotional reflection that is encouraging, insightful, and easy to understand.
+// - {{#if preferShortContent}}Provide a single, concise, inspirational sentence.{{else}}Provide a 1-2 paragraph reflection.{{/if}}
+// - Do not start with "In today's verse" or similar phrases.
+// - Your response should only contain the reflection itself, in the "reflection" field.`,
+// });
 
-const generateDevotionalMessageFlow = ai.defineFlow(
-  {
-    name: 'generateDevotionalMessageFlow',
-    inputSchema: GenerateDevotionalMessageInputSchema,
-    outputSchema: GenerateDevotionalMessageOutputSchema,
-  },
-  async (input: GenerateDevotionalMessageInput) => {
-    const { output } = await prompt(input);
-    if (!output) {
-      throw new Error('AI failed to generate a valid devotional message.');
-    }
-    return output;
-  }
-);
-
-export async function generateDevotionalMessage(
-  input: GenerateDevotionalMessageInput
-): Promise<GenerateDevotionalMessageOutput> {
-  return generateDevotionalMessageFlow(input);
-}
+// export const generateDevotionalMessage = ai.defineFlow(
+//   {
+//     name: 'generateDevotionalMessageFlow',
+//     inputSchema: GenerateDevotionalMessageInputSchema,
+//     outputSchema: GenerateDevotionalMessageOutputSchema,
+//   },
+//   async (input) => {
+//     const { output } = await prompt(input);
+//     if (!output) {
+//       throw new Error('AI failed to generate a devotional message.');
+//     }
+//     return output;
+//   }
+// );

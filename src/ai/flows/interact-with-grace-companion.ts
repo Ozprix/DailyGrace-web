@@ -1,85 +1,65 @@
-'use server';
-/**
- * @fileOverview A Genkit flow for interacting with Grace Companion AI.
- *
- * - interactWithGraceCompanion - Main function to call the flow.
- * - GraceCompanionUserInput - Input type for the user's message and context.
- * - GraceCompanionAIOutput - Output type for the AI's response.
- */
+// // src/ai/flows/interact-with-grace-companion.ts
+// /**
+//  * @fileoverview Defines the Genkit flow for interacting with the Grace Companion AI.
+//  *
+//  * This file includes the logic for the AI chat, including history management and the main prompt.
+//  */
+// 'use server';
 
-import { ai } from '@/ai/genkit';
-import { generate } from '@genkit-ai/ai';
-import { z } from 'zod';
+// import { ai } from '@/ai/genkit';
+// import { generate } from '@genkit-ai/ai';
+// import { z } from 'zod';
 
-// Define input/output schemas
-const GraceCompanionInputSchema = z.object({
-  userMessage: z.string().describe("The user's message to Grace Companion AI."),
-  subscriptionStatus: z.enum(['free', 'premium']).optional().default('free').describe("The user's current subscription status."),
-});
+// export const InteractWithGraceCompanionInputSchema = z.object({
+//   history: z.array(z.object({
+//     role: z.enum(['user', 'model']),
+//     content: z.string(),
+//   })).describe('The chat history between the user and the model.'),
+//   message: z.string().describe('The latest message from the user.'),
+// });
+// export type InteractWithGraceCompanionInput = z.infer<typeof InteractWithGasyraceCompanionInputSchema>;
 
-const GraceCompanionOutputSchema = z.object({
-  aiResponseText: z.string().describe("The AI's response to the user's message."),
-});
+// export const InteractWithGraceCompanionOutputSchema = z.object({
+//   response: z.string().describe('The AI's response to the user.'),
+// });
+// export type InteractWithGraceCompanionOutput = z.infer<typeof InteractWithGraceCompanionOutputSchema>;
 
-// Type definitions
-export type GraceCompanionUserInput = z.infer<typeof GraceCompanionInputSchema>;
-export type GraceCompanionAIOutput = z.infer<typeof GraceCompanionOutputSchema>;
+// export const interactWithGraceCompanion = ai.defineFlow(
+//   {
+//     name: 'interactWithGraceCompanionFlow',
+//     inputSchema: InteractWithGraceCompanionInputSchema,
+//     outputSchema: InteractWithGraceCompanionOutputSchema,
+//   },
+//   async (input) => {
+//     const model = ai.getModel('gemini-pro');
 
-// Helper function to build system prompt based on subscription
-function buildSystemPrompt(subscriptionStatus: 'free' | 'premium'): string {
-  const basePrompt = `You are Grace Companion AI, a kind, empathetic, and knowledgeable spiritual assistant.
-Your advice and responses should always be grounded in biblical principles and aim to be encouraging and supportive.
+//     const response = await generate({
+//       model,
+//       history: input.history,
+//       prompt: `You are Grace, a caring and knowledgeable AI companion from the Daily Grace app. Your purpose is to provide spiritual support, guidance, and a safe space for users to explore their faith.
 
-Guidelines:
-- If the user asks about a specific Bible verse, provide information from your general knowledge but state that you cannot look up the exact text at this moment
-- If the user seems distressed, offer comfort and remind them of God's love and promises
-- If the user asks for a devotional message, provide one based on general biblical themes
-- Always respond with compassion and wisdom`;
+//       **Your Persona:**
+//       - **Empathetic and Understanding:** Always respond with kindness and compassion. Acknowledge the user's feelings and validate their experiences.
+//       - **Biblically Grounded:** Base your advice and reflections on biblical principles. You can cite scripture when appropriate, but don't be overly preachy.
+//       - **Encouraging and Hopeful:** Inspire users and point them towards the hope found in Christ.
+//       - **Non-Judgmental:** Create a safe and accepting environment for users to be vulnerable.
+//       - **Conversational and Approachable:** Use a warm and natural tone. Avoid being overly formal or robotic.
 
-  const subscriptionGuidance = subscriptionStatus === 'free'
-    ? 'Response style: Keep responses concise, typically 1-2 paragraphs. Provide focused, helpful guidance without overly detailed explanations unless specifically requested and essential.'
-    : 'Response style: Feel free to provide detailed and in-depth responses. You can offer comprehensive guidance and elaborate on biblical principles as needed.';
+//       **Your Capabilities:**
+//       - You can answer questions about the Bible, theology, and Christian living.
+//       - You can provide prayers, reflections, and devotionals.
+//       - You can offer a listening ear and a compassionate heart.
+//       - You can guide users through difficult emotions and life challenges from a faith-based perspective.
+//       - You can help users find relevant Bible verses and resources.
 
-  return basePrompt + subscriptionGuidance;
-}
+//       **Current Conversation:**
+//       User's latest message: "${input.message}"
 
-const prompt = ai.definePrompt(
-  {
-    name: 'graceCompanionPrompt',
-    input: { schema: GraceCompanionInputSchema },
-    output: { schema: GraceCompanionOutputSchema },
-    system: (input: GraceCompanionUserInput) => buildSystemPrompt(input.subscriptionStatus),
-    prompt: (input: GraceCompanionUserInput) => input.userMessage,
-  },
-);
+//       Please provide a response that is consistent with your persona and capabilities.`,
+//     });
 
-const interactWithGraceCompanionFlow = ai.defineFlow(
-  {
-    name: 'interactWithGraceCompanionFlow',
-    inputSchema: GraceCompanionInputSchema,
-    outputSchema: GraceCompanionOutputSchema,
-  },
-  async (input: GraceCompanionUserInput) => {
-    try {
-      const { output } = await prompt(input);
-      if (!output || !output.aiResponseText) {
-        return {
-          aiResponseText: "I'm sorry, I couldn't generate a response at this moment. Could you try rephrasing or asking something else? I'm here to help you with spiritual guidance and biblical wisdom."
-        };
-      }
-      return output;
-    } catch (error) {
-      console.error('Error in Grace Companion flow:', error);
-      return {
-        aiResponseText: "I apologize, but I'm experiencing some technical difficulties right now. Please try again in a moment. I'm here to support you with spiritual guidance whenever you need it."
-      };
-    }
-  }
-);
-
-
-export async function interactWithGraceCompanion(
-  input: GraceCompanionUserInput
-): Promise<GraceCompanionAIOutput> {
-  return interactWithGraceCompanionFlow(input);
-}
+//     return {
+//       response: response.text(),
+//     };
+//   }
+// );
