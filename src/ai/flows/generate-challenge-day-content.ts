@@ -1,4 +1,3 @@
-// src/ai/flows/generate-challenge-day-content.ts
 'use server';
 
 import { ai } from '@/ai/genkit';

@@ -1,4 +1,3 @@
-
 'use server';
 /**
  * @fileOverview Generates an inspirational message and themes based on a Bible verse.

@@ -1,4 +1,3 @@
-
 'use server';
 /**
  * @fileOverview Generates a prayer point based on a Bible verse and message.
