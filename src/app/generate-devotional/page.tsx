@@ -19,10 +19,10 @@ import { useUserPreferences } from '@/hooks/use-user-preferences';
 import { useJournal } from '@/hooks/use-journal';
 import { useToast } from '@/hooks/use-toast';
 import { useContent } from '@/contexts/content-context';
-import { generateDevotionalMessage } from '@/ai/flows/generate-devotional-message';
-import type { GenerateDevotionalMessageOutput } from '@/ai/flows/generate-devotional-message';
-import { generatePrayerPoint } from '@/ai/flows/generate-prayer-point';
-import type { GeneratePrayerPointOutput } from '@/ai/flows/generate-prayer-point';
+// import { generateDevotionalMessage } from '@/ai/flows/generate-devotional-message';
+// import type { GenerateDevotionalMessageOutput } from '@/ai/flows/generate-devotional-message';
+// import { generatePrayerPoint } from '@/ai/flows/generate-prayer-point';
+// import type { GeneratePrayerPointOutput } from '@/ai/flows/generate-prayer-point';
 import { DevotionalCard } from '@/components/devotional-card';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { analytics } from '@/lib/firebase/config';
@@ -157,20 +157,20 @@ export default function GenerateDevotionalPage() {
       
       const preferShortFormat = preferences.subscriptionStatus === 'free' ? true : preferences.contentStyle === 'short';
 
-      const msgOutput: GenerateDevotionalMessageOutput = await generateDevotionalMessage({
-        bibleVerse: verse.text,
-        preferShortMessage: preferShortFormat,
-      });
-      const prayerOutput: GeneratePrayerPointOutput = await generatePrayerPoint({
-        verse: verse.text,
-        message: msgOutput.message,
-        preferShortPrayer: preferShortFormat,
-      });
+      // const msgOutput: GenerateDevotionalMessageOutput = await generateDevotionalMessage({
+      //   bibleVerse: verse.text,
+      //   preferShortMessage: preferShortFormat,
+      // });
+      // const prayerOutput: GeneratePrayerPointOutput = await generatePrayerPoint({
+      //   verse: verse.text,
+      //   message: msgOutput.message,
+      //   preferShortPrayer: preferShortFormat,
+      // });
       setGeneratedDevotionalContent({
         verse: verse,
-        message: msgOutput.message,
-        prayerPoint: prayerOutput.prayerPoint,
-        themes: msgOutput.themes || [],
+        message: "This is a placeholder message. AI generation is currently disabled.",
+        prayerPoint: "This is a placeholder prayer point. AI generation is currently disabled.",
+        themes: [],
       });
       if (analytics) {
         logEvent(analytics, 'generate_devotional_content_success', { verse_id: verse.id, source: 'custom_generate_page' });

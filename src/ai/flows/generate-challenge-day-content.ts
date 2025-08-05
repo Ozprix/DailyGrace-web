@@ -1,4 +1,5 @@
-// // src/ai/flows/generate-challenge-day-content.ts
+// src/ai/flows/generate-challenge-day-content.ts
+// Temporarily commented out for performance optimization focus
 // 'use server';
 
 // import { ai } from '@/ai/genkit';
@@ -59,3 +60,15 @@
 // ): Promise<GenerateChallengeDayContentOutput> {
 //   return generateChallengeDayContentFlow(input);
 // }
+
+// Temporary placeholder exports
+export const GenerateChallengeDayContentInputSchema = {};
+export const GenerateChallengeDayContentOutputSchema = {};
+export type GenerateChallengeDayContentInput = any;
+export type GenerateChallengeDayContentOutput = any;
+
+export async function generateChallengeDayContent(
+  input: GenerateChallengeDayContentInput
+): Promise<GenerateChallengeDayContentOutput> {
+  return { reflection: '', prayerPoint: '' };
+}

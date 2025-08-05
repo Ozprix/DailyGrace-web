@@ -8,7 +8,8 @@
     "start": "next start --port 9002",
     "lint": "next lint",
     "test": "jest",
-    "firebase:emulators": "firebase emulators:start --only functions,firestore --import=./firebase-emulator-data --export-on-exit"
+    "firebase:emulators": "firebase emulators:start --only functions,firestore --import=./firebase-emulator-data --export-on-exit",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "@genkit-ai/ai": "^1.15.1",
@@ -39,9 +40,11 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@sentry/nextjs": "^10.1.0",
     "@stripe/stripe-js": "^4.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "critters": "^0.0.23",
     "date-fns": "^3.0.6",
     "firebase": "^10.12.2",
     "genkit": "^1.15.1",
@@ -54,6 +57,7 @@
     "react-hook-form": "^7.60.0",
     "recharts": "^2.12.7",
     "server-only": "^0.0.1",
+    "sharp": "^0.34.3",
     "stripe": "^18.3.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",

@@ -1,6 +1,13 @@
 // src/functions/src/types/index.ts
 
-import type { Timestamp } from 'firebase-admin/firestore';
+// Temporarily disabled for performance testing
+// import type { Timestamp } from 'firebase-admin/firestore';
+
+// Placeholder types for performance testing
+export interface PlaceholderType {
+  id: string;
+  name: string;
+}
 
 // This file should contain type definitions relevant to your backend functions.
 // Ensure these types align with the data structures your functions expect and use.

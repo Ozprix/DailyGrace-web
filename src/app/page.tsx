@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -56,6 +56,7 @@ export default function DashboardPage() {
     const { getVerseById, isLoadingContent: isLoadingContentContext } = useContent();
     const { activeChallenges, isLoading: isLoadingChallenges } = useUserChallenges();
     const { weeklyMissions, isLoadingMissions, handleCompleteMission, isCompletingMission } = useMissions();
+    const [mounted, setMounted] = useState(false);
     const router = useRouter();
     
     const weeklyTheme = getCurrentTheme();
@@ -76,10 +77,35 @@ export default function DashboardPage() {
     };
     
     useEffect(() => {
-        if (analytics) {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (mounted && analytics) {
           logEvent(analytics, 'view_page', { page_name: 'dashboard' });
         }
-    }, []);
+    }, [mounted]);
+
+    // Don't render anything until mounted to prevent SSR issues
+    if (!mounted) {
+        return (
+            <div className="flex flex-col gap-6">
+                <div className="flex justify-between items-center">
+                    <Skeleton className="h-9 w-48" />
+                </div>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <Skeleton className="h-24 w-full"/>
+                    <Skeleton className="h-24 w-full"/>
+                    <Skeleton className="h-24 w-full lg:col-span-1"/>
+                </div>
+                <Skeleton className="h-48 w-full" />
+                 <div>
+                    <Skeleton className="h-8 w-64 mb-4" />
+                    <Skeleton className="h-32 w-full" />
+                </div>
+            </div>
+        );
+    }
 
     if (authLoading || !preferencesLoaded || isLoadingContentContext || isLoadingChallenges) {
         return (

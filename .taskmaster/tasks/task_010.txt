@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: Prayer Circles and Community Groups
+# Status: done
+# Dependencies: 9
+# Priority: medium
+# Description: Build private prayer circles for intimate group prayer and community building
+# Details:
+Create prayer circles system where users can create or join private groups for focused prayer. Implement circle management, member invitations, prayer sharing within circles, and circle-specific features. Include circle analytics and engagement tracking.
+
+# Test Strategy:
+Test circle creation and management, verify member invitations work, test prayer sharing within circles, and ensure proper privacy controls.

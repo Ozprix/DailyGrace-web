@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: Gamification System - Missions and Challenges
+# Status: done
+# Dependencies: 7
+# Priority: medium
+# Description: Implement weekly missions, spiritual challenges, and the Grace Points reward system
+# Details:
+Create weekly missions system with various spiritual tasks, implement spiritual challenges with multi-day journeys, build the Grace Points reward system, and create achievement badges. Include mission completion tracking and reward distribution.
+
+# Test Strategy:
+Test mission creation and completion, verify Grace Points are awarded correctly, test challenge progression, and ensure achievement system works properly.

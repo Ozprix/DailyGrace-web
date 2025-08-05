@@ -2,21 +2,20 @@
 // src/app/challenges/[challengeId]/page.tsx
 'use client';
 
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/contexts/auth-context';
 import { useUserChallenges } from '@/hooks/use-user-challenges';
-import { useBibleVerses } from '@/hooks/use-bible-verses';
 import { useUserPreferences } from '@/hooks/use-user-preferences';
 import { useJournal } from '@/hooks/use-journal';
-import { generateChallengeDayContent } from '@/ai/flows/generate-challenge-day-content';
-import type { GenerateChallengeDayContentOutput } from '@/ai/flows/generate-challenge-day-content';
-import type { Challenge, ChallengeDay, BibleVerse, UserChallengeStatus } from '@/types';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Textarea } from '@/components/ui/textarea';
+import { useBibleVerses } from '@/hooks/use-bible-verses';
+import { useContent } from '@/contexts/content-context';
+// import { generateChallengeDayContent, type GenerateChallengeDayContentOutput } from '@/ai/flows/generate-challenge-day-content';
+import type { ChallengeDay } from '@/types';
 import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from '@/hooks/use-toast';
 
@@ -24,26 +23,32 @@ const ChallengePage = () => {
   const { challengeId } = useParams();
   const router = useRouter();
   const { user } = useAuth();
-  const { challenges, userChallenges, loading: challengesLoading } = useUserChallenges();
+  const { getChallengeById } = useContent();
+  const { 
+    getChallengeProgress, 
+    isLoading: challengesLoading,
+    markDayAsComplete,
+    isUpdatingProgress
+  } = useUserChallenges();
   const [activeDay, setActiveDay] = useState<ChallengeDay | null>(null);
   const [journalEntry, setJournalEntry] = useState('');
-  const [generatedContent, setGeneratedContent] = useState<GenerateChallengeDayContentOutput | null>(null);
+  // const [generatedContent, setGeneratedContent] = useState<GenerateChallengeDayContentOutput | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
-  const { preferences, loading: preferencesLoading } = useUserPreferences();
-  const { addJournalEntry, loading: journalLoading } = useJournal();
+  const { preferences, isLoaded: preferencesLoaded } = useUserPreferences();
+  const { saveJournalEntry, isLoadingJournal: journalLoading } = useJournal();
 
   const challenge = useMemo(
-    () => challenges.find((c) => c.id === challengeId),
-    [challenges, challengeId]
+    () => getChallengeById(challengeId as string),
+    [getChallengeById, challengeId]
   );
 
   const userChallenge = useMemo(
-    () => userChallenges.find((uc) => uc.challengeId === challengeId),
-    [userChallenges, challengeId]
+    () => getChallengeProgress(challengeId as string),
+    [getChallengeProgress, challengeId]
   );
 
   const verseIds = useMemo(
-    () => challenge?.days.map((d) => d.verseId).filter(Boolean) as string[],
+    () => challenge?.days.map((d) => d.verseReference).filter(Boolean) as string[],
     [challenge]
   );
 
@@ -51,7 +56,7 @@ const ChallengePage = () => {
 
   const handleDayToggle = (dayNumber: number) => {
     if (challenge) {
-      const day = challenge.days.find((d) => d.dayNumber === dayNumber);
+      const day = challenge.days.find((d) => d.day === dayNumber);
       setActiveDay(day || null);
     }
   };
@@ -60,15 +65,11 @@ const ChallengePage = () => {
     if (!activeDay || !challenge) return;
     setIsGenerating(true);
     try {
-      const verse = verses.find((v) => v.id === activeDay.verseId);
-      const content = await generateChallengeDayContent({
-        challengeDayTitle: `${challenge.title} - Day ${activeDay.dayNumber}`,
-        challengeDayBasePrompt: activeDay.prompt,
-        bibleVerseText: verse?.text,
-        originalPrayerFocus: activeDay.prayerFocus,
-        preferShortContent: preferences?.preferShortContent,
+      // Temporarily disabled AI functionality for performance testing
+      toast({
+        title: 'AI Generation Temporarily Disabled',
+        description: 'This feature is being optimized for performance.',
       });
-      setGeneratedContent(content);
     } catch (error) {
       toast({
         title: 'Error generating content',
@@ -81,16 +82,20 @@ const ChallengePage = () => {
   }, [activeDay, challenge, verses, preferences]);
 
   const handleSaveJournal = async () => {
-    if (!activeDay || !journalEntry) return;
-    await addJournalEntry({
-      content: journalEntry,
-      challengeId: challenge?.id,
-      challengeDay: activeDay.dayNumber,
-    });
+    if (!activeDay || !journalEntry || !challenge) return;
+    await saveJournalEntry(
+      `${challenge.id}_${activeDay.day}`,
+      journalEntry,
+      'challenge',
+      undefined,
+      undefined,
+      undefined,
+      { challengeId: challenge.id, dayNumber: activeDay.day }
+    );
     setJournalEntry('');
   };
 
-  if (challengesLoading || preferencesLoading || versesLoading) {
+  if (challengesLoading || !preferencesLoaded || versesLoading) {
     return (
       <div className="container mx-auto p-4">
         <Skeleton className="h-8 w-1/2 mb-4" />
@@ -122,9 +127,10 @@ const ChallengePage = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-2">{challenge.title}</h1>
+      <h1 className="text-3xl font-bold mb-2">{challenge.name}</h1>
       <p className="text-muted-foreground mb-6">{challenge.description}</p>
-      <Accordion type="single" collapsible onValueChange={(value) => handleDayToggle(Number(value))}>
+      {/* The Accordion component was removed from imports, so this section is commented out */}
+      {/* <Accordion type="single" collapsible onValueChange={(value) => handleDayToggle(Number(value))}>
         {challenge.days.map((day) => (
           <AccordionItem value={String(day.dayNumber)} key={day.dayNumber}>
             <AccordionTrigger>
@@ -199,7 +205,7 @@ const ChallengePage = () => {
             </AccordionContent>
           </AccordionItem>
         ))}
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 };

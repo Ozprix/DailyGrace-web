@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: AI Content Generation Integration
+# Status: done
+# Dependencies: 5
+# Priority: high
+# Description: Integrate Google AI (Gemini) via Genkit for generating devotional content and prayer points
+# Details:
+Set up Genkit integration with Google AI, create AI flows for generating devotional messages, prayer points, and verse images. Implement proper prompt engineering, error handling, and content moderation. Set up usage limits and caching strategies.
+
+# Test Strategy:
+Test AI content generation, verify quality and appropriateness of generated content, test error handling for API failures, and ensure proper rate limiting and caching.

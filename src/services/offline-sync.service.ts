@@ -66,7 +66,7 @@ const cacheData = async <T extends keyof DailyGraceDB>(
   if (typeof window === 'undefined') return; // Guard against server-side execution
   try {
     const db = await getDbPromise();
-    const tx = db.transaction(storeName, 'readwrite');
+    const tx = db.transaction(storeName as any, 'readwrite');
     await Promise.all(data.map(item => tx.store.put(item)));
     return tx.done;
   } catch (error) {
@@ -84,7 +84,7 @@ export const getCachedData = async <T extends keyof DailyGraceDB>(
     if (typeof window === 'undefined') return []; // Guard against server-side execution
     try {
         const db = await getDbPromise();
-        return db.getAll(storeName);
+        return db.getAll(storeName as any);
     } catch (error) {
         console.error(`Failed to get cached data from store: ${storeName}`, error);
         return [];

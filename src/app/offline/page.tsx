@@ -2,70 +2,118 @@
 // src/app/offline/page.tsx
 "use client";
 
-import { WifiOff, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { useEffect } from 'react';
-import { analytics } from '@/lib/firebase/config';
-import { logEvent } from 'firebase/analytics';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { WifiOff, RefreshCw, BookOpen, Heart, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function OfflinePage() {
-
-  useEffect(() => {
-    if (analytics) {
-      logEvent(analytics, 'view_page', { page_name: 'offline_fallback_page' });
-    }
-  }, []);
-
   const handleRetry = () => {
-    if (typeof window !== 'undefined') {
-      if (analytics) {
-        logEvent(analytics, 'offline_page_retry_clicked');
-      }
-      window.location.reload();
-    }
+    window.location.reload();
+  };
+
+  const handleGoHome = () => {
+    window.location.href = '/';
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-4 selection:bg-primary/20 selection:text-primary">
-      <main className="flex flex-col items-center text-center">
-        <Card className="w-full max-w-md shadow-xl bg-card/80 backdrop-blur-sm border-border/50">
-            <CardHeader className="items-center">
-                <div className="p-3 bg-destructive/10 rounded-full mb-4">
-                    <WifiOff className="h-12 w-12 text-destructive" />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+      <div className="max-w-md w-full">
+        <Card className="shadow-lg border-0">
+          <CardHeader className="text-center pb-4">
+            <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <WifiOff className="w-8 h-8 text-blue-600" />
+            </div>
+            <CardTitle className="text-2xl font-bold text-gray-900">
+              You're Offline
+            </CardTitle>
+            <CardDescription className="text-gray-600">
+              Don't worry! You can still access your saved content and continue your spiritual journey.
+            </CardDescription>
+          </CardHeader>
+          
+          <CardContent className="space-y-6">
+            {/* Available Offline Features */}
+            <div className="space-y-3">
+              <h3 className="font-semibold text-gray-900">Available Offline:</h3>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                  <BookOpen className="w-5 h-5 text-green-600" />
+                  <span className="text-sm text-gray-700">Daily Devotionals</span>
                 </div>
-                <CardTitle className="text-2xl font-bold text-destructive">You're Offline</CardTitle>
-                <CardDescription className="text-muted-foreground mt-1">
-                    It seems you've lost your internet connection.
-                </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-                <p className="text-foreground/80">
-                    Please check your network settings and try again. Some previously visited pages might still be accessible.
-                </p>
-                <div className="flex flex-col items-center space-y-3">
-                     <p className="text-lg font-semibold text-primary opacity-70">Daily Grace</p>
+                <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                  <Heart className="w-5 h-5 text-green-600" />
+                  <span className="text-sm text-gray-700">Prayer Wall</span>
                 </div>
-            </CardContent>
-            <CardFooter className="flex-col space-y-3">
-                 <Button onClick={handleRetry} variant="primaryGradient" className="w-full">
-                    Retry Connection
-                </Button>
-                <Button onClick={() => {
-                    if (typeof window !== 'undefined') {
-                         if (analytics) {
-                            logEvent(analytics, 'offline_page_go_home_clicked');
-                        }
-                        window.location.href = '/';
-                    }
-                }} variant="outline" className="w-full">
-                    Go to Homepage (if cached)
-                </Button>
-            </CardFooter>
-        </Card>
+                <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                  <MessageCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-sm text-gray-700">Journal Entries</span>
+                </div>
+              </div>
+            </div>
 
-        <AlertTriangle className="h-16 w-16 text-amber-500 opacity-30 fixed bottom-6 right-6 -z-10" />
-      </main>
+            {/* Action Buttons */}
+            <div className="space-y-3">
+              <Button 
+                onClick={handleRetry}
+                className="w-full bg-blue-600 hover:bg-blue-700"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </Button>
+              
+              <Button 
+                onClick={handleGoHome}
+                variant="outline"
+                className="w-full"
+              >
+                Go to Home
+              </Button>
+            </div>
+
+            {/* Quick Access Links */}
+            <div className="pt-4 border-t border-gray-200">
+              <h4 className="font-medium text-gray-900 mb-3">Quick Access:</h4>
+              <div className="grid grid-cols-2 gap-2">
+                <Link href="/daily-devotional">
+                  <Button variant="ghost" size="sm" className="w-full justify-start">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Devotional
+                  </Button>
+                </Link>
+                <Link href="/prayer-wall">
+                  <Button variant="ghost" size="sm" className="w-full justify-start">
+                    <Heart className="w-4 h-4 mr-2" />
+                    Prayers
+                  </Button>
+                </Link>
+                <Link href="/journal">
+                  <Button variant="ghost" size="sm" className="w-full justify-start">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Journal
+                  </Button>
+                </Link>
+                <Link href="/favorites">
+                  <Button variant="ghost" size="sm" className="w-full justify-start">
+                    <Heart className="w-4 h-4 mr-2" />
+                    Favorites
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Offline Tips */}
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h4 className="font-medium text-blue-900 mb-2">💡 Offline Tips:</h4>
+              <ul className="text-sm text-blue-800 space-y-1">
+                <li>• Your journal entries will sync when you're back online</li>
+                <li>• Prayer requests can be saved for later submission</li>
+                <li>• Check your connection and try again</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
